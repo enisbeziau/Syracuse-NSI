@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La conjecture de Syracuse | Projet NSI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href=#>Vocabulaire</a></li>
+                <li><a href="#">Simulateur</a></li>
+                <li><a href=#>Tentatives résolution</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="image-fond">
+        <img src="bg.jpg" alt="">
+    </div>
+
+    <div class="accueil">
+        <div class="contenu-accueil">
+            <p>La conjecture de Syracuse</p>
+            <a id="decouvrir" href="#link">Découvrir</a>
+        </div>
+    </div>
+
+    <main>
+        <h1>
+            Énoncé et histoire du problème
+        </h1>
+        <section class="section-pair">
+
+            <div class="gauche">
+                <img src="collatz.jpeg" alt="">
+            </div>
+
+            <div class="droite">
+                <h2>Les origines de la conjecture</h2>
+                <p>
+                    Les noms multiples de cette suite prouvent la difficulté d'en retrouver la paternité exacte. La
+                    naissance de ce problème semble se situer autour des années 1950. Helmut Hasse, un ami de Lothar
+                    Collatz, de visite à l'université américaine de Syracuse propose le problème aux universitaires.
+                    Celui-ci remporte un vif succès et la suite de Collatz, appelée aussi algorithme de Hasse prend
+                    alors le nom de suite de Syracuse. Entre-temps, le mathématicien polonais Stanislas Ulam le répand
+                    dans le Laboratoire national de Los Alamos et la suite devient la suite d'Ulam. Dans les années
+                    1960, le problème est repris par le mathématicien S. Kakutani qui le diffuse dans les universités de
+                    Yale et Chicago. Le problème prend alors le nom de problème de Kakutani.
+
+                    L'étude de cette suite a donné lieu à la création d'un vocabulaire très imagé comme le temps de vol,
+                    le temps de vol en altitude, l'altitude maximale ou encore le facteur d'expension
+
+                    Cette conjecture mobilisa tant les mathématiciens durant les années 60, en pleine guerre froide,
+                    qu'une blague courut selon laquelle ce problème serait l'œuvre d'un complot soviétique pour ralentir
+                    la recherche américaine. Plus sérieusement, Paul Erds dit à propos de la conjecture de Collatz : «
+                    les mathématiques ne sont pas encore prêtes pour de tels problèmes ». Il proposa une offre de 500 $
+                    à quiconque lui donnerait une solution.
+                </p>
+            </div>
+
+        </section>
+
+        <section class="section-impair">
+            <div class="gauche-impair">
+                <img src="https://enisbeziau.github.io/Site-Syracuse/assets/graphique/graphique.png" alt="">
+            </div>
+
+            <div class="droite-impair">
+                <h2>L'énoncé de la conjecture de Syracuse</h2>
+                <p>
+                    a conjecture de Syracuse repose sur une série d'opération élementaire appliquée à un nombre entier
+                    sctrictement positif.
+                    Cette opération, appelée application de Syracuse, est définie ainsi :
+
+                    - Prenez n'importe quel nombre entier sctrictement positif
+                    - S'il est pair, divisez le par 2
+                    - S'il est impair, triplez le et ajoutez 1
+
+                    En itérant sur cette application, nous pouvons obtenir une suite appelée Suite de Syracuse <br>
+                    Nous pouvons remarquer que avec N = 28, la Suite de Syracuse atteint un cycle (4, 2, 1). 1 étant
+                    impair, on le multiplie par 3 puis on ajoute 1 ce qui nous donne 4. Le cycle se répète alors
+                    indéfiniment et est appelé cycle trivial.
+                </p>
+            </div>
+        </section>
+
+        <section class="section-pair">
+            <div class="gauche">
+                <img src="https://enisbeziau.github.io/Site-Syracuse/assets/graphique/graphiqueCompressee.png" alt="">
+            </div>
+
+            <div class="droite">
+                <h2>La suite compressée </h2>
+
+                <p>
+                    En observant la formule de la suite de Syracuse, on remarque que si un est impair, un + 1 est
+                    nécessairement pair et l'opération suivante doit donc être une division par deux.
+                    Ainsi, nous pouvons définir une variante de la suite de Syracuse appelée Suite compressée de
+                    Syracuse La nouvelle suite étant extraite de la suite de Syracuse, la conjecture affirme que
+                    celle-ci aboutit
+                    toujours au cycle trivial (4, 2, 1). Cet avantage fait de la suite compressée de Syracuse une suite
+                    bien
+                    plus intéressante à représenter sous forme algorithmique car celle-ci à l'avantage de combiner deux
+                    étapes en une seule ce qui augmente la vitesse des fonctions tout en pouvant toujours vérifier si la
+                    suite de Syracuse atterit ou non.
+                </p>
+            </div>
+        </section>
+    </main>
+
+
+</body>
+
+</html>
