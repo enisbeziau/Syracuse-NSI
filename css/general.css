@@ -16,7 +16,7 @@ Ce fichier sert à définir le style des élements repris sur l'ensembles des pa
     margin: 0px;
     text-decoration: none;
     list-style: none;
-    color: white;
+    color: whitesmoke;
     box-sizing: border-box;
     font-family: 'Barlow', sans-serif;
     letter-spacing: 1px;
@@ -56,14 +56,14 @@ body {
 
 .navbar ul li a {
     text-decoration: none;
-    color: #fff;
+    color: whitesmoke;
     border-radius: 15px;
     padding: 5px 10px;
     transition: background-color 0.3s;
 }
 
 .navbar ul li a:hover {
-    background-color: white;
+    background-color: whitesmoke;
     color: #000;
 }
 
@@ -74,7 +74,7 @@ h1 {
 footer{
     text-align: center;
     padding: 15px;
-    border-top: 1px solid white;
+    border-top: 1px solid whitesmoke;
     
 }
 
