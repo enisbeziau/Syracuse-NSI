@@ -9,7 +9,6 @@ Ce fichier sert à définir le style des élements repris sur l'ensembles des pa
 @import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
 
 
-/* Code de mise en page par défaut */
 
 * {
     padding: 0px;
@@ -80,4 +79,8 @@ footer{
 
 footer a{
     color: whitesmoke;
+}
+
+span.gras {
+    font-weight: bold;
 }
