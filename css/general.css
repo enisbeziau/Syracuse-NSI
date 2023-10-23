@@ -1,3 +1,11 @@
+/* 
+Ce fichier sert à définir le style des élements repris sur l'ensembles des pages du site web tels que :
+- La barre de navigation
+- Le code de reset de la page (marge interne et externe, police...)
+- Le footer
+*/
+
+
 @import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
 
 
@@ -61,4 +69,10 @@ body {
 
 h1 {
     text-align: center;
+}
+
+footer{
+    text-align: center;
+    padding: 15px;
+    
 }
