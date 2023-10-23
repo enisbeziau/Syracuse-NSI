@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+
+/* Code de mise en page par défaut */
+
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+    letter-spacing: 1px;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: rgb(38 74 87);
+    min-height: 100vh;
+}
+
+
+/* Code de la barre de navigation */
+
+.navbar {
+    background-color: transparent;
+    top: 0;
+    right: 0;
+    padding: 20px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    border-radius: 15px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: white;
+    color: #000;
+}
+
+h1 {
+    text-align: center;
+}

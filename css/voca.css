@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+h1,
+h2,
+p,
+sub {
+    font-family: 'Quicksand';
+    /* On définie sur tous les types de balise texte utilisées plutot que sur *{} pour ne pas changer la police de la navbar*/
+}
+
+h2,
+p,
+sub {
+    color: black;
+}
+
+
+h1 {
+    padding: 20px;
+}
+
+h2 {
+    padding: 12px;
+    text-decoration: underline;
+}
+
+
+.carte {
+    background: whitesmoke;
+    margin: 0 70px 50px 75px;
+    /* Regroupe les marges en une seule déclaration */
+    border-radius: 20px;
+}
+
+.contenu-carte {
+    display: flex;
+}
+
+.texte,
+.image {
+    flex: 1;
+    margin: 5px;
+    text-align: center;
+}
+
+.texte p {
+    text-align: justify;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.image {
+    border-left: 1px solid black;
+}
+
+.image img {
+    width: 98%;
+}

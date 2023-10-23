@@ -5,23 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La conjecture de Syracuse | Projet NSI</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/accueil.css">
 </head>
 
 <body>
     <header>
         <nav class="navbar">
             <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href=#>Vocabulaire</a></li>
-                <li><a href="#">Simulateur</a></li>
+                <li><a href="src/index.html">Accueil</a></li>
+                <li><a href="src/voca.html">Vocabulaire</a></li>
+                <li><a href="src/simulateur.html">Simulateur</a></li>
                 <li><a href=#>Tentatives résolution</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="image-fond">
-        <img src="bg.jpg" alt="">
+        <img src="assets/accueil.jpg" alt="">
     </div>
 
     <div class="accueil">
@@ -32,13 +33,13 @@
     </div>
 
     <main>
-        <h1>
+        <h1 id="link">
             Énoncé et histoire du problème
         </h1>
         <section class="section-pair">
 
             <div class="gauche">
-                <img src="collatz.jpeg" alt="">
+                <img src="assets/collatz.jpeg" alt="">
             </div>
 
             <div class="droite">
@@ -68,45 +69,49 @@
 
         <section class="section-impair">
             <div class="gauche-impair">
-                <img src="https://enisbeziau.github.io/Site-Syracuse/assets/graphique/graphique.png" alt="">
+                <img src="assets/28.png" alt="">
             </div>
 
             <div class="droite-impair">
                 <h2>L'énoncé de la conjecture de Syracuse</h2>
                 <p>
-                    a conjecture de Syracuse repose sur une série d'opération élementaire appliquée à un nombre entier
+                    La conjecture de Syracuse repose sur une série d'opération élementaire appliquée à un nombre entier
                     sctrictement positif.
-                    Cette opération, appelée application de Syracuse, est définie ainsi :
+                    Cette opération, appelée <strong>application de Syracuse</strong>, est définie ainsi : <br><br>
 
-                    - Prenez n'importe quel nombre entier sctrictement positif
-                    - S'il est pair, divisez le par 2
-                    - S'il est impair, triplez le et ajoutez 1
+                    - Prenez n'importe quel nombre entier sctrictement positif <br>
+                    - S'il est pair, divisez le par 2 <br>
+                    - S'il est impair, triplez le et ajoutez 1 <br><br>
 
-                    En itérant sur cette application, nous pouvons obtenir une suite appelée Suite de Syracuse <br>
+                    En itérant sur cette application, nous pouvons obtenir une suite appelée <strong>Suite de
+                        Syracuse</strong>.
                     Nous pouvons remarquer que avec N = 28, la Suite de Syracuse atteint un cycle (4, 2, 1). 1 étant
-                    impair, on le multiplie par 3 puis on ajoute 1 ce qui nous donne 4. Le cycle se répète alors
-                    indéfiniment et est appelé cycle trivial.
+                    impair, on le multiplie par 3 puis on ajoute 1 ce qui nous donne 4. <br>Le cycle (4, 2, 1) se répète
+                    alors
+                    indéfiniment, c'est le <strong>cycle trivial</strong>.
                 </p>
             </div>
         </section>
 
         <section class="section-pair">
             <div class="gauche">
-                <img src="https://enisbeziau.github.io/Site-Syracuse/assets/graphique/graphiqueCompressee.png" alt="">
+                <img src="assets/28compressee.png" alt="">
             </div>
 
             <div class="droite">
                 <h2>La suite compressée </h2>
 
                 <p>
-                    En observant la formule de la suite de Syracuse, on remarque que si un est impair, un + 1 est
+                    En observant la formule de la suite de Syracuse, on remarque que si un est impair, u<sub>n</sub> + 1
+                    est
                     nécessairement pair et l'opération suivante doit donc être une division par deux.
-                    Ainsi, nous pouvons définir une variante de la suite de Syracuse appelée Suite compressée de
-                    Syracuse La nouvelle suite étant extraite de la suite de Syracuse, la conjecture affirme que
+                    Ainsi, nous pouvons définir une variante de la suite de Syracuse appelée <span
+                        class="soulignee">Suite compressée de
+                        Syracuse</span> La nouvelle suite étant extraite de la suite de Syracuse, la conjecture affirme
+                    que
                     celle-ci aboutit
-                    toujours au cycle trivial (4, 2, 1). Cet avantage fait de la suite compressée de Syracuse une suite
-                    bien
-                    plus intéressante à représenter sous forme algorithmique car celle-ci à l'avantage de combiner deux
+                    toujours au cycle trivial. <br>Cette forme est bien intéressante à représenter sous forme
+                    algorithmique car celle-ci à l'avantage de combiner deux
                     étapes en une seule ce qui augmente la vitesse des fonctions tout en pouvant toujours vérifier si la
                     suite de Syracuse atterit ou non.
                 </p>

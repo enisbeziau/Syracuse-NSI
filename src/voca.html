@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/voca.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="voca.html">Vocabulaire</a></li>
+                <li><a href="simulateur.html">Simulateur</a></li>
+                <li><a href=#>Tentatives résolution</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1 class="titre">Vocabulaire</h1>
+
+    <main>
+        <section class="carte">
+            <h2>1. Notion de vol</h2>
+            <div class="contenu-carte">
+
+                <div class="texte">
+                    <p>
+                        La notion de "vol" dans une suite de Syracuse est étroitement liée à sa représentation
+                        graphique. En effet, lorsque nous traçons la représentation graphique de la suite, nous
+                        remarquons que ses valeurs peuvent atteindre des "hauteurs" considérables avant de redescendre
+                        plus ou moins rapidement. Cette trajectoire erratique rappelle la course aléatoire d'une feuille
+                        emportée par le vent. <br>
+                        C'est précisément cette similitude qui a conduit à l'utilisation du terme "vol" pour décrire ce
+                        phénomène.
+                    </p>
+                </div>
+
+                <div class="image">
+                    <img src="../assets/27.png" alt="">
+                </div>
+            </div>
+
+        </section>
+
+        <section class="carte">
+            <h2>2. Temps de vol</h2>
+            <div class="contenu-carte">
+
+                <div class="texte">
+                    <p>
+                        Le temps de vol d'une suite de Syracuse correspond au nombre d'itérations effectuées jusqu'à ce
+                        que la suite entre dans le cycle trivial. <br>
+                        Dans l'exemple avec N = 20, son temps de vol est de 7
+                    </p>
+                </div>
+
+                <div class="image">
+                    <img src="../assets/20.png" alt="">
+                </div>
+            </div>
+
+        </section>
+
+        <section class="carte">
+            <h2>3. Altitude maximale</h2>
+            <div class="contenu-carte">
+
+                <div class="texte">
+                    <p>
+                        L'altitude maximale d'une suite de Syracuse fait référence à la plus grande valeur atteinte.
+                        <br>
+                        Dans notre exemple où N = 30, le maximum est de 160.
+                    </p>
+                </div>
+
+                <div class="image">
+                    <img src="../assets/30.png" alt="">
+                </div>
+            </div>
+
+        </section>
+
+        <section class="carte">
+            <h2>4. Temps de vol en altitude</h2>
+            <div class="contenu-carte">
+
+                <div class="texte">
+                    <p>
+                        Le temps de vol en altitude d'un nombre est le plus petit indice n tel que u<sub>n + 1</sub>
+                        &#x3C;
+                        u<sub>n</sub>. Autrement dis, le temps de vol en altitude fait référence au nombre d'itération
+                        effectué avant que u<sub>n+1</sub> devienne plus petit que le nombre de départ. <br>Dans notre
+                        exemple, u<sub>0</sub> vaut 12 et u<sub>5</sub> > u<sub>0</sub> mais u<sub>6</sub> &#x3C;
+                        u<sub>0</sub>. <br>Le vol en altitude de 12 vaut donc 5.
+                        <br>
+                    </p>
+                </div>
+
+                <div class="image">
+                    <img src="../assets/12.png" alt="">
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+</body>
+
+</html>
