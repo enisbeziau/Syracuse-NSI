@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil | Projet NSI</title>
     <link rel="shortcut icon" href="assets/icon.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Quicksand:wght@300&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Quicksand:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -39,8 +38,12 @@
         <h1 id="link">
             Énoncé et histoire du problème
         </h1>
-        <section class="section-pair">
 
+        <!-- 
+            Les sections paires ont leur texte à droite et leur image d'illustration à gauche 
+            Les sections impaires ont leur texte à gauche et leur image d'illustration à droite
+        -->
+        <section class="section-pair">
             <div class="gauche">
                 <a href="assets/collatz.jpeg" target="_blank" rel="noopener noreferrer">
                     <img src="assets/collatz.jpeg" alt="Portrait de Lothar Collatz">
@@ -48,29 +51,24 @@
             </div>
 
             <div class="droite">
-                <h2>Les origines de la conjecture</h2>
+                <h2>Origines et énoncés de la conjecture</h2>
                 <p>
-                    Les noms multiples de cette suite prouvent la difficulté d'en retrouver la paternité exacte. La
-                    naissance de ce problème semble se situer autour des années 1950. Helmut Hasse, un ami de Lothar
-                    Collatz, de visite à l'université américaine de Syracuse propose le problème aux universitaires.
-                    Celui-ci remporte un vif succès et la suite de Collatz, appelée aussi algorithme de Hasse prend
-                    alors le nom de suite de Syracuse. Entre-temps, le mathématicien polonais Stanislas Ulam le répand
-                    dans le Laboratoire national de Los Alamos et la suite devient la suite d'Ulam. Dans les années
-                    1960, le problème est repris par le mathématicien S. Kakutani qui le diffuse dans les universités de
-                    Yale et Chicago. Le problème prend alors le nom de problème de Kakutani.
-
-                    L'étude de cette suite a donné lieu à la création d'un vocabulaire très imagé comme le temps de vol,
-                    le temps de vol en altitude, l'altitude maximale ou encore le facteur d'expension
-
-                    Cette conjecture mobilisa tant les mathématiciens durant les années 60, en pleine guerre froide,
-                    qu'une blague courut selon laquelle ce problème serait l'œuvre d'un complot soviétique pour ralentir
-                    la recherche américaine. Plus sérieusement, Paul Erds dit à propos de la conjecture de Collatz : «
-                    les mathématiques ne sont pas encore prêtes pour de tels problèmes ». Il proposa une offre de 500 $
-                    à quiconque lui donnerait une solution.
+                    L'histoire de la conjecture de Syracuse remonte au début du XXe siècle, lorsque le mathématicien
+                    allemand Lothar Collatz a formulé cette énigme mathématique fascinante. Cette conjecture, bien que
+                    relativement simple à comprendre, demeure l'un des problèmes non résolus les plus célèbres en
+                    mathématiques, et elle continue d'attirer l'attention des mathématiciens du monde entier.
+                    <br>
+                    L'énoncé de la conjecture de Syracuse est le suivant : le vol de tout nombre n atterit
+                    <br>
+                    Malgré sa simplicité apparente, la conjecture de Syracuse pose un défi mathématique intrigant, et
+                    personne n'a encore pu prouver de manière concluante qu'elle est vraie pour tous les nombres. Cette
+                    énigme continue d'inspirer des recherches et des explorations mathématiques, et elle demeure l'un
+                    des mystères non résolus de la discipline.
                 </p>
             </div>
 
         </section>
+
 
         <section class="section-impair">
             <div class="gauche-impair">
@@ -80,12 +78,11 @@
             </div>
 
             <div class="droite-impair">
-                <h2>L'énoncé de la conjecture de Syracuse</h2>
+                <h2>La Suite de Syracuse</h2>
                 <p>
                     La conjecture de Syracuse repose sur une série d'opération élementaire appliquée à un nombre entier
                     sctrictement positif.
-                    Cette opération, appelée <span class="gras">application de Syracuse</span class="gras">, est définie
-                    ainsi :
+                    Cette opération, appelée <span class="gras">application de Syracuse</span>, est définie ainsi :
 
                     <br><br>
                     - Prenez n'importe quel nombre entier sctrictement positif <br>
@@ -114,9 +111,10 @@
             </div>
 
             <div class="droite">
-                <h2>La suite compressée </h2>
+                <h2>La suite compressée de Syracuse</h2>
                 <p>
-                    En observant la formule de la suite de Syracuse, on remarque que si u<sub>n</sub> est impair, u<sub>n+1</sub>
+                    En observant la formule de la suite de Syracuse, on remarque que si u<sub>n</sub> est impair,
+                    u<sub>n+1</sub>
                     est nécessairement pair et l'opération suivante doit donc être une division par deux.
                     Ainsi, nous pouvons définir une variante de la suite de Syracuse appelée <span class="gras"
                         class="soulignee">Suite compressée de Syracuse</span class="gras">. La nouvelle suite étant
