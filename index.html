@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil | Projet NSI</title>
     <link rel="shortcut icon" href="assets/icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/accueil.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Quicksand:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -83,7 +84,8 @@
                 <p>
                     La conjecture de Syracuse repose sur une série d'opération élementaire appliquée à un nombre entier
                     sctrictement positif.
-                    Cette opération, appelée <span class="gras">application de Syracuse</span class="gras">, est définie ainsi :
+                    Cette opération, appelée <span class="gras">application de Syracuse</span class="gras">, est définie
+                    ainsi :
 
                     <br><br>
                     - Prenez n'importe quel nombre entier sctrictement positif <br>
@@ -96,7 +98,8 @@
                     Nous pouvons remarquer que avec N = 28, la Suite de Syracuse atteint un cycle (4, 2, 1). 1 étant
                     impair, on le multiplie par 3 puis on ajoute 1 ce qui nous donne 4.
                     <br>
-                    Le cycle (4, 2, 1) se répète alors indéfiniment, c'est le <span class="gras">cycle trivial</span class="gras">.
+                    Le cycle (4, 2, 1) se répète alors indéfiniment, c'est le <span class="gras">cycle trivial</span
+                        class="gras">.
                 </p>
             </div>
         </section>
@@ -113,10 +116,11 @@
             <div class="droite">
                 <h2>La suite compressée </h2>
                 <p>
-                    En observant la formule de la suite de Syracuse, on remarque que si un est impair, u<suspan class="gras">n</suspan class="gras"> + 1
+                    En observant la formule de la suite de Syracuse, on remarque que si u<sub>n</sub> est impair, u<sub>n+1</sub>
                     est nécessairement pair et l'opération suivante doit donc être une division par deux.
                     Ainsi, nous pouvons définir une variante de la suite de Syracuse appelée <span class="gras"
-                        class="soulignee">Suite compressée de Syracuse</span class="gras">. La nouvelle suite étant extraite de la
+                        class="soulignee">Suite compressée de Syracuse</span class="gras">. La nouvelle suite étant
+                    extraite de la
                     suite de Syracuse, la conjecture affirme que celle-ci aboutit toujours au cycle trivial.
                     <br>
                     Cette forme est bien intéressante à représenter sous forme algorithmique car celle-ci à l'avantage
@@ -135,4 +139,3 @@
 </body>
 
 </html>
-

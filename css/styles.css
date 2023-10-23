@@ -1,0 +1,268 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+html {
+    /* La police de toutes les pages est Quicksand, à l'exception de la police du footer, de la navbar et de accueil.html */
+    font-family: 'Quicksand';
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: rgb(38 74 87);
+    min-height: 100vh;
+}
+
+
+/* Code de la barre de navigation */
+
+.navbar {
+    font-family: 'Barlow', 'sans-serif';
+    background-color: transparent;
+    top: 0;
+    right: 0;
+    padding: 20px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+    border-radius: 15px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: whitesmoke;
+    color: #000;
+}
+
+
+/* Style du footer */
+
+footer {
+    color: whitesmoke;
+    font-family: 'Barlow', 'sans-serif';
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid whitesmoke;
+
+}
+
+footer a {
+    color: whitesmoke;
+}
+
+
+/* Style de la page accueil.html */
+
+.image-fond {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.image-fond img {
+    filter: blur(3px);
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.accueil {
+    font-family: 'Barlow', 'sans-serif';
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenu-accueil {
+    text-align: center;
+    background-color: rgb(0 0 0 / 41%);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.contenu-accueil p {
+    color: whitesmoke;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#decouvrir {
+    display: inline-block;
+    cursor: pointer;
+    background-color: rgb(52, 52, 52);
+    border: 0px;
+    border-radius: 4px;
+    width: 141px;
+    height: 41px;
+    color: whitesmoke;
+    line-height: 41px;
+
+}
+
+#decouvrir:hover {
+    background-color: #7e7e7e;
+}
+
+h1#link {
+    color: whitesmoke;
+    font-family: 'Barlow', 'sans-serif';
+}
+
+/* Mise en page des sections de présentation de la conjecture dans accueil.html*/
+/* Ceux ci alternent entre texte à gauche | image à droite et image à gauche | texte à droite */
+
+.section-pair,
+.section-impair {
+    font-family: 'Barlow', 'sans-serif';
+    background-color: rgb(38 74 87);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    border-bottom: 1px solid whitesmoke;
+}
+
+.section-impair {
+    flex-direction: row-reverse;
+
+}
+
+.gauche,
+.gauche-impair {
+    max-width: 50%;
+
+}
+
+.gauche img,
+.gauche-impair img {
+    background-color: whitesmoke;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.droite,
+.droite-impair {
+    flex: 1;
+    padding: 20px;
+}
+
+.droite h2,
+.droite-impair h2 {
+    color: whitesmoke;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.droite p,
+.droite-impair p {
+    color: whitesmoke;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.droite sub {
+    color: whitesmoke;
+}
+
+
+/* Style de la page voca.html */
+
+h1.titre {
+    color: whitesmoke;
+    padding: 20px;
+}
+
+.carte h2 {
+    padding: 12px;
+    text-decoration: underline;
+}
+
+.carte {
+    background: whitesmoke;
+    margin: 0 70px 50px 75px;
+    border-radius: 20px;
+}
+
+.contenu-carte {
+    display: flex;
+}
+
+.texte,
+.image {
+    flex: 1;
+    margin: 5px;
+    text-align: center;
+}
+
+.texte p {
+    text-align: justify;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.image {
+    border-left: 1px solid black;
+}
+
+.image img {
+    width: 98%;
+}
+
+
+/* Style de la page info.html */
+.info {
+    font-size: 1.2rem;
+    padding: 10px;
+
+}
+
+/* Style des élements utilisés dans toutes les pages du site */
+
+span.gras {
+    font-weight: bold;
+    color: whitesmoke;
+
+}
+
+h1 {
+    text-align: center;
+}
+
+code {
+    color: black;
+    background-color: #eee;
+    border-radius: 3px;
+    font-family: courier, monospace;
+    padding: 0 3px;
+}
