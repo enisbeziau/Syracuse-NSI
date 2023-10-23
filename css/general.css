@@ -74,5 +74,10 @@ h1 {
 footer{
     text-align: center;
     padding: 15px;
+    border-top: 1px solid white;
     
+}
+
+footer a{
+    color: whitesmoke;
 }

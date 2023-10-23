@@ -1,19 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
-h1,
 h2,
 p,
 sub {
     font-family: 'Quicksand';
+    color: black;
     /* On définie sur tous les types de balise texte utilisées plutot que sur *{} pour ne pas changer la police de la navbar*/
 }
-
-h2,
-p,
-sub {
-    color: black;
-}
-
 
 h1 {
     padding: 20px;
@@ -24,11 +17,9 @@ h2 {
     text-decoration: underline;
 }
 
-
 .carte {
     background: whitesmoke;
     margin: 0 70px 50px 75px;
-    /* Regroupe les marges en une seule déclaration */
     border-radius: 20px;
 }
 
