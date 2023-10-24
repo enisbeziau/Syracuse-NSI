@@ -1,0 +1,98 @@
+/* 
+Auteur : Enis Béziau 1H
+Ce fichier vise à réunir tous les élements de style communs aux pages du site pour éviter les répétitions
+*/
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    list-style: none;
+    /* La couleur principale des textes et titres du site est noir. Seul le footer, la navbar et la page d'accueil sont en blancs */
+    color: black; 
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: rgb(38 74 87);
+    min-height: 100vh;
+}
+
+
+/* Code de la barre de navigation */
+
+.navbar {
+    font-family: 'Barlow', 'sans-serif';
+    background-color: transparent;
+    top: 0;
+    right: 0;
+    padding: 20px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+    border-radius: 15px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: whitesmoke;
+    color: #000;
+}
+
+
+/* Style du pied de page */
+
+footer {
+    color: whitesmoke;
+    font-family: 'Barlow', 'sans-serif';
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid whitesmoke;
+
+}
+
+footer a {
+    color: whitesmoke;
+}
+
+
+/* Éléments redondants dans l'ensemble des pages */
+
+
+span.centre{ 
+    /* A changer */
+    display: block;  
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+code {
+    color: black;
+    background-color: #eee;
+    border-radius: 3px;
+    font-family: courier, monospace;
+    padding: 0 3px;
+}
