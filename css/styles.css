@@ -264,6 +264,12 @@ span.gras {
 
 }
 
+span.centre{
+    /* a changer */
+    display: block;  
+    text-align: center;
+}
+
 h1 {
     text-align: center;
 }

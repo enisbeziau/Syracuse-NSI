@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tentatives de résolution | Projet NSI</title>
+    <link rel="shortcut icon" href="../assets/icon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Quicksand:wght@300&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
+
 </head>
 
 <body>
@@ -55,16 +57,13 @@
             </div>
 
             <p>Notre algorithme précédant, bien que fonctionnel, est loin d'être le plus optimal. En effet, celui ci
-                test tous les nombres entiers sctrictement supérieur à 0 ce qui n'est pas nécessaire. Pour disqualifier
+                teste tous les nombres entiers sctrictement supérieur à 2. Pour disqualifier
                 d'emblée certains
                 nombres, nous pouvons modifier l'énoncé de la conjecture de Syracuse en un nouvel énoncé
-                équivalent.En
-                effet, nous pouvons affirmer que si tout entier a un temps de vol en altitude fini,
-                alors tout vol
-                atterit. Cette nouvelle formulation est intéressante dans notre recherche de contre
-                exemple
-                car elle nous amène à ne chercher que des nombres dont la suite de Syracuse ne passe pas en dessous de
-                u<sub>0</sub> tels que : <br>
+                équivalent. Ainsi, nous pouvons affirmer que si tout entier a un temps de vol en altitude fini,
+                alors tout vol atterit. Cette nouvelle formulation est intéressante dans notre recherche de contre
+                exemple car elle nous amène à ne chercher que des nombres dont la suite de Syracuse ne passe pas en
+                dessous de u<sub>0</sub> tels que : <br>
             </p>
 
             <div class="contenu-carte">
@@ -72,11 +71,12 @@
                 <div class="texte">
                     <p>
                         - Les nombres de la forme 2k car ceux ci sont directement divisés par 2 donc u<sub>1</sub>
-                        &lt; N <br><br>
-                        - Les nombres impairs de la forme 4k + 1 car, par l'application de syracuse, 4k + 1 ⇨ 12k + 4,
-                        pair ⇨ 6k
-                        + 2, pair ⇨ 3k + 1.<br>
-                        3k + 1 &lt; 4k + 1 ⟺ u<sub>3</sub> &lt; u<sub>0</sub>. <br>Le vol des nombres de la
+                        &lt; N
+                        <br><br>
+                        - Les nombres impairs de la forme 4k + 1 car, par l'application de syracuse,
+                        4k + 1 ⇨ 12k + 4 ⇨ 6k + 2 ⇨ 3k + 1
+                        <br>
+                        et 3k + 1 &lt; 4k + 1 ⟺ u<sub>3</sub> &lt; u<sub>0</sub>. <br>Le vol des nombres de la
                         forme 4k + 1
                         atterrissent donc. <br><br>
                         - Les nombres de la forme 16k + 3 car <br>⇨48k + 10 ⇨ 24k + 5 ⇨ 72k + 16 ⇨ 36k + 8
@@ -95,12 +95,98 @@
             <p>
                 Par des calculs analogues, nous prouvons prouver que plus de 90% des nombres entiers
                 naturels
-                sont inutiles à testercar nous prouvons prouver que leur vol en altitude est fini.
+                sont inutiles à tester car nous prouvons prouver que leur vol en altitude est fini.
                 Ainsi, seuls
-                les nombres impairs de la forme 16k+7, 16k + 11 ou 16k + 15 peuvent être des prétendants à un
+                les nombres impairs de la forme 16k + 7, 16k + 11 ou 16k + 15 peuvent être des prétendants à un
                 contre exemple. En effet, nous ne pouvons pas prouver avec exactitude que ces vols atterissent
                 car leur comportement varie en fonction des nombres.
             </p>
+        </section>
+
+        <section class="carte">
+            <h2>2. Recherche de cycles non triviaux</h2>
+            <p>
+                Une autre approche pour vaincre la conjecture de Syracuse serait de prouver qu'il existe un cycle dit
+                non trivial qui serait donc différent du cycle (4, 2, 1) qui serait donc un cycle non trivial. Supposons
+                qu'il existe un cycle non trivial de longueur 3 tel que :
+
+                <br><br>
+                <span class="centre">A ⇨ B ⇨ C ⇨ A</span>
+                <br>
+
+                On cherche à trouver les valeurs possibles de A, B et C tel que le cycle ci-dessus existe. (⇨ :
+                application de Syracuse).
+                <br>
+                Trivialement, A &lt; B &lt; C. Nous avons également nécessairement A impair car, le cas échéant, A
+                serait divisé par 2 et donc A &lt; B.
+                <br>
+                On a donc B = 3A + 1 qui est pair. C vaudra donc B / 2 =
+                (3A + 1) / 2. Puisque C donne A et C &gt; A, C est pair. Donc A = (3A + 1) / 2²
+                <br>
+                On résoud donc l'équation d'inconnues A ∈ ℕ\{0}
+
+                <br><br>
+                <span class="centre">A = (3A + 1) / 4 <br> ⟺ 4A = 3A + 1 <br> ⟺ A = 1</span>
+                <br>
+
+                On a donc nécessairement B = 4 et C = 2. Le seul cycle (A, B, C) possible dans les nombres positifs est
+                donc le cycle trivial
+                <br>
+                Par des méthodes de démonstration par l'absurde, il est possible de prouver
+                qu'il n'existe pas de cycle de longueur 2 ou 5.
+                <br>
+                En général, le théorème de Eliahou nous dit qu'il
+                n'existe aucun cycle de nombre positif inférieur à 180 000 000 000.
+            </p>
+        </section>
+
+        <section class="carte">
+            <h2>Approche inverse : arbre de Syracuse</h2>
+            <p>
+                Depuis le début, nos approches sont similaires. Nous partons d'une itération sur l'application de
+                Syracuse pour en observer ou démontrer des propriétés. Une autre approche possible est de changer de
+                point de vue et de prendre le problème à l'envers. C'est de cette idée qu'est née l'arbre de syracuse.
+            </p>
+
+            <div class="contenu-carte">
+
+                <div class="texte">
+                    <p>
+                        Partons de 8 Pour y arriver, nous venons soit de l'application de Syracuse 3x + 1, soit de x/2.
+                        <br>
+                        On test de résoudre l'équation d'inconnue n ∈ ℕ\{0} :
+
+                        <br><br>
+                        <span class="centre">3n + 1 = 8 <br> ⟺ 3n = 7 <br> ⟺ n = 7/3∉ ℕ\{0}</span>
+                        <br>
+
+                        On en déduit donc que 8 ne vient pas de l'application de Syracuse sur les nombres impairs car
+                        7/3 n'est pas un entier naturel. Ainsi, 8 vient forcément de l'application de Syracuse sur les
+                        nombres pairs et donc de 16.
+                        <br><br>
+                        Nous passons maintenant à 16. Par la même méthode que pour 8, on résoud les équations
+                        d'inconnues n ∈ ℕ\{0} :
+
+                        <br><br>
+                        <span class="centre">3n + 1 = 16 et n / 2 = 16 <br> ⟺ n = 5 et n = 32</span>
+                        <br>
+
+                        Ces deux équations possèdent des solutions naturels, l'arbre de Syracuse possède donc 2 branches
+                        qui représente les 2 applications de Syracuse possibles. À partir de ces deux branches, d'autres
+                        seront à leur tour crées. Ainsi, il est dit que tous les nombres entiers naturels sctrictement
+                        positifs sont présents dans cet arbre. Nous n'avons cependant par encore réussi à le démontrer.
+                    
+
+                    </p>
+                </div>
+
+                <div class="image">
+                    <a href="../assets/arbre.jpg" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/arbre.jpg" alt="Image de l'arbre de Syracuse">
+                    </a>
+                </div>
+
+            </div>
         </section>
 
     </main>
