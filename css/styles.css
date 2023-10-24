@@ -144,11 +144,8 @@ h1#link {
     font-family: 'Barlow', 'sans-serif';
 }
 
-/* Mise en page des sections de présentation de la conjecture dans accueil.html*/
-/* Ceux ci alternent entre texte à gauche | image à droite et image à gauche | texte à droite */
 
-.section-pair,
-.section-impair {
+.presentation {
     font-family: 'Barlow', 'sans-serif';
     background-color: rgb(38 74 87);
     display: flex;
@@ -158,48 +155,36 @@ h1#link {
     border-bottom: 1px solid whitesmoke;
 }
 
-.section-impair {
-    flex-direction: row-reverse;
-
-}
-
-
-.gauche,
-.gauche-impair {
+.presentation figure {
     max-width: 50%;
-
 }
 
-.gauche img,
-.gauche-impair img {
+.presentation figure img {
     background-color: whitesmoke;
     max-width: 100%;
     height: auto;
     border-radius: 10px;
 }
 
-.droite,
-.droite-impair {
+.presentation article {
     flex: 1;
     padding: 20px;
 }
 
-.droite h2,
-.droite-impair h2 {
+.presentation article h2 {
     color: whitesmoke;
     font-size: 24px;
     margin-bottom: 20px;
 }
 
-.droite p,
-.droite-impair p {
+.presentation article p {
     color: whitesmoke;
     text-align: justify;
     font-size: 18px;
     line-height: 1.5;
 }
 
-.droite sub {
+.presentation article sub {
     color: whitesmoke;
 }
 
