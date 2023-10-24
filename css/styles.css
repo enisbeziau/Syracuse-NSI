@@ -1,3 +1,10 @@
+/* 
+Auteur : Enis Béziau [1H]
+Date : 24 octobre 2023
+Ce fichier contient le style relatif à toutes les pages du site
+*/
+
+
 * {
     padding: 0px;
     margin: 0px;
@@ -204,16 +211,17 @@ h1.titre {
     padding: 20px;
 }
 
-.carte h2 {
-    padding: 12px;
-    text-decoration: underline;
-}
-
 .carte {
     background: whitesmoke;
     margin: 0 70px 50px 75px;
     border-radius: 20px;
 }
+
+.carte h2 {
+    padding: 12px;
+    text-decoration: underline;
+}
+
 
 .contenu-carte {
     display: flex;
@@ -226,7 +234,7 @@ h1.titre {
     text-align: center;
 }
 
-.texte p {
+.texte p, .carte p{
     text-align: justify;
     padding: 10px;
     font-size: 1.2rem;
