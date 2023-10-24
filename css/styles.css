@@ -116,7 +116,8 @@ footer a {
     color: white;
 }
 
-.contenu-accueil p {
+.contenu-accueil h1 {
+    font-weight: normal;
     color: whitesmoke;
     font-size: 36px;
     margin-bottom: 20px;
