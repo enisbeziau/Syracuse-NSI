@@ -167,26 +167,31 @@ h1#link {
     border-radius: 10px;
 }
 
-.presentation article {
+.texte-presentation {
     flex: 1;
     padding: 20px;
 }
 
-.presentation article h2 {
+.texte-presentation h2 {
     color: whitesmoke;
     font-size: 24px;
     margin-bottom: 20px;
 }
 
-.presentation article p {
+.texte-presentation p {
     color: whitesmoke;
     text-align: justify;
     font-size: 18px;
     line-height: 1.5;
 }
 
-.presentation article sub {
+.texte-presentation sub {
     color: whitesmoke;
+}
+
+.presentation figcaption{
+    color: whitesmoke;
+    text-align: center;
 }
 
 
