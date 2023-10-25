@@ -1,5 +1,9 @@
 /* Style pour la page d'accueil `accueil.html` */
 
+body{
+    font-family: 'Barlow', sans-serif;
+}
+
 .image-fond {
     background-color: transparent;
     position: absolute;

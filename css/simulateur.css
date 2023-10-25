@@ -1,0 +1,44 @@
+.zone-input {
+    width: 400px;
+    max-width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    margin: 10px 0 10px 0;
+} 
+
+#input {
+    background: rgba(255, 255, 255, .3);
+    border: 2px solid black;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    width: 100%;
+}
+
+#btn {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 13%;
+    right: 10px;
+}
+
+::placeholder{
+    color: whitesmoke;
+}
+
+#graphique{
+    margin-top: 25px;
+}
+
+.zone-graphique{
+    display: none;
+    background-color: whitesmoke;
+    margin: 0px 70px 50px 75px;
+    border-radius: 20px;
+}
+
+.zone-graphique.on{
+    display: block;
+}

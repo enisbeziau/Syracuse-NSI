@@ -19,6 +19,7 @@ html {
 }
 
 body {
+    font-family: 'Quicksand';
     background-color: rgb(38 74 87);
     min-height: 100vh;
 }
@@ -87,6 +88,11 @@ span.centre{
 
 h1 {
     text-align: center;
+}
+
+h1.titre {
+    color: whitesmoke;
+    padding: 20px;
 }
 
 code {

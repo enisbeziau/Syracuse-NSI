@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulateur | Projet-NSI</title>
+    <link rel="shortcut icon" href="../assets/icon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Quicksand:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/simulateur.css">
+    <!-- La balise script sert à importer la librairie utilisée pour créer le graphique -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="voca.html">Vocabulaire</a></li>
+                <li><a href="simulateur.html">Simulateur</a></li>
+                <li><a href="tentatives-resolutions.html">Tentatives résolution</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="titre">Générateur de graphique</h1>
+
+        <section class="zone-input">
+            <input type="number" id="input" placeholder="Entrez un nombre entier naturel">
+            <button id="btn" title="Bouton pour soumettre l'entrée">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M5 12l14 0"></path>
+                    <path d="M13 18l6 -6"></path>
+                    <path d="M13 6l6 6"></path>
+                </svg>
+            </button>
+        </section>
+
+        <section class="zone-graphique">
+            <canvas id="graphique"></canvas>
+        </section>
+    </main>
+    <script src="../js/app.js"></script>
+
+</body>
+</html>
