@@ -8,6 +8,9 @@
     <link rel="shortcut icon" href="../assets/icon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Quicksand:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/general.css">
+    <!-- Importation de la bibliothèque MathJax qui permet d'écrire des équations plus proprement grâce à LaTex -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 </head>
 
@@ -48,11 +51,11 @@
                     </p>
                 </div>
 
-                <div class="image">
-                    <a href="../assets/code.png" target="_blank" rel="noopener noreferrer">
-                        <img src="../assets/code.png" alt="Code python">
+                <figure class="image">
+                    <a href="https://replit.com/@medouard770/syracuse#main.py" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/code.png" alt="Code python" title="Testez-le">
                     </a>
-                </div>
+                </figure>
             </div>
 
             <p>Notre algorithme précédant, bien que fonctionnel, est loin d'être le plus optimal. En effet, celui ci
@@ -84,11 +87,11 @@
                     </p>
                 </div>
 
-                <div class="image">
-                    <a href="../assets/code_opti.png" target="_blank" rel="noopener noreferrer">
-                        <img src="../assets/code_opti.png" alt="Code Python">
+                <figure class="image">
+                    <a href="https://replit.com/@medouard770/suiteexclusion#main.py" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/code_opti.png" alt="Code Python" title="Testez-le">
                     </a>
-                </div>
+                </figure>
             </div>
             <p>
                 Par des calculs analogues, nous prouvons prouver que plus de 90% des nombres entiers
@@ -176,11 +179,12 @@
                     </p>
                 </div>
 
-                <div class="image">
+                <figure class="image">
                     <a href="../assets/arbre.jpg" target="_blank" rel="noopener noreferrer">
                         <img src="../assets/arbre.jpg" alt="Image de l'arbre de Syracuse">
                     </a>
-                </div>
+                    <figcaption>Arbre de Syracuse</figcaption>
+                </figure>
 
             </div>
         </section>

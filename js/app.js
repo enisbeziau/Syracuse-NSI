@@ -1,3 +1,10 @@
+/*
+Auteur : Enis Béziau [1H]
+Code gérant : 
+- L'affichage du graphique montrant la suite de Syracuse d'un nombre entré
+- L'affichage de la section d'informations lors du clic sur la flèche
+*/
+
 // Constantes et variable utilisées pour la partie affichage du graphique
 const canvas = document.getElementById("graphique");
 const btn = document.getElementById("btn");
@@ -17,6 +24,7 @@ const altitudeMax = document.getElementById("altitude-max");
 const facteurExpansion = document.getElementById("facteur-expansion");
 
 
+// Lors du clic sur la flèche à droite de l'écran, la section passe de 0% de largeur à 100% de largeur, la rendant visible
 btnFleche.addEventListener("click", () => {
     if (informations.style.width === "100%") {
         informations.style.width = "0";
@@ -66,6 +74,11 @@ function supprimerGraphiqueExistant() {
 
 
 function creerGraphique(ctx, suite, repere) {
+    /**
+     * @param {CanvasRenderingContext2D} ctx - Le contexte 2D du canvas HTML, utilisé pour dessiner des éléments graphiques sur le canvas
+     * @param {entier[]} suite - La suite dont les éléments composeront les points du graphique qui seront reliés
+     * @param {"linear" | "logarithmic"} repere - Le type de repère dans lequel sera dessiné le graphique
+     */
     new Chart(ctx, {
         type: 'line',
         data: {
@@ -114,7 +127,12 @@ function creerGraphique(ctx, suite, repere) {
 
 
 function verifierEntree(input) {
-    return Number.isInteger(input) && input >= 0;
+    /**
+     * Sert à vérifier la saisie de l'utilisateur pour éviter une erreur lors de la génération du graphique
+     * @param {string | number | null} input - La valeur qui est testé pour savoir si oui ou non c'est un entier
+     * @return {bool} - Si oui ou non l'entrée est un nombre supérieur ou égal à 1
+     */
+    return Number.isInteger(input) && input >= 1;
 }
 
 
