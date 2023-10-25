@@ -7,7 +7,7 @@ Ce fichier vise à réunir tous les élements de style communs aux pages du site
     margin: 0px;
     text-decoration: none;
     list-style: none;
-    /* La couleur principale des textes et titres du site est noir. Seul le footer, la navbar et la page d'accueil sont en blancs */
+    /* La couleur principale des textes et titres du site est noir. Seul le footer, la navbar, la page d'accueil et les titres h1 sont en blancs */
     color: black; 
     box-sizing: border-box;
     letter-spacing: 1px;
@@ -77,8 +77,51 @@ footer a {
 }
 
 
-/* Éléments redondants dans l'ensemble des pages */
+/* 
+Style des « cartes », les sections blanches composées de texte ou d'image et de texte 
+Cet aspect de carte est réutilisé dans toutes les pages sauf accueil.html
+*/
 
+.carte {
+    font-family: 'Quicksand';
+    background: whitesmoke;
+    margin: 0 70px 50px 75px;
+    border-radius: 20px;
+}
+
+.carte h2 {
+    padding: 12px;
+    text-decoration: underline;
+}
+
+
+.contenu-carte {
+    display: flex;
+}
+
+.texte,
+.image {
+    flex: 1;
+    margin: 5px;
+    text-align: center;
+}
+
+.texte p, .carte p{
+    text-align: justify;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.image {
+    border-left: 1px solid black;
+}
+
+.image img {
+    width: 98%;
+}
+
+
+/* Éléments redondants dans l'ensemble des pages */
 
 span.centre{ 
     /* A changer */
