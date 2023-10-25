@@ -72,8 +72,8 @@ body {
     top: 50%;
     left: 100%;
     transform: translate(-100%, -50%);
-    background: #007BFF;
-    color: #fff;
+    background: whitesmoke;
+    color: black;
     padding: 10px;
     cursor: pointer;
 }

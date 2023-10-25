@@ -138,7 +138,7 @@ btn.addEventListener('click', () => {
 
         vol.innerHTML = "Vol de la suite : " + suiteSyracuse.length;
         altitudeMax.innerHTML = "Altitude maximale : " + Math.max(...suiteSyracuse);
-        facteurExpansion.innerHTML = "Facteur d'expansion :" + Math.round((Math.max(...suiteSyracuse) / input));
+        facteurExpansion.innerHTML = "Facteur d'expansion :" + Math.round((Math.max(...suiteSyracuse) / entreeValide));
         suiteTxt.innerHTML = suiteSyracuse;
         txtCompressee.innerHTML = suiteCompresseeSyracuse;
     }
