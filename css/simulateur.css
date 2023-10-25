@@ -1,3 +1,8 @@
+body {
+    overflow: hidden;
+    font-family: 'Barlow';
+}
+
 .zone-input {
     width: 400px;
     max-width: 100%;
@@ -5,7 +10,7 @@
     left: 50%;
     transform: translate(-50%, -25%);
     margin: 10px 0 10px 0;
-} 
+}
 
 #input {
     background: rgba(255, 255, 255, .3);
@@ -24,21 +29,80 @@
     right: 10px;
 }
 
-::placeholder{
+::placeholder {
     color: whitesmoke;
 }
 
-#graphique{
+#graphique {
     margin-top: 25px;
 }
 
-.zone-graphique{
+.zone-graphique {
     display: none;
     background-color: whitesmoke;
     margin: 0px 70px 50px 75px;
     border-radius: 20px;
 }
 
-.zone-graphique.on{
+.zone-graphique.on {
     display: block;
+}
+
+.section-informations {
+    display: none;
+}
+
+.section-informations.on {
+    display: block;
+}
+
+#informations {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(38 74 87);
+    transition: width 0.5s ease-in-out;
+}
+
+
+#fleche {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-100%, -50%);
+    background: #007BFF;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.boite-info {
+    display: flex;
+    height: 100vh;
+}
+
+.box {
+    word-break:keep-all;
+    flex: 1;
+    border-left: 1px solid white;
+
+}
+
+.box:first-child {
+    border-left: none;
+}
+
+.box h4 {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.box p {
+    color: whitesmoke;
+    text-align: justify;
+    padding: 10px;
+    font-size: 1.2rem;
 }
