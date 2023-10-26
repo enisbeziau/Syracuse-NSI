@@ -144,5 +144,5 @@ code {
 
 /* Style des rendus visuels LaTex grâce à MathJax. La couleur sert à mieux intégrer l'expression mathématique avec la police Quicksand */
 .MathJax.CtxtMenu_Attached_0 {
-    color: rgb(74 74 74);
+    color: rgb(85 85 85);
 }
