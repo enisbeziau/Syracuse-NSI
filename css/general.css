@@ -13,6 +13,7 @@ Ce fichier vise à réunir tous les élements de style communs aux pages du site
     letter-spacing: 1px;
 }
 
+
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -64,18 +65,33 @@ body {
 /* Style du pied de page */
 
 footer {
+    background-color: rgb(38 74 87);
     color: whitesmoke;
-    font-family: 'Barlow', 'sans-serif';
     text-align: center;
-    padding: 15px;
-    border-top: 1px solid whitesmoke;
-
+    padding: 20px;
 }
 
 footer a {
     color: whitesmoke;
 }
 
+.contenu-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reseau {
+    display: flex;
+}
+
+.reseau li {
+    margin-right: 10px;
+}
+
+.reseau a {
+    color: whitesmoke;
+}
 
 /* 
 Style des « cartes », les sections blanches composées de texte ou d'image et de texte 
@@ -106,7 +122,8 @@ Cet aspect de carte est réutilisé dans toutes les pages sauf accueil.html
     text-align: center;
 }
 
-.texte p, .carte p{
+.texte p,
+.carte p {
     text-align: justify;
     padding: 10px;
     font-size: 1.2rem;
@@ -123,12 +140,8 @@ Cet aspect de carte est réutilisé dans toutes les pages sauf accueil.html
 
 /* Éléments redondants dans l'ensemble des pages */
 
-
-h1 {
-    text-align: center;
-}
-
 h1.titre {
+    text-align: center;
     color: whitesmoke;
     padding: 20px;
 }

@@ -1,7 +1,11 @@
 /* Style pour la page d'accueil `accueil.html` */
 
-body{
+body {
     font-family: 'Barlow', sans-serif;
+}
+
+h1 {
+    text-align: center;
 }
 
 .image-fond {
@@ -111,7 +115,7 @@ h1#link {
     color: whitesmoke;
 }
 
-.presentation figcaption{
+.presentation figcaption {
     color: whitesmoke;
     text-align: center;
 }
