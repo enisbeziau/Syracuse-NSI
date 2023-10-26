@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Quicksand:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/accueil.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
@@ -65,7 +67,7 @@
 
         <section class="presentation">
             <div class="texte-presentation">
-                <h2>Origines et énoncés de la conjecture </h2>
+                <h2>Énoncé de la conjecture</h2>
                 <p>
                     La conjecture de Syracuse repose sur une série d'opération appliquée à un nombre entier sctrictement positif.
                     Cette opération, appelée <span class="gras">application de Syracuse</span>, est définie ainsi :
@@ -76,36 +78,49 @@
                     - S'il est impair, triplez le et ajoutez 1
                     <br><br>
 
-                    En itérant sur cette application, nous pouvons obtenir une suite appelée <span class="gras">Suite de Syracuse</span>.
-                    En prenant, par exemple, 28 pour nombre de départ (noté u<sub>0</sub> ou N), la suite de Syracuse est la suivante : 
-                    <br>
-                    14 ; 7 ; 22 ; 11 ; 34 ; 17 ; 52 ; 26 ; 13 ; 40 ; 20 ; 10 ; 5 ; 16 ; 8 ; 4 ; 2 ; 1
-                    <br>
-                    1 étant impair, on le multiplie par 3 puis on ajoute 1 ce qui nous donne 4 qui est pair et que l'on divise donc par 2 
-                    Pour retomber sur 1...
-                    <br>
-                    Le cycle (4, 2, 1) se répète alors indéfiniment, c'est le <span class="gras">cycle trivial</span>.
+                    Remarque : On note conventionnellement N le nombre de départ.
                 </p>
             </div>
 
             <figure>
-                <a href="assets/graphique/28.png" target="_blank" rel="noopener noreferrer">
-                    <img src="assets/graphique/28.png"
-                         alt="Représentation graphique de la suite de Syracuse pour N = 28">
+                <a href="assets/valeurs.png" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/valeurs.png"
+                         alt="Application de Syracuse successives pour N = 27">
                 </a>
-                <figcaption>Représentation graphique de la suite de Syracuse pour N = 28</figcaption>
+                <figcaption>Application de Syracuse successives pour N = 27</figcaption>
             </figure>
         </section>
 
         <section class="presentation">
             <figure>
-                <a href="assets/graphique/28compressee.png" target="_blank" rel="noopener noreferrer">
-                    <img src="assets/graphique/28compressee.png"
-                         alt="Représentation graphique de la suite compressée de Syracuse pour N = 28">
+                <a href="assets/graphique/28.png" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/graphique/28.png" alt="Représentation graphique de la suite de Syracuse pour N = 28">
                 </a>
-                <figcaption>Représentation graphique de la suite compressée de Syracuse pour N = 28</figcaption>
+                <figcaption>Représentation graphique de la suite de Syracuse pour N = 28</figcaption>
             </figure>
 
+            <div class="texte-presentation">
+                <h2>La suite de Syracuse</h2>
+                <p>
+                    En itérant sur l'application de Syracuse, nous pouvons obtenir une suite appelée <span class="gras">suite de Syracuse</span>.
+                    Cette suite se définie par récurrence de cette manière :
+                    \[\forall n\in \mathbb N^* :\quad u_{n+1}=
+                    \left \{
+                        \begin{array}{c @{=} c}
+                            \frac{u_n}{2} & \text{Si } u_n \text{ est pair} \\
+                            3n+1  & \text{ Si} u_n \text{ est impair}
+                        \end{array}
+                        \right.
+                    \]
+                    En prenant, par exemple, \(u_0=28\), la suite de Syracuse est la suivante :
+                    14 ; 7 ; 22 ; 11 ; 34 ; 17 ; 52 ; 26 ; 13 ; 40 ; 20 ; 10 ; 5 ; 16 ; 8 ; 4 ; 2 ; 1
+                    1 étant impair, on le multiplie par 3 puis on ajoute 1 ce qui nous donne 4 qui est pair et que l'on divise donc par 2 Pour retomber sur 1...
+                    Le cycle (4, 2, 1) se répète alors indéfiniment, c'est le cycle trivial.
+                </p>
+            </div>
+        </section>
+
+        <section class="presentation">
             <div class="texte-presentation">
                 <h2>La suite compressée de Syracuse</h2>
                 <p>
@@ -120,6 +135,14 @@
                     toujours vérifier si la suite de Syracuse atterit ou non.
                 </p>
             </div>
+
+            <figure>
+                <a href="assets/graphique/28compressee.png" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/graphique/28compressee.png"
+                         alt="Représentation graphique de la suite compressée de Syracuse pour N = 28">
+                </a>
+                <figcaption>Représentation graphique de la suite compressée de Syracuse pour N = 28</figcaption>
+            </figure>
         </section>
     </main>
 
