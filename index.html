@@ -26,7 +26,7 @@
 
         <section class="accueil">
             <figure class="image-fond">
-                <img src="assets/accueil.jpg" alt="Tableau rempli d'expressions mathématiques floues">
+                <img src="assets/accueil.png" alt="Tableau rempli d'expressions mathématiques floues">
             </figure>
 
             <div class="contenu-accueil">
@@ -156,44 +156,6 @@
           </ul>
         </div>
       </footer>
-
-      <div class="changer-image">
-        <input type="text" id="nouvelle-image" placeholder="URL de la nouvelle image">
-        <button onclick="changerImageAccueil()">Changer l'image</button>
-    </div>
-    <script>
-        function changerImageAccueil() {
-            const nouvelleImageURL = document.getElementById("nouvelle-image").value;
-            if (nouvelleImageURL) {
-                const imageFond = document.querySelector(".image-fond img");
-                imageFond.src = nouvelleImageURL;
-            }
-        }
-        
-    </script>
-
-<div class="changer-image">
-    <input type="file" id="nouvelle-image2" accept="image/*">
-    <button onclick="changerImageAccueil2()">Changer l'image</button>
-</div>
-
-<script>
-    function changerImageAccueil2() {
-        const inputImage = document.getElementById("nouvelle-image2");
-        const imageFond = document.querySelector(".image-fond img");
-
-        // Vérifiez si un fichier a été sélectionné
-        if (inputImage.files.length > 0) {
-            const nouvelleImage = inputImage.files[0];
-            const nouvelleImageURL = URL.createObjectURL(nouvelleImage);
-
-            // Mettez à jour l'image d'accueil avec la nouvelle image
-            imageFond.src = nouvelleImageURL;
-        }
-    }
-</script>
-
-    <br><br><br><br><br><br><br><br><br><br>
 
 </body>
 
