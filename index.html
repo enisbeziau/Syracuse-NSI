@@ -157,6 +157,21 @@
         </div>
       </footer>
 
+      <div class="changer-image">
+        <input type="text" id="nouvelle-image" placeholder="URL de la nouvelle image">
+        <button onclick="changerImageAccueil()">Changer l'image</button>
+    </div>
+    <script>
+        function changerImageAccueil() {
+            const nouvelleImageURL = document.getElementById("nouvelle-image").value;
+            if (nouvelleImageURL) {
+                const imageFond = document.querySelector(".image-fond img");
+                imageFond.src = nouvelleImageURL;
+            }
+        }
+    </script>
+    
+
 </body>
 
 </html>
