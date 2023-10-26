@@ -65,6 +65,7 @@ body {
 /* Style du pied de page */
 
 footer {
+    border-top: 1px solid whitesmoke;
     background-color: rgb(38 74 87);
     color: whitesmoke;
     text-align: center;
@@ -79,7 +80,6 @@ footer a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid whitesmoke;
 }
 
 .reseau {
