@@ -28,16 +28,12 @@
         <section class="carte">
             <h2>1. Notion de vol</h2>
             <div class="contenu-carte">
-
                 <div class="texte">
                     <p>
                         La notion de "vol" dans une suite de Syracuse est étroitement liée à sa représentation
-                        graphique. En effet, lorsque nous traçons la représentation graphique de la suite, nous
-                        remarquons que ses valeurs peuvent atteindre des "hauteurs" considérables avant de redescendre
-                        plus ou moins rapidement. Cette trajectoire erratique rappelle la course aléatoire d'une feuille
-                        emportée par le vent. <br>
-                        C'est précisément cette similitude qui a conduit à l'utilisation du terme "vol" pour décrire ce
-                        phénomène.
+                        graphique. En effet, nous remarquons que ses valeurs peuvent atteindre des "hauteurs" considérables avant de redescendre
+                        plus ou moins rapidement. Cette trajectoire rappelle la course aléatoire d'une feuille emportée par le vent. 
+                        C'est cette similitude qui a conduit à l'utilisation du terme "vol" pour décrire ce phénomène.
                     </p>
                 </div>
 
@@ -48,18 +44,18 @@
                     <figcaption>Représentation graphique de la suite de Syracuse pour N = 27</figcaption>
                 </figure>
             </div>
-
         </section>
 
         <section class="carte">
             <h2>2. Temps de vol</h2>
             <div class="contenu-carte">
-
                 <div class="texte">
                     <p>
-                        Le temps de vol d'une suite de Syracuse correspond au nombre d'itérations effectuées jusqu'à ce
-                        que la suite entre dans le cycle trivial. <br>
-                        Dans l'exemple avec N = 20, son temps de vol est de 7
+                        Le temps de vol est défini comme le plus petit indice n tel que u<sub>n</sub> = 1.
+                        En d'autre terme, le temps de vol d'une suite de Syracuse correspond au nombre d'itérations effectuées jusqu'à ce
+                        que la suite atteigne 1 et, par conséquent, entre dans le cycle trivial. 
+                        <br>
+                        Exemple : La suite de Syracuse du nombre 20 a un temps de vol de 7 car il a fallu cette application de Syracuse pour atteindre 1.
                     </p>
                 </div>
 
@@ -78,9 +74,9 @@
 
                 <div class="texte">
                     <p>
-                        L'altitude maximale d'une suite de Syracuse fait référence à la plus grande valeur atteinte.
+                        L'altitude maximale fait référence à la plus grande valeur atteinte au cours des itérations de la suite
                         <br>
-                        Dans notre exemple où N = 30, le maximum est de 160.
+                        Exemple : Le maximum atteint par la suite de Syracuse du nombre 30 vaut 160.
                     </p>
                 </div>
 
@@ -99,12 +95,12 @@
 
                 <div class="texte">
                     <p>
-                        Le temps de vol en altitude d'un nombre est le plus petit indice n tel que u<sub>n + 1</sub>
-                        &#x3C;
-                        u<sub>n</sub>. Autrement dis, le temps de vol en altitude fait référence au nombre d'itération
-                        effectué avant que u<sub>n+1</sub> devienne plus petit que le nombre de départ. <br>Dans notre
-                        exemple, u<sub>0</sub> vaut 12 et u<sub>5</sub> > u<sub>0</sub> mais u<sub>6</sub> &#x3C;
-                        u<sub>0</sub>. <br>Le vol en altitude de 12 vaut donc 5.
+                        Le temps de vol en altitude d'un nombre est le plus petit indice n tel que u<sub>n+1</sub> &#x3C; u<sub>n</sub>. 
+                        Autrement dis, le temps de vol en altitude fait référence au nombre d'itération
+                        nécessaire avant que u<sub>n+1</sub> devienne plus petit que le nombre de départ. 
+                        <br>
+                        Dans notre exemple, u<sub>0</sub> = 12 et u<sub>5</sub> > u<sub>0</sub> mais u<sub>6</sub> &#x3C;
+                        u<sub>0</sub>. <br>Le vol en altitude de 12 vaut donc 6.
                         <br>
                     </p>
                 </div>
