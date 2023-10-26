@@ -8,7 +8,7 @@ Ce fichier vise à réunir tous les élements de style communs aux pages du site
     text-decoration: none;
     list-style: none;
     /* La couleur principale des textes et titres du site est noir. Seul le footer, la navbar, la page d'accueil et les titres h1 sont en blancs */
-    color: black; 
+    /* color: black;  */
     box-sizing: border-box;
     letter-spacing: 1px;
 }
@@ -123,11 +123,6 @@ Cet aspect de carte est réutilisé dans toutes les pages sauf accueil.html
 
 /* Éléments redondants dans l'ensemble des pages */
 
-span.centre{ 
-    /* A changer */
-    display: block;  
-    text-align: center;
-}
 
 h1 {
     text-align: center;
@@ -144,4 +139,10 @@ code {
     border-radius: 3px;
     font-family: courier, monospace;
     padding: 0 3px;
+}
+
+
+/* Style des rendus visuels LaTex grâce à MathJax. La couleur sert à mieux intégrer l'expression mathématique avec la police Quicksand */
+.MathJax.CtxtMenu_Attached_0 {
+    color: rgb(74 74 74);
 }

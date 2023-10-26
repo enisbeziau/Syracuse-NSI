@@ -71,19 +71,21 @@
             <div class="contenu-carte">
                 <div class="texte">
                     <p>
-                        - Les nombres de la forme 2k car ceux ci sont directement divisés par 2 donc u<sub>1</sub>
-                        &lt; N
+                        - Les nombres de la forme \(2k\) car ceux ci sont directement divisés par 2 donc \(u_1 \lt N\)
                         <br><br>
-                        - Les nombres impairs de la forme 4k + 1 car, par l'application de syracuse,
-                        4k + 1 ⇨ 12k + 4 ⇨ 6k + 2 ⇨ 3k + 1
+                        - Les nombres impairs de la forme \(4k+1\) car,
+                        \[4k+1 \rightarrow 12k+4 \rightarrow 6k+2 \rightarrow 3k+1\]
+                        et \(3k+1 \lt 4k+1 \iff u_3 \lt N\)
                         <br>
-                        et 3k + 1 &lt; 4k + 1 ⟺ u<sub>3</sub> &lt; u<sub>0</sub>. <br>Le vol des nombres de la
-                        forme 4k + 1
-                        atterrissent donc. <br><br>
-                        - Les nombres de la forme 16k + 3 car <br>⇨48k + 10 ⇨ 24k + 5 ⇨ 72k + 16 ⇨ 36k + 8
-                        ⇨ 18k + 4 ⇨ 9k + 2 <br>
-                        9k + 2 &lt; 16k + 3 ⟺ u<sub>6</sub> &lt; u<sub>0</sub>. <br> Les nombres de la forme 16k + 3
-                        atterrissent donc. <br> <br>
+                        Les nombres de la forme \(4k+1\) atterissent donc.
+                        <br><br><br>
+                        - Les nombres de la forme \(16k+3\) car 
+                        \[48k+10 \rightarrow 24k+5 \rightarrow 72k+16 \rightarrow 36k+8 \rightarrow 18k+4 \rightarrow 9k+2\]
+                        et \(9k+2 \lt 16k+3 \iff u_6 \lt N\)
+                        <br> 
+                        Les nombres de la forme \(16k+3\) atterissent donc.
+                        <br><br>
+                        (Où \(\rightarrow\) désigne l'application de syracuse)
                     </p>
                 </div>
 
@@ -107,31 +109,25 @@
         <section class="carte">
             <h2>2. Recherche de cycles non triviaux</h2>
             <p>
-                Une autre approche pour vaincre la conjecture de Syracuse serait de prouver qu'il existe un cycle dit
-                non trivial qui serait donc différent du cycle (4, 2, 1) qui serait donc un cycle non trivial. Supposons
-                qu'il existe un cycle non trivial de longueur 3 tel que :
+                Une autre approche pour vaincre la conjecture de Syracuse serait de prouver qu'il existe un cycle 
+                différent du cycle trivial. 
+                <br>
+                Pour ce faire, raisonnons par l'absurde et admettons qu'il existe un autre cycle de longueur 3 (A, B, C) tel que 
+                \(A\lt B\lt C\) et 
 
-                <br><br>
-                <span class="centre">A ⇨ B ⇨ C ⇨ A</span>
-                <br>
+                \[A \rightarrow B \rightarrow C \rightarrow A\]
 
-                On cherche à trouver les valeurs possibles de A, B et C tel que le cycle ci-dessus existe. (⇨ :
-                application de Syracuse).
+                Nous avons donc nécessairrement \(A\) impair car, le cas échéant, \(B\) serait divisé par 2 et \(B\lt A\).
                 <br>
-                Trivialement, A &lt; B &lt; C. Nous avons également nécessairement A impair car, le cas échéant, A
-                serait divisé par 2 et donc A &lt; B.
+                Ainsi \(B=3A+1\), qui est pair donc \(C=\frac{B}{2}=\frac{3A+1}{2}\). Puisque \(C \to A\) et \(C \gt A\), \(C\) est pair et vaut
+                \(\frac{1}{2}(\frac{3A+1}{2})=\frac{3A+1}{4}\)
                 <br>
-                On a donc B = 3A + 1 qui est pair. C vaudra donc B / 2 =
-                (3A + 1) / 2. Puisque C donne A et C &gt; A, C est pair. Donc A = (3A + 1) / 2²
-                <br>
-                On résoud donc l'équation d'inconnues A ∈ ℕ\{0}
+                Résolvons maintenant l'équation d'inconnue \(A\in \mathbb N^*\) afin de déduire les valeurs de \(A, B, C\) tels que le cycle existe.
+                \[A=\frac{3A+1}{4}\iff 4A=3A+1\iff A=1\]
 
-                <br><br>
-                <span class="centre">A = (3A + 1) / 4 <br> ⟺ 4A = 3A + 1 <br> ⟺ A = 1</span>
+                Ainsi \(B=3\times 1+1=4\) et \(C=\frac{B}{2}=\frac{4}{2}=2\)
                 <br>
-
-                On a donc nécessairement B = 4 et C = 2. Le seul cycle (A, B, C) possible dans les nombres positifs est
-                donc le cycle trivial
+                Nous concluons donc que le seul cycle de longueur 3 existant est le cycle trivial.
                 <br>
                 Par des méthodes de démonstration par l'absurde, il est possible de prouver
                 qu'il n'existe pas de cycle de longueur 2 ou 5.
@@ -153,25 +149,18 @@
 
                 <div class="texte">
                     <p>
-                        Partons de 8 Pour y arriver, nous venons soit de l'application de Syracuse 3x + 1, soit de x/2.
+                        Partons de 8 Pour y arriver, nous venons soit de l'application de Syracuse 3x + 1, soit de \(\frac x 2\).
                         <br>
-                        On test de résoudre l'équation d'inconnue n ∈ ℕ\{0} :
-
-                        <br><br>
-                        <span class="centre">3n + 1 = 8 <br> ⟺ 3n = 7 <br> ⟺ n = 7/3∉ ℕ\{0}</span>
-                        <br>
+                        On test de résoudre l'équation d'inconnue \(n\in \mathbb N^*\) :
+                        \[3n+1=8\iff 3n=8\iff n=\frac{7}{3} \notin \mathbb N^*\]
 
                         On en déduit donc que 8 ne vient pas de l'application de Syracuse sur les nombres impairs car
-                        7/3 n'est pas un entier naturel. Ainsi, 8 vient forcément de l'application de Syracuse sur les
+                        \(\frac{7}{3}\) n'est pas un entier naturel. Ainsi, 8 vient forcément de l'application de Syracuse sur les
                         nombres pairs et donc de 16.
                         <br><br>
                         Nous passons maintenant à 16. Par la même méthode que pour 8, on résoud les équations
-                        d'inconnues n ∈ ℕ\{0} :
-
-                        <br><br>
-                        <span class="centre">3n + 1 = 16 et n / 2 = 16 <br> ⟺ n = 5 et n = 32</span>
-                        <br>
-
+                        d'inconnues \(n\in \mathbb N^*\) :
+                        \[3n+1=16\iff n=5\, \, \, \text{ou}\, \frac{n}{2}=16\iff n=32 \]
                         Ces deux équations possèdent des solutions naturels, l'arbre de Syracuse possède donc 2 branches
                         qui représente les 2 applications de Syracuse possibles. À partir de ces deux branches, d'autres
                         seront à leur tour crées. Ainsi, il est dit que tous les nombres entiers naturels sctrictement

@@ -8,6 +8,9 @@
     <link rel="shortcut icon" href="../assets/icon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Quicksand:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/general.css">
+    <!-- Importation de la bibliothèque MathsJax qui permet d'avoir un rendu LaTex -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
@@ -51,7 +54,7 @@
             <div class="contenu-carte">
                 <div class="texte">
                     <p>
-                        Le temps de vol est défini comme le plus petit indice n tel que u<sub>n</sub> = 1.
+                        Le temps de vol est défini comme le plus petit indice \(n\) tel que \(u_n=1\).
                         En d'autre terme, le temps de vol d'une suite de Syracuse correspond au nombre d'itérations effectuées jusqu'à ce
                         que la suite atteigne 1 et, par conséquent, entre dans le cycle trivial. 
                         <br>
@@ -95,13 +98,13 @@
 
                 <div class="texte">
                     <p>
-                        Le temps de vol en altitude d'un nombre est le plus petit indice n tel que u<sub>n+1</sub> &#x3C; u<sub>n</sub>. 
+                        Le temps de vol en altitude d'un nombre est le plus petit indice \(n\) tel que \(u_{n+1} \lt u_n\). 
                         Autrement dis, le temps de vol en altitude fait référence au nombre d'itération
                         nécessaire avant que u<sub>n+1</sub> devienne plus petit que le nombre de départ. 
                         <br>
-                        Dans notre exemple, u<sub>0</sub> = 12 et u<sub>5</sub> > u<sub>0</sub> mais u<sub>6</sub> &#x3C;
-                        u<sub>0</sub>. <br>Le vol en altitude de 12 vaut donc 6.
+                        Dans notre exemple, \(u_0=12\) et \(u_5 \gt u_0\) mais \(u_6 \lt u_0\)
                         <br>
+                        Le vol en altitude de 12 vaut donc 6.
                     </p>
                 </div>
 
