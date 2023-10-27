@@ -158,6 +158,37 @@
         </div>
       </footer>
 
+      <div class="color-picker">
+        <input type="text" id="color-input" placeholder="Entrez un code hexadécimal">
+        <button id="change-color-button">Changer la couleur</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const colorInput = document.getElementById("color-input");
+            const changeColorButton = document.getElementById("change-color-button");
+    
+            changeColorButton.addEventListener("click", function() {
+                const hexColor = colorInput.value;
+                if (/^#[0-9A-Fa-f]{6}$/.test(hexColor)) {
+                    document.body.style.backgroundColor = hexColor;
+                    const sections = document.querySelectorAll(".presentation");
+                    sections.forEach(function(section) {
+                        section.style.backgroundColor = hexColor;
+                    });
+                    const footer = document.querySelector("footer");
+                    footer.style.backgroundColor = hexColor;
+                } else {
+                    alert("Code hexadécimal invalide. Veuillez entrer un code hexadécimal à six chiffres (par exemple, #FF5733).");
+                }
+            });
+        });
+    </script>
+    
+    
+    
+    
+
 </body>
 
 </html>
