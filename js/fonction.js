@@ -52,12 +52,14 @@ function creerGraphique(ctx, suite, repere) {
      * @param {entier[]} suite - La suite dont les éléments composeront les points du graphique qui seront reliés
      * @param {"linear" | "logarithmic"} repere - Le type de repère dans lequel sera dessiné le graphique
      */
+    // Constante contenant les str "orthonormé" ou "semi-logarithmique" en fonction de la valeur de l'argument repere.
+    const repereLabel = repere === "linear" ? "orthonormé" : "semi-logarithmique"; 
     new Chart(ctx, {
         type: 'line',
         data: {
             labels: Array.from({ length: suite.length }, (_, index) => index + 1),
             datasets: [{
-                label: '',
+                label: 'Repère ' + repereLabel,
                 data: suite,
                 borderColor: 'black',
                 borderWidth: 2,
