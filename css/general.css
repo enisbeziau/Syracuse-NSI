@@ -60,50 +60,6 @@ body {
 }
 
 
-/* 
-Style des « cartes », les sections blanches composées de texte ou d'image et de texte 
-Cet aspect de carte est réutilisé dans toutes les pages sauf accueil.html
-*/
-
-.carte {
-    font-family: 'Quicksand';
-    background: whitesmoke;
-    margin: 0 70px 50px 75px;
-    border-radius: 20px;
-}
-
-.carte h2 {
-    padding: 12px;
-    text-decoration: underline;
-}
-
-
-.contenu-carte {
-    display: flex;
-}
-
-.texte,
-.image {
-    flex: 1;
-    margin: 5px;
-    text-align: center;
-}
-
-.texte p,
-.carte p {
-    text-align: justify;
-    padding: 10px;
-    font-size: 1.2rem;
-}
-
-.image {
-    border-left: 1px solid black;
-}
-
-.image img {
-    width: 98%;
-}
-
 
 /* Style du pied de page */
 

@@ -1,0 +1,58 @@
+
+.presentation {
+    font-family: 'Barlow', 'sans-serif';
+    background-color: rgb(38 74 87);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px 50px 50px;
+    border-bottom: 1px solid whitesmoke;
+}
+
+.presentation figure {
+    max-width: 50%;
+}
+
+.presentation figure img {
+    background-color: whitesmoke;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.texte-presentation {
+    flex: 1;
+    padding: 20px;
+}
+
+.texte-presentation h2 {
+    color: whitesmoke;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.texte-presentation p {
+    color: whitesmoke;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.texte-presentation sub {
+    color: whitesmoke;
+}
+
+.presentation figcaption {
+    color: whitesmoke;
+    text-align: center;
+}
+
+span.gras {
+    font-weight: bold;
+    color: whitesmoke;
+
+}
+
+.MathJax.CtxtMenu_Attached_0 {
+    color: whitesmoke;
+}

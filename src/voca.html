@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="../assets/icon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Quicksand:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/section/presentation.css">
     <!-- Importation de la bibliothèque MathsJax qui permet d'avoir un rendu LaTex -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -28,106 +29,103 @@
     <h1 class="titre">Vocabulaire</h1>
 
     <main>
-        <section class="carte">
-            <h2>1. Notion de vol</h2>
-            <div class="contenu-carte">
-                <div class="texte">
-                    <p>
-                        La notion de "vol" dans une suite de Syracuse est étroitement liée à sa représentation
-                        graphique. En effet, nous remarquons que ses valeurs peuvent atteindre des "hauteurs" considérables avant de redescendre
-                        plus ou moins rapidement. Cette trajectoire rappelle la course aléatoire d'une feuille emportée par le vent. 
-                        C'est cette similitude qui a conduit à l'utilisation du terme "vol" pour décrire ce phénomène.
-                    </p>
-                </div>
+        <section class="presentation">
+            <figure>
+                <a href="../assets/graphique/27.png" target="_blank" rel="noopener noreferrer">
+                    <img src="../assets/graphique/27.png"
+                        alt="Représentation graphique de la suite de Syracuse pour N = 27">
+                </a>
+                <figcaption>Représentation graphique de la suite de Syracuse pour \(N=27\)</figcaption>
+            </figure>
 
-                <figure class="image">
-                    <a href="../assets/graphique/27.png" target="_blank" rel="noopener noreferrer">
-                        <img src="../assets/graphique/27.png" alt="Représentation graphique de la suite de Syracuse pour N = 27">
-                    </a>
-                    <figcaption>Représentation graphique de la suite de Syracuse pour N = 27</figcaption>
-                </figure>
+            <div class="texte-presentation">
+                <h2>1. Notion de vol</h2>
+                <p>
+                    La notion de "vol" dans une suite de Syracuse est étroitement liée à sa représentation graphique. En
+                    effet, nous remarquons que ses valeurs peuvent atteindre des "hauteurs" considérables avant de
+                    redescendre plus ou moins rapidement. Cette trajectoire rappelle la course aléatoire d'une feuille
+                    emportée par le vent. C'est cette similitude qui a conduit à l'utilisation du terme "vol" pour
+                    décrire ce phénomène.
+                </p>
             </div>
         </section>
 
-        <section class="carte">
-            <h2>2. Temps de vol</h2>
-            <div class="contenu-carte">
-                <div class="texte">
-                    <p>
-                        Le temps de vol est défini comme le plus petit indice \(n\) tel que \(u_n=1\).
-                        En d'autre terme, le temps de vol d'une suite de Syracuse correspond au nombre d'itérations effectuées jusqu'à ce
-                        que la suite atteigne 1 et, par conséquent, entre dans le cycle trivial. 
-                        <br>
-                        Exemple : La suite de Syracuse du nombre 20 a un temps de vol de 7 car il a fallu cette application de Syracuse pour atteindre 1.
-                    </p>
-                </div>
+        <section class="presentation">
+            <div class="texte-presentation">
+                <h2>2. Temps de vol</h2>
+                <p>
+                    Le temps de vol est défini comme le plus petit indice \(n\) tel que \(u_n=1\)
+                    . En d'autre terme, le temps de vol d'une suite de Syracuse correspond au nombre d'itérations
+                    effectuées jusqu'à ce que la suite atteigne 1 et, par conséquent, entre dans le cycle trivial.
+                    <br>
+                    Exemple : La suite de Syracuse du nombre 20 a un temps de vol de 7 car il a fallu cette application
+                    de Syracuse pour atteindre 1.
+                </p>
+            </div>
 
-                <figure class="image">
-                    <a href="../assets/graphique/20.png" target="_blank" rel="noopener noreferrer">
-                        <img src="../assets/graphique/20.png" alt="Représentation graphique de la suite de Syracuse pour N = 20">
-                    </a>
-                    <figcaption>Représentation graphique de la suite de Syracuse pour N = 20</figcaption>
-                </figure>
+            <figure>
+                <a href="../assets/graphique/20.png" target="_blank" rel="noopener noreferrer">
+                    <img src="../assets/graphique/20.png"
+                        alt="Représentation graphique de la suite de Syracuse pour N = 20">
+                </a>
+                <figcaption>Représentation graphique de la suite de Syracuse pour \(N=20\)</figcaption>
+            </figure>
+        </section>
+
+        <section class="presentation">
+            <figure>
+                <a href="../assets/graphique/30.png" target="_blank" rel="noopener noreferrer">
+                    <img src="../assets/graphique/30.png"
+                        alt="Représentation graphique de la suite de Syracuse pour N = 30">
+                </a>
+                <figcaption>Représentation graphique de la suite de Syracuse pour \(N=30\)</figcaption>
+            </figure>
+
+            <div class="texte-presentation">
+                <h2>3. Altitude maximale</h2>
+                <p>
+                    L'altitude maximale fait référence à la plus grande valeur atteinte au cours des itérations de la
+                    suite.
+                    <br>
+                    Exemple : Le maximum atteint par la suite de Syracuse du nombre 30 vaut 160.
+                </p>
             </div>
         </section>
 
-        <section class="carte">
-            <h2>3. Altitude maximale</h2>
-            <div class="contenu-carte">
-
-                <div class="texte">
-                    <p>
-                        L'altitude maximale fait référence à la plus grande valeur atteinte au cours des itérations de la suite
-                        <br>
-                        Exemple : Le maximum atteint par la suite de Syracuse du nombre 30 vaut 160.
-                    </p>
-                </div>
-
-                <figure class="image">
-                    <a href="../assets/graphique/30.png" target="_blank" rel="noopener noreferrer">
-                        <img src="../assets/graphique/30.png" alt="Représentation graphique de la suite de Syracuse pour N = 30">
-                    </a>
-                    <figcaption>Représentation graphique de la suite de Syracuse pour N = 30</figcaption>
-                </figure>
+        <section class="presentation">
+            <div class="texte-presentation">
+                <h2>4. Temps de vol en altitude</h2>
+                <p>
+                    Le temps de vol en altitude d'un nombre est le plus petit indice \(n\) tel que \(u_{n+1} \lt u_n\).
+                    Autrement dis, le temps de vol en altitude fait référence au nombre d'itération
+                    nécessaire avant que u<sub>n+1</sub> devienne plus petit que le nombre de départ.
+                    <br>
+                    Dans notre exemple, \(u_0=12\) et \(u_5 \gt u_0\) mais \(u_6 \lt u_0\)
+                    <br>
+                    Le vol en altitude de 12 vaut donc 6.
+                </p>
             </div>
-        </section>
 
-        <section class="carte">
-            <h2>4. Temps de vol en altitude</h2>
-            <div class="contenu-carte">
-
-                <div class="texte">
-                    <p>
-                        Le temps de vol en altitude d'un nombre est le plus petit indice \(n\) tel que \(u_{n+1} \lt u_n\). 
-                        Autrement dis, le temps de vol en altitude fait référence au nombre d'itération
-                        nécessaire avant que u<sub>n+1</sub> devienne plus petit que le nombre de départ. 
-                        <br>
-                        Dans notre exemple, \(u_0=12\) et \(u_5 \gt u_0\) mais \(u_6 \lt u_0\)
-                        <br>
-                        Le vol en altitude de 12 vaut donc 6.
-                    </p>
-                </div>
-
-                <figure class="image">
-                    <a href="../assets/graphique/12.png" target="_blank" rel="noopener noreferrer">
-                        <img src="../assets/graphique/12.png" alt="Représentation graphique de la suite de Syracuse pour N = 12">
-                    </a>
-                    <figcaption>Représentation graphique de la suite de Syracuse pour N = 12</figcaption>
-                </figure>
-            </div>
+            <figure>
+                <a href="../assets/graphique/12.png" target="_blank" rel="noopener noreferrer">
+                    <img src="../assets/graphique/12.png"
+                        alt="Représentation graphique de la suite de Syracuse pour N = 12">
+                </a>
+                <figcaption>Représentation graphique de la suite de Syracuse pour \(N=12\)</figcaption>
+            </figure>
         </section>
     </main>
 
     <footer>
         <div class="contenu-footer">
-          <p>&copy; <a href="infos.html">Enis Béziau 1H</a></p>
-          <ul class="reseau">
-            <li><a href="http://github.com/enisbeziau" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a href="mailto:enislycee@gmail.com" target="_blank" rel="noopener noreferrer">Gmail</a></li>
-            <li><a href="http://bit.ly/LMB_1H" target="_blank" rel="noopener noreferrer">Drive</a></li>
-          </ul>
+            <p>&copy; <a href="infos.html">Enis Béziau 1H</a></p>
+            <ul class="reseau">
+                <li><a href="http://github.com/enisbeziau" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="mailto:enislycee@gmail.com" target="_blank" rel="noopener noreferrer">Gmail</a></li>
+                <li><a href="http://bit.ly/LMB_1H" target="_blank" rel="noopener noreferrer">Drive</a></li>
+            </ul>
         </div>
-      </footer>
+    </footer>
 
 </body>
 
