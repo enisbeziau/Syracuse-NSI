@@ -9,9 +9,9 @@ function syracuseSuite(nombre) {
     /**
      * Génère la suite de Syracuse pour un nombre donné.
      * @param {number} nombre - Le nombre de départ.
-     * @return {number[]} - La suite de Syracuse.
+     * @returns {number[]} - La suite de Syracuse sous forme de tableau.
      */
-    const sequence = [nombre];
+    let sequence = [nombre];
     while (nombre !== 1) {
         nombre = nombre % 2 === 0 ? nombre / 2 : nombre * 3 + 1;
         sequence.push(nombre + '   ');
@@ -53,7 +53,7 @@ function creerGraphique(ctx, suite, repere) {
      * @param {"linear" | "logarithmic"} repere - Le type de repère dans lequel sera dessiné le graphique
      */
     // Constante contenant les str "orthonormé" ou "semi-logarithmique" en fonction de la valeur de l'argument repere.
-    const repereLabel = repere === "linear" ? "orthonormé" : "semi-logarithmique"; 
+    const repereLabel = repere === "linear" ? "orthonormé" : "semi-logarithmique";
     new Chart(ctx, {
         type: 'line',
         data: {
@@ -81,7 +81,7 @@ function creerGraphique(ctx, suite, repere) {
                     type: repere,
                     title: {
                         display: true,
-                        text: 'Valeurs ' + repere,
+                        text: 'Valeurs ',
                         color: 'black',
                     },
                     ticks: {
@@ -104,8 +104,8 @@ function creerGraphique(ctx, suite, repere) {
 function verifierEntree(input) {
     /**
      * Sert à vérifier la saisie de l'utilisateur pour éviter une erreur lors de la génération du graphique
-     * @param {string | number | null} input - La valeur qui est testé pour savoir si oui ou non c'est un entier
-     * @return {bool} - Si oui ou non l'entrée est un nombre supérieur ou égal à 1
+     * @param {any} input - La valeur qui est testé pour savoir si oui ou non c'est un entier
+     * @return {bool} - true si input est un nombre entier supérieur ou égal à 1, false sinon
      */
     return Number.isInteger(input) && input >= 1;
 }
