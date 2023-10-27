@@ -22,7 +22,6 @@ let premierClic = true;
 
 
 // Constantes utilisées pour la partie informations
-const btnFleche = document.getElementById("fleche");
 const informations = document.getElementById("informations");
 const classInformations = document.querySelector(".section-informations")
 const suiteTxt = document.getElementById("suite-txt");
@@ -30,16 +29,6 @@ const txtCompressee = document.getElementById("txt-compressee");
 const vol = document.getElementById("vol");
 const altitudeMax = document.getElementById("altitude-max");
 const facteurExpansion = document.getElementById("facteur-expansion");
-
-
-// Lors du clic sur la flèche à droite de l'écran, la section passe de 0% de largeur à 100% de largeur, la rendant visible
-btnFleche.addEventListener("click", () => {
-    if (informations.style.width === "100%") {
-        informations.style.width = "0";
-    } else {
-        informations.style.width = "100%";
-    }
-});
 
 
 btn.addEventListener('click', () => {

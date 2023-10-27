@@ -7,8 +7,6 @@ Ce fichier vise à réunir tous les élements de style communs aux pages du site
     margin: 0px;
     text-decoration: none;
     list-style: none;
-    /* La couleur principale des textes et titres du site est noir. Seul le footer, la navbar, la page d'accueil et les titres h1 sont en blancs */
-    /* color: black;  */
     box-sizing: border-box;
     letter-spacing: 1px;
 }
@@ -62,38 +60,6 @@ body {
 }
 
 
-/* Style du pied de page */
-
-footer {
-    border-top: 1px solid whitesmoke;
-    background-color: rgb(38 74 87);
-    color: whitesmoke;
-    text-align: center;
-    padding: 20px;
-}
-
-footer a {
-    color: whitesmoke;
-}
-
-.contenu-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.reseau {
-    display: flex;
-}
-
-.reseau li {
-    margin-right: 10px;
-}
-
-.reseau a {
-    color: whitesmoke;
-}
-
 /* 
 Style des « cartes », les sections blanches composées de texte ou d'image et de texte 
 Cet aspect de carte est réutilisé dans toutes les pages sauf accueil.html
@@ -136,6 +102,43 @@ Cet aspect de carte est réutilisé dans toutes les pages sauf accueil.html
 
 .image img {
     width: 98%;
+}
+
+
+/* Style du pied de page */
+
+footer {
+    border-top: 1px solid whitesmoke;
+    background-color: rgb(38 74 87);
+    color: whitesmoke;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: whitesmoke;
+}
+
+.contenu-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reseau {
+    display: flex;
+}
+
+.reseau li {
+    margin-right: 10px;
+}
+
+.reseau a {
+    color: whitesmoke;
+}
+
+.reseau a:hover{
+    text-decoration: underline;
 }
 
 
