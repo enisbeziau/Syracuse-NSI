@@ -43,16 +43,9 @@ body {
     border-radius: 20px;
 }
 
-.zone-graphique.on {
-    display: block;
-}
 
 .section-informations {
     display: none;
-}
-
-.section-informations.on {
-    display: block;
 }
 
 #informations {
