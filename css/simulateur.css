@@ -44,6 +44,40 @@ body {
 }
 
 
+/* Style des boutons pour changer le repère du graphique*/
+
+.ensemble-btn {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.ensemble-btn button {
+    border: none;
+    cursor: pointer;
+    padding: 7px 13px;
+    width: 50%; /* Les boutons auront la même largeur */
+    background-color: #a5a5a5;
+    color: black;
+    border-radius: 5px;
+}
+
+/* Style pour le dernier bouton */
+.ensemble-btn button:last-child {
+    margin-left: 5px;
+}
+
+.ensemble-btn button:hover {
+    background-color: #2980b9;
+}
+
+#ensemble-btn {
+    display: none;
+}
+
+/*  */
+
+
 .section-informations {
     display: none;
 }
