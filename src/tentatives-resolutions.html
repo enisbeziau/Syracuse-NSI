@@ -71,7 +71,8 @@
             <div class="contenu-carte">
                 <div class="texte">
                     <p>
-                        - Les nombres de la forme \(2k\) car ceux ci sont directement divisés par 2 donc \(u_1 \lt N\)
+                        - Les nombres de la forme \(2k\) et \(2^n\), pour tout \(n\in \mathbb N^*\), 
+                          car ceux ci sont directement divisés par 2 donc \(u_1 \lt N\)
                         <br><br>
                         - Les nombres impairs de la forme \(4k+1\) car,
                         \[4k+1 \rightarrow 12k+4 \rightarrow 6k+2 \rightarrow 3k+1\]
@@ -119,13 +120,13 @@
 
                 Nous avons donc nécessairrement \(A\) impair car, le cas échéant, \(B\) serait divisé par 2 et \(B\lt A\).
                 <br>
-                Ainsi \(B=3A+1\), qui est pair donc \(C=\frac{B}{2}=\frac{3A+1}{2}\). Puisque \(C \to A\) et \(C \gt A\), \(C\) est pair et vaut
-                \(\frac{1}{2}(\frac{3A+1}{2})=\frac{3A+1}{4}\)
+                Ainsi \(B=3A+1\), qui est pair donc \(C=\frac{B}{2}=\frac{3A+1}{2}\). Puisque \(C \to A\) et \(C \gt A\),   \(C\) est pair et vaut
+                \(\frac{B}{2}=\frac{1}{2}(\frac{3A+1}{2})=\frac{3A+1}{4}\)
                 <br>
                 Résolvons maintenant l'équation d'inconnue \(A\in \mathbb N^*\) afin de déduire les valeurs de \(A, B, C\) tels que le cycle existe.
                 \[A=\frac{3A+1}{4}\iff 4A=3A+1\iff A=1\]
 
-                Ainsi \(B=3\times 1+1=4\) et \(C=\frac{B}{2}=\frac{4}{2}=2\)
+                Ainsi \(B=3\times 1+1=4\;\) et \(C=\frac{B}{2}=\frac{4}{2}=2\)
                 <br>
                 Nous concluons donc que le seul cycle de longueur 3 existant est le cycle trivial.
                 <br>
@@ -152,7 +153,7 @@
                         Partons de 8 Pour y arriver, nous venons soit de l'application de Syracuse 3x + 1, soit de \(\frac x 2\).
                         <br>
                         On test de résoudre l'équation d'inconnue \(n\in \mathbb N^*\) :
-                        \[3n+1=8\iff 3n=8\iff n=\frac{7}{3} \notin \mathbb N^*\]
+                        \[3n+1=8\iff 3n=7\iff n=\frac{7}{3} \notin \mathbb N^*\]
 
                         On en déduit donc que 8 ne vient pas de l'application de Syracuse sur les nombres impairs car
                         \(\frac{7}{3}\) n'est pas un entier naturel. Ainsi, 8 vient forcément de l'application de Syracuse sur les
