@@ -14,7 +14,7 @@ function syracuseSuite(nombre) {
     let sequence = [nombre];
     while (nombre !== 1) {
         nombre = nombre % 2 === 0 ? nombre / 2 : nombre * 3 + 1;
-        sequence.push(nombre + '   ');
+        sequence.push(nombre);
     }
     return sequence;
 }
@@ -29,7 +29,7 @@ function syracuseCompresseeSuite(nombre) {
     const sequence = [nombre];
     while (nombre !== 1) {
         nombre = nombre % 2 === 0 ? nombre / 2 : (nombre * 3 + 1) / 2;
-        sequence.push(nombre + '   ');
+        sequence.push(nombre);
     }
     return sequence;
 }
@@ -111,6 +111,7 @@ function verifierEntree(input) {
 }
 
 
+// Exporte les fonctions définies dans ce fichier pour pouvoir les importer et utiliser dans app.js
 export {
     syracuseSuite,
     syracuseCompresseeSuite,

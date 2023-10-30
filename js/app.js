@@ -6,6 +6,7 @@ Code gérant :
 */
 
 
+// Importe les fonctions utilisées dans le programme depuis fonction.js
 import {
     syracuseSuite,
     syracuseCompresseeSuite,
@@ -46,7 +47,7 @@ boutons.forEach(bouton => {
         boutons.forEach(boutonReinitialise => {
             boutonReinitialise.style.backgroundColor = '';
         });
-        
+
         // Change la couleur de fond du bouton cliqué en bleu
         bouton.style.backgroundColor = "#1b9bff";
     });
@@ -60,13 +61,16 @@ btn_input.addEventListener('click', () => {
 
         const ctx = canvas.getContext('2d');
         let suiteSyracuse = syracuseSuite(entreeValide);
-        let suiteCompresseeSyracuse = syracuseCompresseeSuite(entreeValide)
+        let suiteCompresseeSyracuse = syracuseCompresseeSuite(entreeValide);
+
 
         // Supprimer le graphique existant s'il y en a un
         supprimerGraphiqueExistant(canvas);
 
+
         // Créer un nouveau graphique
         creerGraphique(ctx, suiteSyracuse, "linear");
+
 
         if (premierClic) {
             zoneGraphique.style.display = "block";
@@ -86,14 +90,19 @@ btn_input.addEventListener('click', () => {
             supprimerGraphiqueExistant(canvas);
             creerGraphique(ctx, suiteSyracuse, "logarithmic");
         })
-        
+
+
+        // La première génération étant forcément avec le repère orthonormé, on colore le bouton
+        btnOrtho.style.backgroundColor = "#1b9bff";
+
 
         // Remplissage des informations de la section informations en fonction de l'entrée de l'utilisateur
         vol.innerHTML = "Vol de la suite : " + suiteSyracuse.length;
         altitudeMax.innerHTML = "Altitude maximale : " + Math.max(...suiteSyracuse);
         facteurExpansion.innerHTML = "Facteur d'expansion : " + Math.round((Math.max(...suiteSyracuse) / entreeValide));
-        suiteTxt.innerHTML = suiteSyracuse;
-        txtCompressee.innerHTML = suiteCompresseeSyracuse;
-    } 
-    else { alert("Vous devez entrer un nombre entier supérieur ou égal à 1");}
+        // Affiche les nombres des suites dans le format nombre1 ; nombre2 ...
+        suiteTxt.innerHTML = suiteSyracuse.map(num => ` ${num} `).join(';');
+        txtCompressee.innerHTML = suiteCompresseeSyracuse.map(num => ` ${num} `).join(';');
+    }
+    else { alert("Vous devez entrer un nombre entier supérieur ou égal à 1"); }
 });
