@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tentatives de résolution | Projet NSI</title>
     <link rel="shortcut icon" href="../assets/icon.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Quicksand:wght@300&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/general.css">
     <link rel="stylesheet" href="../css/section/carte.css">
     <!-- Importation de la bibliothèque MathJax qui permet d'écrire des équations plus proprement grâce à LaTex -->
@@ -53,7 +54,8 @@
                 </div>
 
                 <figure class="image">
-                    <a href="https://replit.com/@medouard770/syracuse#main.py" target="_blank" rel="noopener noreferrer">
+                    <a href="https://replit.com/@medouard770/syracuse#main.py" target="_blank"
+                        rel="noopener noreferrer">
                         <img src="../assets/tentatives_resolutions/code.png" alt="Code python" title="Testez-le">
                     </a>
                 </figure>
@@ -72,8 +74,8 @@
             <div class="contenu-carte">
                 <div class="texte">
                     <p>
-                        - Les nombres de la forme \(2k\) et \(2^n\), pour tout \(n\in \mathbb N^*\), 
-                          car ceux ci sont directement divisés par 2 donc \(u_1 \lt N\)
+                        - Les nombres de la forme \(2k\) et \(2^n\), pour tout \(n\in \mathbb N^*\),
+                        car ceux ci sont directement divisés par 2 donc \(u_1 \lt N\)
                         <br><br>
                         - Les nombres impairs de la forme \(4k+1\) car,
                         \[4k+1 \rightarrow 12k+4 \rightarrow 6k+2 \rightarrow 3k+1\]
@@ -81,10 +83,11 @@
                         <br>
                         Les nombres de la forme \(4k+1\) atterissent donc.
                         <br><br><br>
-                        - Les nombres de la forme \(16k+3\) car 
-                        \[48k+10 \rightarrow 24k+5 \rightarrow 72k+16 \rightarrow 36k+8 \rightarrow 18k+4 \rightarrow 9k+2\]
+                        - Les nombres de la forme \(16k+3\) car
+                        \[48k+10 \rightarrow 24k+5 \rightarrow 72k+16 \rightarrow 36k+8 \rightarrow 18k+4 \rightarrow
+                        9k+2\]
                         et \(9k+2 \lt 16k+3 \iff u_6 \lt N\)
-                        <br> 
+                        <br>
                         Les nombres de la forme \(16k+3\) atterissent donc.
                         <br><br>
                         (Où \(\rightarrow\) désigne l'application de syracuse)
@@ -92,7 +95,8 @@
                 </div>
 
                 <figure class="image">
-                    <a href="https://replit.com/@medouard770/suiteexclusion#main.py" target="_blank" rel="noopener noreferrer">
+                    <a href="https://replit.com/@medouard770/suiteexclusion#main.py" target="_blank"
+                        rel="noopener noreferrer">
                         <img src="../assets/tentatives_resolutions/code_opti.png" alt="Code Python" title="Testez-le">
                     </a>
                 </figure>
@@ -111,20 +115,24 @@
         <section class="carte">
             <h2>2. Recherche de cycles non triviaux</h2>
             <p>
-                Une autre approche pour vaincre la conjecture de Syracuse serait de prouver qu'il existe un cycle 
-                différent du cycle trivial. 
+                Une autre approche pour vaincre la conjecture de Syracuse serait de prouver qu'il existe un cycle
+                différent du cycle trivial.
                 <br>
-                Pour ce faire, raisonnons par l'absurde et admettons qu'il existe un autre cycle de longueur 3 \((A, B, C)\) tel que 
-                \(A\lt B\lt C\) et 
+                Pour ce faire, raisonnons par l'absurde et admettons qu'il existe un autre cycle de longueur 3 \((A, B,
+                C)\) tel que
+                \(A\lt B\lt C\) et
 
                 \[A \rightarrow B \rightarrow C \rightarrow A\]
 
-                Nous avons donc nécessairrement \(A\) impair car, le cas échéant, \(B\) serait divisé par 2 et \(B\lt A\).
+                Nous avons donc nécessairrement \(A\) impair car, le cas échéant, \(B\) serait divisé par 2 et \(B\lt
+                A\).
                 <br>
-                Ainsi \(B=3A+1\), qui est pair donc \(C=\frac{B}{2}=\frac{3A+1}{2}\). Puisque \(C \to A\) et \(C \gt A\),   \(C\) est pair et vaut
+                Ainsi \(B=3A+1\), qui est pair donc \(C=\frac{B}{2}=\frac{3A+1}{2}\). Puisque \(C \to A\) et \(C \gt
+                A\), \(C\) est pair et vaut
                 \(\frac{B}{2}=\frac{1}{2}(\frac{3A+1}{2})=\frac{3A+1}{4}\)
                 <br>
-                Résolvons maintenant l'équation d'inconnue \(A\in \mathbb N^*\) afin de déduire les valeurs de \(A, B, C\) tels que le cycle existe.
+                Résolvons maintenant l'équation d'inconnue \(A\in \mathbb N^*\) afin de déduire les valeurs de \(A, B,
+                C\) tels que le cycle existe.
                 \[A=\frac{3A+1}{4}\iff 4A=3A+1\iff A=1\]
 
                 Ainsi \(B=3\times 1+1=4\;\) et \(C=\frac{B}{2}=\frac{4}{2}=2\)
@@ -151,13 +159,15 @@
 
                 <div class="texte">
                     <p>
-                        Partons de 8 Pour y arriver, nous venons soit de l'application de Syracuse 3x + 1, soit de \(\frac x 2\).
+                        Partons de 8 Pour y arriver, nous venons soit de l'application de Syracuse 3x + 1, soit de
+                        \(\frac x 2\).
                         <br>
                         On test de résoudre l'équation d'inconnue \(n\in \mathbb N^*\) :
                         \[3n+1=8\iff 3n=7\iff n=\frac{7}{3} \notin \mathbb N^*\]
 
                         On en déduit donc que 8 ne vient pas de l'application de Syracuse sur les nombres impairs car
-                        \(\frac{7}{3}\) n'est pas un entier naturel. Ainsi, 8 vient forcément de l'application de Syracuse sur les
+                        \(\frac{7}{3}\) n'est pas un entier naturel. Ainsi, 8 vient forcément de l'application de
+                        Syracuse sur les
                         nombres pairs et donc de 16.
                         <br><br>
                         Nous passons maintenant à 16. Par la même méthode que pour 8, on résoud les équations
@@ -179,18 +189,35 @@
 
             </div>
         </section>
+
+        <section class="carte">
+            <h2>Un énoncé indécidable ?</h2>
+            <p>
+                Après toutes ces tentatives infructueuses ou n'apportant pas une réponse claire et définitive quant à la
+                validation ou à la réfutation de la conjecture, certains spécialités viennent à se demander si cette
+                question ne serait pas indescidable. Cependant, une méthode de résoudre cette conjecture serait de
+                trouver un contre exemple à celle ci. Pour le moment, tous les nombres de l'intervalle \([1, 2^{68}]\)
+                vérifient la conjecture de Syracuse. Or, il est important de noter que, sur l'infinité des nombres
+                naturels, ce nombre est ridiculement petit. A titre d'exemple, 
+                <a href="https://fr.wikipedia.org/wiki/Conjecture_de_P%C3%B3lya" target="_blank" rel="noopener noreferrer">
+                    la conjecture de Pólya
+                </a>
+                a été réfuté à l'aide d'un contre exemple estimé à \(1,845\times 10^{361}\).
+            </p>
+        </section>
     </main>
 
     <footer>
         <div class="contenu-footer">
-          <p>&copy; <a href="infos.html">Enis Béziau 1H</a></p>
-          <ul class="reseau">
-            <li><a href="https://github.com/enisbeziau/Syracuse-NSI" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a href="mailto:enislycee@gmail.com" target="_blank" rel="noopener noreferrer">Gmail</a></li>
-            <li><a href="http://bit.ly/LMB_1H" target="_blank" rel="noopener noreferrer">Drive</a></li>
-          </ul>
+            <p>&copy; <a href="infos.html">Enis Béziau 1H</a></p>
+            <ul class="reseau">
+                <li><a href="https://github.com/enisbeziau/Syracuse-NSI" target="_blank"
+                        rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="mailto:enislycee@gmail.com" target="_blank" rel="noopener noreferrer">Gmail</a></li>
+                <li><a href="http://bit.ly/LMB_1H" target="_blank" rel="noopener noreferrer">Drive</a></li>
+            </ul>
         </div>
-      </footer>
+    </footer>
 
 </body>
 

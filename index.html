@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil | Projet NSI</title>
     <link rel="shortcut icon" href="assets/icon.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Quicksand:wght@300&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/accueil.css">
     <link rel="stylesheet" href="css/section/presentation.css">
@@ -56,7 +58,8 @@
                     allemand Lothar Collatz a formulé cette énigme mathématique. Cette conjecture, bien que
                     relativement simple à comprendre, demeure l'un des problèmes non résolus les plus célèbres en
                     mathématiques, et elle continue d'attirer l'attention des mathématiciens du monde entier.
-                    L'énoncé de la conjecture de Syracuse est le suivant : la suite de Syracuse de n'importe quel entier strictement positif atteint 1
+                    L'énoncé de la conjecture de Syracuse est le suivant : la suite de Syracuse de n'importe quel entier
+                    strictement positif atteint 1
                     <br>
                     Malgré sa simplicité apparente, la conjecture de Syracuse pose un défi mathématique intrigant, et
                     personne n'a encore pu prouver de manière concluante qu'elle est vraie pour tous les nombres. Cette
@@ -68,9 +71,10 @@
 
         <section class="presentation">
             <section class="texte-presentation">
-                <h2>Énoncé de la conjecture</h2>
+                <h2>Application de Syracuse</h2>
                 <p>
-                    La conjecture de Syracuse repose sur une série d'opération appliquée à un nombre entier sctrictement positif.
+                    La conjecture de Syracuse repose sur une série d'opération appliquée à un nombre entier sctrictement
+                    positif.
                     Cette opération, appelée <span class="gras">application de Syracuse</span>, est définie ainsi :
 
                     <br><br>
@@ -85,8 +89,7 @@
 
             <figure>
                 <a href="assets/accueil/valeurs.png" target="_blank" rel="noopener noreferrer">
-                    <img src="assets/accueil/valeurs.png"
-                         alt="Application de Syracuse successives pour N = 27">
+                    <img src="assets/accueil/valeurs.png" alt="Application de Syracuse successives pour N = 27">
                 </a>
                 <figcaption>Application de Syracuse successives pour \(N=27\)</figcaption>
             </figure>
@@ -103,19 +106,21 @@
             <section class="texte-presentation">
                 <h2>La suite de Syracuse</h2>
                 <p>
-                    En itérant sur l'application de Syracuse, nous pouvons obtenir une suite appelée <span class="gras">suite de Syracuse</span>.
+                    En itérant sur l'application de Syracuse, nous pouvons obtenir une suite appelée <span
+                        class="gras">suite de Syracuse</span>.
                     Cette suite se définie par récurrence
                     \[\forall n\in \mathbb N^* :\quad u_{n+1}=
                     \left \{
-                        \begin{array}{c @{=} c}
-                            \frac{u_n}{2} & \text{Si } u_n \text{ est pair} \\
-                            3u_n+1  & \text{Si } u_n \text{ est impair}
-                        \end{array}
-                        \right.
+                    \begin{array}{c @{=} c}
+                    \frac{u_n}{2} & \text{Si } u_n \text{ est pair} \\
+                    3u_n+1 & \text{Si } u_n \text{ est impair}
+                    \end{array}
+                    \right.
                     \]
-                    En prenant, par exemple, \(u_0=28\), la suite de Syracuse est la suivante 
+                    En prenant, par exemple, \(u_0=28\), la suite de Syracuse est la suivante
                     14 ; 7 ; 22 ; 11 ; 34 ; 17 ; 52 ; 26 ; 13 ; 40 ; 20 ; 10 ; 5 ; 16 ; 8 ; 4 ; 2 ; 1. <br>
-                    1 étant impair, on le multiplie par 3 puis on ajoute 1 ce qui nous donne 4 qui est pair et que l'on divise donc par 2 pour retomber sur 1...
+                    1 étant impair, on le multiplie par 3 puis on ajoute 1 ce qui nous donne 4 qui est pair et que l'on
+                    divise donc par 2 pour retomber sur 1...
                     Le cycle (4, 2, 1) se répète alors indéfiniment, on parle de cycle trivial.
                 </p>
             </section>
@@ -125,11 +130,12 @@
             <section class="texte-presentation">
                 <h2>La suite compressée de Syracuse</h2>
                 <p>
-                    En observant la formule de la suite de Syracuse, on remarque que si \(u_n\) est impair, 
+                    En observant la formule de la suite de Syracuse, on remarque que si \(u_n\) est impair,
                     \(u_{n+1}\) est nécessairement pair et l'opération suivante doit donc être une division par deux.
-                    Ainsi, nous pouvons définir une variante de la suite de Syracuse appelée 
-                    <span class="gras">Suite compressée de Syracuse</span>. 
-                    La nouvelle suite étant extraite de la suite de Syracuse, la conjecture affirme que celle-ci aboutit toujours au cycle trivial.
+                    Ainsi, nous pouvons définir une variante de la suite de Syracuse appelée
+                    <span class="gras">Suite compressée de Syracuse</span>.
+                    La nouvelle suite étant extraite de la suite de Syracuse, la conjecture affirme que celle-ci aboutit
+                    toujours au cycle trivial.
                     <br>
                     Cette forme est bien intéressante à représenter sous forme algorithmique car celle-ci à l'avantage
                     de combiner deux étapes en une seule, ce qui augmente la vitesse des fonctions tout en pouvant
@@ -140,7 +146,7 @@
             <figure>
                 <a href="assets/accueil/28compressee.png" target="_blank" rel="noopener noreferrer">
                     <img src="assets/accueil/28compressee.png"
-                         alt="Représentation graphique de la suite compressée de Syracuse pour N = 28">
+                        alt="Représentation graphique de la suite compressée de Syracuse pour N = 28">
                 </a>
                 <figcaption>Représentation graphique de la suite compressée de Syracuse pour \(N=28\)</figcaption>
             </figure>
@@ -149,13 +155,15 @@
 
     <footer>
         <div class="contenu-footer">
-          <p>&copy; <a href="src/infos.html">Enis Béziau 1H</a></p>
-          <ul class="reseau">
-            <li><a href="https://github.com/enisbeziau/Syracuse-NSI" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a href="mailto:enislycee@gmail.com" target="_blank" rel="noopener noreferrer">Gmail</a></li>
-            <li><a href="http://bit.ly/LMB_1H" target="_blank" rel="noopener noreferrer">Drive</a></li>
-          </ul>
+            <p>&copy; <a href="src/infos.html">Enis Béziau 1H</a></p>
+            <ul class="reseau">
+                <li><a href="https://github.com/enisbeziau/Syracuse-NSI" target="_blank"
+                        rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="mailto:enislycee@gmail.com" target="_blank" rel="noopener noreferrer">Gmail</a></li>
+                <li><a href="http://bit.ly/LMB_1H" target="_blank" rel="noopener noreferrer">Drive</a></li>
+            </ul>
         </div>
-      </footer>
+    </footer>
 </body>
+
 </html>
