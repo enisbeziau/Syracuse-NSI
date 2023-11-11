@@ -47,7 +47,8 @@ Dans le seconde partie du projet, je compte implémenter les ajouts suivants :
 
 **ajout d'une nouvelle page `simulateur.html`** : Je compte ajouter une sixième et dernière page à mon site dans laquelle il sera possible d’entrer un nombre et de générer la représentation graphique de sa suite de Syracuse qui sera affiché sur la page. Pour ce faire, je compte utiliser la bibliothèque `chart.js`. Lorsque le vol du nombre sera très important, un graphique doté d'un repère orthonormal peut se révéler peu lisible. C'est pourquoi je compte également ajouter sur cette page un bouton permettant de faire basculer le graphique généré d'un repère orthonormal à un repère semi-logarithmique et inversement
 
-**Rendre l'architecture du projet plus clair**
+**Rendre l'architecture du projet plus clair**  
+Je pense organiser comme ci-dessous mon projet  
 ├── index.html  
 ├── assets  
 │   ├── accueil.jpg  
@@ -78,7 +79,9 @@ Dans le seconde partie du projet, je compte implémenter les ajouts suivants :
 │   ├── simulateur.html  
 │   ├── tentatives-resolutions.html  
 │   ├── voca.html  
-
+Cette architecture claire et ce découpage du site en fichiers distincts permet :
+- D'améliorer les performances de la page et le temps de chargement en important que les fichiers css strictement nécessaire au style de la page. Cela évite d'importer par exemple un seul fichier `styles.css` de 800 lignes dont la moitié peut porter sur une page complètement différente et dont les styles n'ont aucun effet
+- De faciliter la maintenance du code en permettant de très rapidement identifier quel composant nous voulons modifier au lieu de chercher dans un grand fichier ce que l'on cherche, ce qui fait gagner beaucoup de temps
 
 
 
