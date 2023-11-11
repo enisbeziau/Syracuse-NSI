@@ -37,3 +37,51 @@ Avec `div class="texte-presentation">` en premier
 Avec `<figure>` en premier
 ![image](https://github.com/enisbeziau/Syracuse-NSI/assets/126325785/444f21e2-309c-4638-a2e7-8d254d4c0c49)
 
+Je pense utiliser la section de classe presentation lorsque le texte sera court et illustré d’une image (graphique) comme dans les pages `index.html` et `voca.html ` 
+Je pense utiliser la section de classe carte dans des pages contenant plus de texte ou d’explication comme dans les pages `info.html` et `tentatives-resolutions.html`
+
+Le but est de pouvoir réutiliser et adapter ces modèles en ne changeant que l’image, le texte et le titre de section. Cela permet donc de réduire la taille du code css et, par conséquent, alléger et rendre plus optimisé le site final
+
+## V. Futurs ajouts
+Dans le seconde partie du projet, je compte implémenter les ajouts suivants : 
+
+**ajout d'une nouvelle page `simulateur.html`** : Je compte ajouter une sixième et dernière page à mon site dans laquelle il sera possible d’entrer un nombre et de générer la représentation graphique de sa suite de Syracuse qui sera affiché sur la page. Pour ce faire, je compte utiliser la bibliothèque `chart.js`. Lorsque le vol du nombre sera très important, un graphique doté d'un repère orthonormal peut se révéler peu lisible. C'est pourquoi je compte également ajouter sur cette page un bouton permettant de faire basculer le graphique généré d'un repère orthonormal à un repère semi-logarithmique et inversement
+
+**Rendre l'architecture du projet plus clair**
+├── index.html  
+├── assets  
+│   ├── accueil.jpg  
+│   ├── arbre.jpg  
+│   ├── code.png  
+│   ├── code_opti.png  
+│   ├── collatz.jpeg  
+│   ├── icon.png  
+│   ├── graphique  
+│   │   ├── 12.png  
+│   │   ├── 20.png  
+│   │   ├── 27.png  
+│   │   ├── 28.png  
+│   │   ├── 28compressee.png  
+│   │   ├── 30.png  
+├── js  
+│   ├── app.js  
+│   ├── fonction.js  
+├── css  
+│   ├── accueil.css  
+│   ├── general.css  
+│   ├── simulateur.css  
+│   ├── section  
+│   │   ├── presentation.css  
+│   │   ├── carte.css  
+├── src  
+│   ├── infos.html  
+│   ├── simulateur.html  
+│   ├── tentatives-resolutions.html  
+│   ├── voca.html  
+
+
+
+
+
+
+
