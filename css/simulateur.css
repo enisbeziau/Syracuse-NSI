@@ -79,40 +79,28 @@ body {
 
 /* Style de la partie information */
 
-
-#informations {
+/* 
+La section informations est pas défaut cachée tant que l'utilisateur n'a rien entré 
+Lorsque l'entrée est validée et le graphique générée, le display est changé dans le js
+ */
+ #informations {
     display: none;
+    width: 80%;
+    max-width: 400px;
+    margin: 25px auto; 
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; 
 }
 
-#informations h1 {
-    color: black;
+#informations p {
+    margin-bottom: 10px;
 }
 
-
-.boite-info {
-    display: flex;
-}
-
-.box {
-    flex: 1;
-    border-left: 1px solid black;
-
-}
-
-.box:first-child {
-    border-left: none;
-}
-
-.box h4 {
-    color: black;
-    text-align: center;
-    font-size: 1.2em;
-    padding-bottom: 10px;
-}
-
-.box p {
-    word-break: break-word;
-    text-align: center;
-    padding: 10px 10px 15px 10px;
-    font-size: 1.2rem;
+#altitude-max,
+#facteur-expansion {
+    font-weight: bold;
+    color: #4CAF50;
 }

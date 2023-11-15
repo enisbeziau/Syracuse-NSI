@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulateur | Projet-NSI</title>
     <link rel="shortcut icon" href="../assets/icon.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Quicksand:wght@300&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/general.css">
     <link rel="stylesheet" href="../css/simulateur.css">
-    <link rel="stylesheet" href="../css/section/carte.css">
     <!-- Importation de la bibliothèque chart.js utilisée pour générer les graphiques -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -43,7 +43,8 @@
         </section>
 
         <div class="ensemble-btn" id="ensemble-btn">
-            <button class="btn" id="btn-ortho" class="btn" title="Bouton pour changer le graphique en repère orthonormal">Repère
+            <button class="btn" id="btn-ortho" class="btn"
+                title="Bouton pour changer le graphique en repère orthonormal">Repère
                 orthonormé</button>
             <button class="btn" id="btn-log" class="btn title"
                 title="Bouton pour changer le graphique en repère semi-logarithmique">
@@ -55,25 +56,12 @@
         <section class="zone-graphique" id="zone-graphique">
             <canvas id="graphique"></canvas>
         </section>
-        
 
-        <section class="carte" id="informations">
-            <h1 class="titre">Informations :</h1>
-            <div class="boite-info">
-                <div class="box">
-                    <h4>Suite de Syracuse</h4>
-                    <p id="suite-txt"></p>
-                </div>
-                <div class="box">
-                    <h4>Suite compressée de Syracuse</h4>
-                    <p id="txt-compressee"></p>
-                </div>
-                <div class="box">
-                    <h4>Paramètres</h4>
-                    <p id="vol"></p>
-                    <p id="altitude-max"></p>
-                    <p id="facteur-expansion"></p>
-                </div>
+
+        <section id="informations">
+            <p>Nombre d'itérations : <span id="nbr-iteration"></span></p>
+            <p>Facteur d'expansion: <span id="altitude-max"></span></p>
+            <p>Valeur maximale atteinte: <span id="facteur-expansion"></span></p>
         </section>
 
     </main>

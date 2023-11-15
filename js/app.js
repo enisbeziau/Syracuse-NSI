@@ -33,9 +33,6 @@ const btnLog = document.getElementById('btn-log');
 
 // Constantes utilisées pour la partie informations
 const sectionInformations = document.getElementById("informations")
-const suiteTxt = document.getElementById("suite-txt");
-const txtCompressee = document.getElementById("txt-compressee");
-const vol = document.getElementById("vol");
 const altitudeMax = document.getElementById("altitude-max");
 const facteurExpansion = document.getElementById("facteur-expansion");
 
@@ -61,7 +58,6 @@ btn_input.addEventListener('click', () => {
 
         const ctx = canvas.getContext('2d');
         let suiteSyracuse = syracuseSuite(entreeValide);
-        let suiteCompresseeSyracuse = syracuseCompresseeSuite(entreeValide);
 
 
         // Supprimer le graphique existant s'il y en a un
@@ -97,12 +93,8 @@ btn_input.addEventListener('click', () => {
 
 
         // Remplissage des informations de la section informations en fonction de l'entrée de l'utilisateur
-        vol.innerHTML = "Vol de la suite : " + suiteSyracuse.length;
-        altitudeMax.innerHTML = "Altitude maximale : " + Math.max(...suiteSyracuse);
-        facteurExpansion.innerHTML = "Facteur d'expansion : " + Math.round((Math.max(...suiteSyracuse) / entreeValide));
-        // Affiche les nombres des suites dans le format nombre1 ; nombre2 ...
-        suiteTxt.innerHTML = suiteSyracuse.map(num => ` ${num} `).join(';');
-        txtCompressee.innerHTML = suiteCompresseeSyracuse.map(num => ` ${num} `).join(';');
+        altitudeMax.innerHTML = Math.max(...suiteSyracuse);
+        facteurExpansion.innerHTML =  Math.round((Math.max(...suiteSyracuse) / entreeValide));
     }
     else { alert("Vous devez entrer un nombre entier supérieur ou égal à 1"); }
 });
