@@ -9,7 +9,6 @@ Code gérant :
 // Importe les fonctions utilisées dans le programme depuis fonction.js
 import {
     syracuseSuite,
-    syracuseCompresseeSuite,
     supprimerGraphiqueExistant,
     creerGraphique,
     verifierEntree
@@ -32,7 +31,8 @@ const btnLog = document.getElementById('btn-log');
 
 
 // Constantes utilisées pour la partie informations
-const sectionInformations = document.getElementById("informations")
+const sectionInformations = document.getElementById("informations");
+const iterations = document.getElementById('nbr-iteration');
 const altitudeMax = document.getElementById("altitude-max");
 const facteurExpansion = document.getElementById("facteur-expansion");
 
@@ -52,12 +52,12 @@ boutons.forEach(bouton => {
 
 
 btn_input.addEventListener('click', () => {
-    const entreeValide = parseInt(entree.value);
+    const entree_utilisateur = parseInt(entree.value);
 
-    if (verifierEntree(entreeValide)) {
+    if (verifierEntree(entree_utilisateur)) {
 
         const ctx = canvas.getContext('2d');
-        let suiteSyracuse = syracuseSuite(entreeValide);
+        let infos = syracuseSuite(entree_utilisateur);
 
 
         // Supprimer le graphique existant s'il y en a un
@@ -65,7 +65,7 @@ btn_input.addEventListener('click', () => {
 
 
         // Créer un nouveau graphique
-        creerGraphique(ctx, suiteSyracuse, "linear");
+        creerGraphique(ctx, infos, "linear");
 
 
         if (premierClic) {
@@ -78,13 +78,13 @@ btn_input.addEventListener('click', () => {
 
         btnOrtho.addEventListener('click', () => {
             supprimerGraphiqueExistant(canvas);
-            creerGraphique(ctx, suiteSyracuse, "linear")
+            creerGraphique(ctx, infos, "linear")
         })
 
 
         btnLog.addEventListener('click', () => {
             supprimerGraphiqueExistant(canvas);
-            creerGraphique(ctx, suiteSyracuse, "logarithmic");
+            creerGraphique(ctx, infos, "logarithmic");
         })
 
 
@@ -93,8 +93,9 @@ btn_input.addEventListener('click', () => {
 
 
         // Remplissage des informations de la section informations en fonction de l'entrée de l'utilisateur
-        altitudeMax.innerHTML = Math.max(...suiteSyracuse);
-        facteurExpansion.innerHTML =  Math.round((Math.max(...suiteSyracuse) / entreeValide));
+        iterations.innerHTML = infos.nbr_iterations;
+        altitudeMax.innerHTML = infos.max;
+        facteurExpansion.innerHTML =  Math.round((infos.max / entree_utilisateur));
     }
     else { alert("Vous devez entrer un nombre entier supérieur ou égal à 1"); }
 });
