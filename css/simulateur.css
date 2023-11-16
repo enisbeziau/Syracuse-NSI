@@ -100,7 +100,7 @@ Lorsque l'entrée est validée et le graphique générée, le display est chang�
 }
 
 #altitude-max,
-#facteur-expansion {
-    font-weight: bold;
+#facteur-expansion,
+#nbr-iteration {
     color: #4CAF50;
 }
