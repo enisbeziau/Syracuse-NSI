@@ -28,16 +28,10 @@ body {
 
 .navbar {
     font-family: 'Barlow', 'sans-serif';
-    background-color: transparent;
-    top: 0;
-    right: 0;
     padding: 20px;
 }
 
 .navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
     text-align: right;
 }
 
@@ -47,7 +41,6 @@ body {
 }
 
 .navbar ul li a {
-    text-decoration: none;
     color: whitesmoke;
     border-radius: 15px;
     padding: 5px 10px;
@@ -64,6 +57,7 @@ body {
 /* Style du pied de page */
 
 footer {
+    font-weight: bold;
     border-top: 1px solid whitesmoke;
     background-color: rgb(38 74 87);
     color: whitesmoke;
