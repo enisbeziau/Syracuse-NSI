@@ -7,33 +7,23 @@ Le fait de scinder le code js en deux fichiers améliore la lisibilité de app.j
 
 function syracuseSuite(nombre) {
     /**
-     * Génère la suite de Syracuse pour un nombre donné.
-     * @param {number} nombre - Le nombre de départ.
-     * @returns {number[]} - La suite de Syracuse sous forme de tableau.
+     * Génère la suite de Syracuse pour un nombre donné
+     * @param {number} nombre - Le nombre de départ
+     * @returns {Object} - La suite de Syracuse sous forme de tableau, le nbr d'itérations et le max
      */
     let sequence = [nombre];
+    let nbr_iterations = 0;
     while (nombre !== 1) {
         nombre = nombre % 2 === 0 ? nombre / 2 : nombre * 3 + 1;
         sequence.push(nombre);
+        nbr_iterations ++;
     }
-    return sequence;
+    return {
+        sequence: sequence,
+        nbr_iterations: nbr_iterations,
+        max: Math.max(...sequence),
+    };
 }
-
-
-function syracuseCompresseeSuite(nombre) {
-    /**
-     * Génère la suite de Syracuse compressée pour un nombre donné.
-     * @param {number} nombre - Le nombre de départ.
-     * @return {number[]} - La suite de Syracuse compressée.
-     */
-    const sequence = [nombre];
-    while (nombre !== 1) {
-        nombre = nombre % 2 === 0 ? nombre / 2 : (nombre * 3 + 1) / 2;
-        sequence.push(nombre);
-    }
-    return sequence;
-}
-
 
 function supprimerGraphiqueExistant(canvas) {
     /**
@@ -46,10 +36,10 @@ function supprimerGraphiqueExistant(canvas) {
 }
 
 
-function creerGraphique(ctx, suite, repere) {
+function creerGraphique(ctx, infos, repere) {
     /**
      * @param {CanvasRenderingContext2D} ctx - Le contexte 2D du canvas HTML, utilisé pour dessiner des éléments graphiques sur le canvas
-     * @param {entier[]} suite - La suite dont les éléments composeront les points du graphique qui seront reliés
+     * @param {entier[]} infos - La suite dont les éléments composeront les points du graphique qui seront reliés
      * @param {"linear" | "logarithmic"} repere - Le type de repère dans lequel sera dessiné le graphique
      */
     // Constante contenant les str "orthonormé" ou "semi-logarithmique" en fonction de la valeur de l'argument repere.
@@ -57,10 +47,10 @@ function creerGraphique(ctx, suite, repere) {
     new Chart(ctx, {
         type: 'line',
         data: {
-            labels: Array.from({ length: suite.length }, (_, index) => index + 1),
+            labels: Array.from({ length: infos.sequence.length }, (_, index) => index + 1),
             datasets: [{
                 label: 'Repère ' + repereLabel,
-                data: suite,
+                data: infos.sequence,
                 borderColor: 'black',
                 borderWidth: 2,
             }],
@@ -114,7 +104,6 @@ function verifierEntree(input) {
 // Exporte les fonctions définies dans ce fichier pour pouvoir les importer et utiliser dans app.js
 export {
     syracuseSuite,
-    syracuseCompresseeSuite,
     supprimerGraphiqueExistant,
     creerGraphique,
     verifierEntree
