@@ -17,6 +17,7 @@ html {
     overflow-x: hidden;
 }
 
+
 body {
     font-family: 'Quicksand';
     background-color: rgb(38 74 87);
@@ -87,7 +88,7 @@ footer a {
     color: whitesmoke;
 }
 
-.reseau a:hover{
+.reseau a:hover {
     text-decoration: underline;
 }
 
@@ -112,4 +113,58 @@ code {
 /* Style des rendus visuels LaTex grâce à MathJax. La couleur sert à mieux intégrer l'expression mathématique avec la police Quicksand */
 .MathJax.CtxtMenu_Attached_0 {
     color: rgb(85 85 85);
+}
+
+
+/* Code servant au responsive de la navbar à l'aide d'un menu sandwich */
+
+.hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    display: none;
+}
+
+@media screen and (max-width: 633px) {
+
+    body {
+        overflow: hidden;
+    }
+
+    html.no-scroll {
+        overflow: hidden;
+    }
+
+    .hamburger {
+        z-index: 100;
+        display: block;
+    }
+
+    .ensemble-lien {
+        position: absolute;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+        z-index: 100;
+    }
+
+    .ensemble-lien li {
+        margin: 10px;
+        font-size: 1.3em;
+    }
+
+    .ensemble-lien.menu-mobile {
+        align-items: center;
+        margin-left: 0;
+        display: flex;
+        background-color: #136a86;
+        transition: all 0.5s ease;
+    }
+
 }

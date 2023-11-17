@@ -41,3 +41,16 @@ Cet aspect de carte est réutilisé dans toutes les pages sauf accueil.html
 .image img {
     width: 98%;
 }
+
+@media screen and (max-width: 950px) {
+    .image {
+        padding-top: 5px;
+        border-left: 0px;
+        border-top: 1px solid black;
+    }
+
+    .contenu-carte {
+        display: block;
+        padding: 0px;
+    }
+}
