@@ -43,6 +43,11 @@ Cet aspect de carte est réutilisé dans toutes les pages sauf accueil.html
 }
 
 @media screen and (max-width: 950px) {
+
+    .carte {
+        margin: 0px;
+    }
+
     .image {
         padding-top: 5px;
         border-left: 0px;
