@@ -26,28 +26,28 @@ body {
 
 /* Code de la barre de navigation */
 
-.navbar {
+nav {
     font-family: 'Barlow', 'sans-serif';
     padding: 20px;
 }
 
-.navbar ul {
+.ensemble-lien {
     text-align: right;
 }
 
-.navbar ul li {
+.ensemble-lien li {
     display: inline;
     margin-left: 20px;
 }
 
-.navbar ul li a {
+.ensemble-lien li a {
     color: whitesmoke;
     border-radius: 15px;
     padding: 5px 10px;
     transition: background-color 0.3s;
 }
 
-.navbar ul li a:hover {
+.ensemble-lien li a:hover {
     background-color: whitesmoke;
     color: #000;
 }
