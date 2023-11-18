@@ -1,6 +1,5 @@
 Lien du site : https://enisbeziau.github.io/Syracuse-NSI  
-Lien du code : https://github.com/enisbeziau/Syracuse-NSI/releases/tag/release
-
+Lien du code : [https://github.com/enisbeziau/Syracuse-NSI/releases/tag/release](https://github.com/enisbeziau/Syracuse-NSI/releases/tag/Phase1)
 # Document de rendu de projet - Phase n°1
 
 ## I. Choix du sujet  
@@ -20,12 +19,12 @@ Le site est divisé en 4 pages distinctes :
 - `tentatives-resolutions.html` : Cette page vise à exposer les différentes tentatives des chercheurs pour vaincre la conjecture de Syracuse. Y sont évoqués des tentatives via différentes approches : algorithmique, calculatoire, inversée (arbre de Syracuse) et recherche des cycles non triviaux.
 - `info.html` : Cette page sert à sourcer le site et les informations / illustrations y figurant.
 
-*Remarque* : Toutes les pages sont munies d’une barre de navigation permettant de circuler de page en page sans soucis et d’un pied de page permettant d’accéder au fichier info.html via un lien cliquable. 
+*Remarque* : Toutes les pages sont munies d’une barre de navigation permettant de circuler de page en page sans soucis et d’un pied de page permettant d’accéder au fichier `info.html` via un lien cliquable. 
 
 ## IV. Choix des balises
-Afin de présenter un code doté d'une bonne sémantique, toutes les pages sont munies de balises `<header>` , `<main>` et `<footer>`. La balise `<main>` contient des balises `<section>`
+Afin de présenter un code doté d'une bonne sémantique, toutes les pages sont munies de balises `<header>` , `<main>` et `<footer>`. La balise `<main>` contient des balises `<section>` divisant ansi les parties du site par thème pour plus de compréhension.
 
-**Cas particulier de la page `index.html`** : Le choix de mettre une section pour la page d’accueil est justifié par le futur aspect de la page lors de l’application du css qui sera ainsi
+**Cas particulier de la page `index.html`** : J'ai décidé de mettre une section dans la balise `<header>`. Ce choix est justifié par le style que j'imagine pour cette page d'accueil qui comportera plusieurs élements tels qu'une `<div>`, un `<button>` et un `<h1>` :
 ![image](https://github.com/enisbeziau/Syracuse-NSI/assets/126325785/21593acf-882f-446a-a63c-64ba96e64a42)
 
 Dans toutes les pages du site, il y aura deux types de sections de style différents : 
@@ -48,28 +47,41 @@ Le but est de pouvoir réutiliser et adapter ces modèles en ne changeant que l�
 ## V. Futurs ajouts
 Dans le seconde partie du projet, je compte implémenter les ajouts suivants : 
 
-**ajout d'une nouvelle page `simulateur.html`** : Je compte ajouter une sixième et dernière page à mon site dans laquelle il sera possible d’entrer un nombre et de générer la représentation graphique de sa suite de Syracuse qui sera affiché sur la page. Pour ce faire, je compte utiliser la bibliothèque `chart.js`. Lorsque le vol du nombre sera très important, un graphique doté d'un repère orthonormal peut se révéler peu lisible. C'est pourquoi je compte également ajouter sur cette page un bouton permettant de faire basculer le graphique généré d'un repère orthonormal à un repère semi-logarithmique et inversement
+**ajout d'une nouvelle page `simulateur.html`** : Je compte ajouter une sixième et dernière page à mon site dans laquelle il sera possible d’entrer un nombre et de générer la représentation graphique de sa suite de Syracuse qui sera affiché sur la page. Pour ce faire, je compte utiliser la bibliothèque `chart.js`. Lorsque le vol du nombre sera très important, un graphique doté d'un repère orthonormal peut se révéler peu lisible. C'est pourquoi je compte également ajouter sur cette page un bouton permettant de faire basculer le graphique généré d'un repère orthonormal à un repère semi-logarithmique et inversement.
+
+**Implémentation d'un design responsive pour plus petit écran** : Je comtpe rendre le site plus lisible pour les personnes visitant le site sur un appareil doté d'une résolution d'écran plus petite que celle d'un écran de pc lambda (mobile, tablette) en changeant la taille des textes et l'organisation des `<div>` pour que, plutot que le texte et l'image soient cote à cote, ceux-ci soient l'un en dessous de l'autre
+
+**Utilisation d'un menu hamburger** : Ce point, qui est lié à celui ci-dessus, permettrait de changer la navbar en un menu hamburger lorsque la largeur d'écran devient trop petite et que, par conséquent, le texte des balises composants la navbar est écrasé ou se chevauche. 
+
+**Animation au scroll sur la page d'accueil** J'aimerai également mettre un effet d'apparition progressive de bas en haut des sections de présentation sur la page `index.html` pour donner un effet plus classe à la page.
 
 **Rendre l'architecture du projet plus clair**  
 Je pense organiser comme ci-dessous mon projet  
 ├── index.html  
 ├── assets  
-│   ├── accueil.jpg  
-│   ├── arbre.jpg  
-│   ├── code.png  
-│   ├── code_opti.png  
-│   ├── collatz.jpeg  
-│   ├── icon.png  
-│   ├── graphique  
+│   ├── accueil  
+│   │   ├── 28.png  
+│   │   ├── 28compressee.png  
+│   │   ├── accueil.png  
+│   │   ├── collatz.jpeg  
+│   │   ├── valeurs.png  
+│   ├── tentatives_resolutions  
+│   │   ├── arbre.jpg  
+│   │   ├── code.png  
+│   │   ├── code_opti.png  
+│   ├── voca  
 │   │   ├── 12.png  
 │   │   ├── 20.png  
 │   │   ├── 27.png  
-│   │   ├── 28.png  
-│   │   ├── 28compressee.png  
 │   │   ├── 30.png  
+│   ├── icones  
+│   │   ├── hamburger.png  
+│   │   ├── icon.png  
 ├── js  
 │   ├── app.js  
 │   ├── fonction.js  
+│   ├── responsive.js
+│   ├── anim.js
 ├── css  
 │   ├── accueil.css  
 │   ├── general.css  
@@ -81,13 +93,7 @@ Je pense organiser comme ci-dessous mon projet
 │   ├── infos.html  
 │   ├── simulateur.html  
 │   ├── tentatives-resolutions.html  
-│   ├── voca.html  
+│   ├── voca.html
 Cette architecture claire et ce découpage du site en fichiers distincts permet :
 - D'améliorer les performances de la page et le temps de chargement en important que les fichiers css strictement nécessaire au style de la page. Cela évite d'importer par exemple un seul fichier `styles.css` de 800 lignes dont la moitié peut porter sur une page complètement différente et dont les styles n'ont aucun effet
 - De faciliter la maintenance du code en permettant de très rapidement identifier quel composant nous voulons modifier au lieu de chercher dans un grand fichier ce que l'on cherche, ce qui fait gagner beaucoup de temps
-
-
-
-
-
-
