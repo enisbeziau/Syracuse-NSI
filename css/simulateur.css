@@ -21,11 +21,14 @@ body {
 
 #btn {
     border-radius: 50%;
+    border: 1px solid black;
     height: 40px;
     width: 40px;
     position: absolute;
-    top: 13%;
+    top: 11%;
     right: 10px;
+    font-size: 20px;
+    padding: 3px 3px 3px 5px;
 }
 
 ::placeholder {
