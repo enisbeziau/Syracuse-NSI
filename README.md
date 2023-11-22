@@ -80,8 +80,8 @@ Je pense organiser comme ci-dessous mon projet
 ├── js  
 │   ├── app.js  
 │   ├── fonction.js  
-│   ├── responsive.js
-│   ├── anim.js
+│   ├── responsive.js  
+│   ├── anim.js  
 ├── css  
 │   ├── accueil.css  
 │   ├── general.css  
