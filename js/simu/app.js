@@ -11,8 +11,12 @@ import {
     syracuseSuite,
     supprimerGraphiqueExistant,
     creerGraphique,
-    verifierEntree
+    verifierEntree,
+    exporterCSV
 } from './fonction.js';
+
+// Déclaration de la variable infos en dehors de toute fonction pour qu'elle soit globale
+let infos;
 
 
 // Constantes et variable utilisées pour la partie affichage du graphique
@@ -37,6 +41,10 @@ const altitudeMax = document.getElementById("altitude-max");
 const facteurExpansion = document.getElementById("facteur-expansion");
 
 
+// Constante utilisée pour le téléchargement en format csv des informations
+const btnCsv = document.getElementById("csv");
+
+
 // Gestion du changement de couleur au clic d'un bouton --> ajoute un écouteur d'événement de clic à chaque bouton
 boutons.forEach(bouton => {
     bouton.addEventListener('click', () => {
@@ -57,7 +65,7 @@ btn_input.addEventListener('click', () => {
     if (verifierEntree(entree_utilisateur)) {
 
         const ctx = canvas.getContext('2d');
-        let infos = syracuseSuite(entree_utilisateur);
+        infos = syracuseSuite(entree_utilisateur);
 
 
         // Supprimer le graphique existant s'il y en a un
@@ -97,7 +105,16 @@ btn_input.addEventListener('click', () => {
         iterations.innerHTML = infos.nbr_iterations;
         altitudeMax.innerHTML = infos.max;
         facteurExpansion.innerHTML =  Math.round((infos.max / entree_utilisateur));
+
     }
     // Si l'entrée est invalide
     else { alert("Vous devez entrer un nombre entier supérieur ou égal à 1"); }
 });
+
+
+// Lorsque l'on clique sur le bouton pour générer le fichier csv, on vérifie que la variable infos contient quelque chose puis on exporte
+btnCsv.addEventListener('click', () => {
+    if (infos) {
+        exporterCSV(infos)
+    }
+})

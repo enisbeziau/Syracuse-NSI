@@ -16,7 +16,7 @@ function syracuseSuite(nombre) {
     while (nombre !== 1) {
         nombre = nombre % 2 === 0 ? nombre / 2 : nombre * 3 + 1;
         sequence.push(nombre);
-        nbr_iterations ++;
+        nbr_iterations++;
     }
     return {
         sequence: sequence,
@@ -101,10 +101,33 @@ function verifierEntree(input) {
 }
 
 
+function exporterCSV(infos_objet) {
+    /**
+     * Exporte la suite de Syracuse en CSV
+     * @param {Object} infos_objet - Les informations sur la suite de Syracuse du nombre généré (voir fonction syracuseSuite)
+     */
+
+    const contenu_csv = infos_objet.sequence.join("\n");
+
+    const nomFichier = `suite_de_syracuse_de_${infos_objet.sequence[0]}.csv`;
+
+    const encodedUri = encodeURI(`data:text/csv;charset=utf-8,${contenu_csv}`);
+
+    const link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", nomFichier);
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
+
 // Exporte les fonctions définies dans ce fichier pour pouvoir les importer et utiliser dans app.js
 export {
     syracuseSuite,
     supprimerGraphiqueExistant,
     creerGraphique,
-    verifierEntree
+    verifierEntree,
+    exporterCSV
 };
