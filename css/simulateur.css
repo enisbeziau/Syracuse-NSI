@@ -61,7 +61,7 @@ body {
     border: none;
     cursor: pointer;
     padding: 7px 13px;
-    width: 50%; 
+    width: 50%;
     background-color: whitesmoke;
     color: black;
     border-radius: 5px;
@@ -88,16 +88,16 @@ body {
 La section informations est pas défaut cachée tant que l'utilisateur n'a rien entré 
 Lorsque l'entrée est validée et le graphique générée, le display est changé dans le js
  */
- #informations {
+#informations {
     display: none;
     width: 80%;
     max-width: 400px;
-    margin: 25px auto; 
+    margin: 25px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center; 
+    text-align: center;
 }
 
 #informations p {
@@ -108,6 +108,16 @@ Lorsque l'entrée est validée et le graphique générée, le display est chang�
 #facteur-expansion,
 #nbr-iteration {
     color: #4CAF50;
+}
+
+#csv {
+    background-color: transparent;
+    border: none;
+}
+
+#csv img {
+    width: 30px;
+    height: 30px;
 }
 
 @media screen and (max-width: 800px) {
