@@ -69,6 +69,7 @@ btn_input.addEventListener('click', () => {
 
 
         if (premierClic) {
+            // Lors du premier clic sur le bouton `btn_input`, on affiche le graphique, ses informations et les btns
             zoneGraphique.style.display = "block";
             sectionInformations.style.display = "block";
             divBtn.style.display = "flex";
@@ -88,7 +89,7 @@ btn_input.addEventListener('click', () => {
         })
 
 
-        // La première génération étant forcément avec le repère orthonormé, on colore le bouton
+        // La première génération étant par défaut avec le repère orthonormé, on colore le bouton
         btnOrtho.style.backgroundColor = "#1b9bff";
 
 
@@ -97,5 +98,6 @@ btn_input.addEventListener('click', () => {
         altitudeMax.innerHTML = infos.max;
         facteurExpansion.innerHTML =  Math.round((infos.max / entree_utilisateur));
     }
+    // Si l'entrée est invalide
     else { alert("Vous devez entrer un nombre entier supérieur ou égal à 1"); }
 });

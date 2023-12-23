@@ -2,6 +2,8 @@
 Auteur : Enis Béziau 1H
 Ce fichier vise à réunir tous les élements de style communs aux pages du site pour éviter les répétitions
 */
+
+
 * {
     padding: 0px;
     margin: 0px;
@@ -19,6 +21,7 @@ html {
 
 
 body {
+    /* Police utilisée dans le footer et la navbar */
     font-family: 'Quicksand';
     background-color: rgb(38 74 87);
     min-height: 100vh;

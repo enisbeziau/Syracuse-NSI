@@ -39,7 +39,16 @@ Cet aspect de carte est réutilisé dans toutes les pages sauf accueil.html
 }
 
 .image img {
+    border-radius: 4px;
     width: 98%;
+}
+
+.carte p a {
+    color: black;
+}
+
+.carte p a:hover {
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 950px) {
