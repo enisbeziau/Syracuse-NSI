@@ -45,6 +45,14 @@ Tout d'abord, pour mieux appréhender les explications ci-dessous, voici l'archi
 │   ├── tentatives-resolutions.html  
 │   ├── voca.html 
 
+Concernant le choix du découpage du code stylisant la page en 5 fichiers distincts, ce choix est notamment justifié par 
+- une meilleure maintenabilité du code (il est plus simple de chercher dans un fichiers de ~100 lignes que dans un fichier de plus de 600 lignes)
+- de meilleures performances : on n'importe dans la page uniquement ce dont elle a besoin : il est inutile de charger le style d'une section qui n'y est jamais utilisée
+- une plus grande simplicité dans la gestion des polices et écriture. En effet, par exemple, la couleur utilisée pour ajuster la lisibilité des expressions LaTex générées par [`MathJax`](https://www.mathjax.org/) change en fonction de la page et du type de section utilisé. Si le fond est bleu comme dans les pages `index.html` et `voca.html`, il est plus judicieux que la couleur soit blanche. À contrario, lorsque le fond est blanc, une couleur plutot grise vers noire sera bien meilleure. Pour gérer ce détail, grâce au découpage des fichiers gérant le style des sections, on importe le code de style d'une seule section dans lequel la couleur est gérée. (si nous importions un seul fichier contenant tout le style relatif aux sections, et bien que cela soit gérable, nous aurions pu avoir des soucis de priorité rendant tantot le texte blanc tantot le texte noir vu qu'il est difficile de manipuler la couleur du texte d'une extension qui n'est pas la notre).
+Ainsi, dans le fichier `css` se trouve les fichiers :
+- `general.css` contient le code relatif aux élements redondants cités plus haut (navbar, footer). Il est importé sur toutes les pages du site
+- `accueil.css` qui possède une page à part 
+
 Voici les élements redondants sur le site ainsi qu'une description de quelques spécificités techniques qui leur sont propres :  
 - La navbar : alignée en haut de la page à droite, celle-ci utilise flexbox pour la mise en forme et les noms des pages auxquelles elle renvoie sont dans la police `Barlow`
 - Le footer : prenant toute la largeur de la page et étant situé tout en bas de celle-ci, le footer donne accès à une page de source (`infos.html`) et à des liens externes (GitHub, Gmail et Drive) dans une police identique à la barre de navigation
