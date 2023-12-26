@@ -61,7 +61,9 @@ h1 {
     background-color: #7e7e7e;
 }
 
-h1#link {
+#link {
+    font-size: 30px;
+    text-align: center;
     color: whitesmoke;
 }
 
