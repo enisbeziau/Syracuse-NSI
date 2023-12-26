@@ -8,8 +8,7 @@
     <title>Accueil | Projet NSI</title>
     <link rel="shortcut icon" href="assets/icones/icon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Quicksand:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/accueil.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/section/presentation.css">
     <!-- Importation de la bibliothèque MathJax qui permet d'obtenir un rendu LaTex dans le navigateur -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -45,7 +44,9 @@
         <!-- identifiant link qui sert à ramener à cette partie du site lorsque l'on clique sur le bouton découvrir de la page d'accueil -->
         <h2 id="link">Énoncé et histoire du problème</h1>
 
-        <section class="presentation">
+        <!-- Les sections de cette page possèdent deux classes pour les différencier des sections présentations de la page voca.html -->
+        <!-- On veut que seules les sections de cette page soient affectées par l'opacity (nécessaire à l'animation) définie dans general.css -->
+        <section class="presentation index">
             <figure>
                 <a href="assets/accueil/collatz.jpeg" target="_blank" rel="noopener noreferrer">
                     <img src="assets/accueil/collatz.jpeg" alt="Lothar Collatz">
@@ -71,7 +72,7 @@
             </div>
         </section>
 
-        <section class="presentation">
+        <section class="presentation index">
             <div class="texte-presentation">
                 <h3>Application de Syracuse</h3>
                 <p>
@@ -97,7 +98,7 @@
             </figure>
         </section>
 
-        <section class="presentation">
+        <section class="presentation index">
             <figure>
                 <a href="assets/accueil/28.png" target="_blank" rel="noopener noreferrer">
                     <img src="assets/accueil/28.png" alt="Représentation graphique de la suite de Syracuse pour N = 28">
@@ -128,7 +129,7 @@
             </div>
         </section>
 
-        <section class="presentation">
+        <section class="presentation index">
             <div class="texte-presentation">
                 <h3>La suite compressée de Syracuse</h3>
                 <p>
