@@ -114,8 +114,8 @@
                     \[\forall n\in \mathbb N :\quad u_{n+1}=
                     \left \{
                     \begin{array}{c @{=} c}
-                    \displaystyle \frac{u_n}{2} & \text{Si } u_n \text{ est pair} \\
-                    3u_n+1 & \text{Si } u_n \text{ est impair}
+                    \displaystyle \frac{u_n}{2} & \text{Si } u_n \equiv 0 [2] \\
+                    3u_n+1 & \text{Si } u_n \equiv 1[2]
                     \end{array}
                     \right.
                     \]
@@ -133,15 +133,21 @@
                 <h2>La suite compressée de Syracuse</h2>
                 <p>
                     En observant la formule de la suite de Syracuse, on remarque que si \(u_n\) est impair,
-                    \(u_{n+1}\) est nécessairement pair et l'opération suivante doit donc être une division par deux.
+                    \(u_{n+1}\) est nécessairement pair et sera donc divisé par deux lors de la prochaine opération. 
+                    Pour démontrer, posons \(n\in \mathbb N^*\) impair:
+                    \[3n+1=\underbrace{\underbrace{2n+1}_{\text{de la forme } 2k+1}+n}_{\text{de la forme }k+1 \text{ avec } k \text{ impair}}\]
+
+
                     Ainsi, nous pouvons définir une variante de la suite de Syracuse appelée
                     <span class="gras">Suite compressée de Syracuse</span>.
-                    La nouvelle suite étant extraite de la suite de Syracuse, la conjecture affirme que celle-ci aboutit
-                    toujours au cycle trivial.
-                    <br>
-                    Cette forme est bien intéressante à représenter sous forme algorithmique car celle-ci à l'avantage
-                    de combiner deux étapes en une seule, ce qui augmente la vitesse des fonctions tout en pouvant
-                    toujours vérifier si la suite de Syracuse atterit ou non.
+                    \[\forall n\in \mathbb N :\quad u_{n+1}=
+                    \left \{
+                    \begin{array}{c @{=} c}
+                    \displaystyle \frac{u_n}{2} & \text{Si } u_n \equiv 0[2] \\
+                    \dfrac{3u_n+1}{2} & \text{Si } u_n \equiv 1[2]
+                    \end{array}
+                    \right.
+                    \]
                 </p>
             </section>
 
