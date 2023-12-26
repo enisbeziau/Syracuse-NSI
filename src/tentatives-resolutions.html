@@ -192,6 +192,35 @@
         </section>
 
         <section class="carte">
+            <h2>Indice probabiliste</h2>
+            <p>
+                Nous parlerons ici d'indice probabiliste et non véritablement d'une approche à part entière car nos calculs et raisonnements ne seront pas des plus rigoureux.
+                Le but de ce raisonnement est simplement d'aiguiller sur le sens de variation moyen de la suite de Syracuse d'un entier. 
+                <br>
+                Tout d'abord, raisonnons sur la multiplication appliquée au nombre en fonction de sa parité. Par l'application de Syracuse :
+                \[\forall n\in \mathbb N :\quad u_{n+1}=
+                    \left \{
+                    \begin{array}{c @{=} c}
+                    \displaystyle \frac{1}{2}u_n & \text{Si } u_n \equiv 0[2] \\
+                    \dfrac{3}{2}u_n & \text{Si } u_n \equiv 1[2]
+                    \end{array}
+                    \right.
+                    \]
+                Nous négligeons ici le +1 lorsque \(u_n\) est impair pour simplifier les calculs.  
+                <br>
+                Définissons maintenant deux évènements tels que : 
+                \[P:\, '\text{Le nombre est pair}'\quad ;\quad I:\, '\text{Le nombre est impair}'\]
+                Trivialement, \(\mathbb P(P)=\mathbb P(I)=\frac{1}{2}\) car l'univers \(\Omega\) n'est composé que de ces deux élements 
+                <br>
+                Ainsi, en moyenne, on multipliera successivement par 
+                \[\left(\frac{1}{2}\right)^{1/2}\times \left(\frac{3}{2}\right)^{1/2}=\sqrt{\frac{1}{2}}\times \sqrt{\frac{3}{2}}=\frac{\sqrt 3}{2}\approx 0.87 < 1\]
+                Ce rapport nettement inférieur à 1 nous permet d'identifier un caractère plutot décroissant de la suite de Syracuse. <br>
+                Cependant, Il n'existe aucune preuve rigoureuse de cette affirmation.
+            </p>
+
+        </section>
+
+        <section class="carte">
             <h2>Un énoncé indécidable ?</h2>
             <p>
                 Après toutes ces tentatives infructueuses ou n'apportant pas une réponse claire et définitive quant à la
