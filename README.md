@@ -1,6 +1,9 @@
 Lien du site : https://enisbeziau.github.io/Syracuse-NSI  
+
 Lien du code : [https://github.com/enisbeziau/Syracuse-NSI/releases/tag/release](https://github.com/enisbeziau/Syracuse-NSI/releases/tag/Phase1)  
-Document de rendu de projet phase n°1 : https://github.com/enisbeziau/Rendu-1/blob/main/README.md
+
+Document de rendu de projet phase n°1 : https://github.com/enisbeziau/Rendu-1/blob/main/README.md  
+
 # Document de rendu de projet - Phase finale  
 
 ## I. Généralités  
@@ -33,7 +36,6 @@ Tout d'abord, pour mieux appréhender les explications ci-dessous, voici l'archi
 │   ├── responsive.js  
 │   ├── anim.js  
 ├── css  
-│   ├── accueil.css  
 │   ├── general.css  
 │   ├── simulateur.css  
 │   ├── section  
@@ -45,32 +47,37 @@ Tout d'abord, pour mieux appréhender les explications ci-dessous, voici l'archi
 │   ├── tentatives-resolutions.html  
 │   ├── voca.html 
 
+Voici les élements redondants sur le site ainsi qu'une description de quelques spécificités techniques qui leur sont propres :  
+- La navbar : alignée en haut de la page à droite, celle-ci utilise flexbox pour la mise en forme et les noms des pages auxquelles elle renvoie sont dans la police `Barlow`
+- Le footer : prenant toute la largeur de la page et étant situé tout en bas de celle-ci, le footer donne accès à une page de source (`infos.html`) et à des liens externes (GitHub, Gmail et Drive) dans une police identique à la barre de navigation
+- L'aspect responsive : toutes les pages admettent un aspect pouvant s'adapter aux tailles d'écrans plus petites, notamment celle des mobiles. Géré par le fichier `responsive.js` du dossier `js`, cet aspect se manifeste notamment par le changement de mise en place du texte et des images dans les sections, passant de cote à cote à à coté l'un de l'autre, mais aussi par la disparition de la barre de navigation au profit d'un menu sandwich pour les tailles d'écrans inférieures ou égales à `633px`.
+- L'utilisation de la bibliothèque [`MathJax`](https://www.mathjax.org/) permettant un rendu LaTex des expressions mathématiques dont les formules sont tapées entre `\(\)` ou `\[\]`. Au fur et à mesure de l'élaboration du site, notamment de la page `tentatives-resolutions.html`, le besoin d'expressions mathématiques propres, claires et agréables à lire s'est de plus en plus fait ressentir, d'où l'utilisation de cet outil. Seul point noir : la couleur des expressiosn était bien plus foncée que l'écriture du site, ce qui cassait l'identité visuelle d'une page. Pour y remédier, j'ai mis dans le fichier `general.css` un code permettant de rendre moins foncé le tout : `.MathJax.CtxtMenu_Attached_0 { color: rgb(85 85 85); }`.
+
 Concernant le choix du découpage du code stylisant la page en 5 fichiers distincts, ce choix est notamment justifié par 
 - une meilleure maintenabilité du code (il est plus simple de chercher dans un fichiers de ~100 lignes que dans un fichier de plus de 600 lignes)
 - de meilleures performances : on n'importe dans la page uniquement ce dont elle a besoin : il est inutile de charger le style d'une section qui n'y est jamais utilisée
 - une plus grande simplicité dans la gestion des polices et écriture. En effet, par exemple, la couleur utilisée pour ajuster la lisibilité des expressions LaTex générées par [`MathJax`](https://www.mathjax.org/) change en fonction de la page et du type de section utilisé. Si le fond est bleu comme dans les pages `index.html` et `voca.html`, il est plus judicieux que la couleur soit blanche. À contrario, lorsque le fond est blanc, une couleur plutot grise vers noire sera bien meilleure. Pour gérer ce détail, grâce au découpage des fichiers gérant le style des sections, on importe le code de style d'une seule section dans lequel la couleur est gérée. (si nous importions un seul fichier contenant tout le style relatif aux sections, et bien que cela soit gérable, nous aurions pu avoir des soucis de priorité rendant tantot le texte blanc tantot le texte noir vu qu'il est difficile de manipuler la couleur du texte d'une extension qui n'est pas la notre).
 Ainsi, dans le fichier `css` se trouve les fichiers :
-- `general.css` contient le code relatif aux élements redondants cités plus haut (navbar, footer). Il est importé sur toutes les pages du site
-- `accueil.css` qui possède une page à part 
+- `general.css` contient le code relatif aux élements redondants cités plus haut (navbar, footer). Il est importé sur toutes les pages du site et contient également le code de style de la page d'accueil car celui-ci est assez court.
+- `simulateur.css` qui possède une page à part en raison de la quantité de code importante (~140 lignes). Le détail du fonctionnement du code est donné plus bas.
+- `section/presentation.css` : ce fichier contient le code relatif au style des sections ayant la classe `presentation` comme `index.html` et `voca.html`. Celles-ci sont les plus utilisées et servent à exposer un concept ou expliquer une notion nécessitant un exemple visuel comme un graphique. Le style alterne entre image à gauche et texte à droite et texte à gauche image à droite grâce à la propriété `flex: 1` appliqué à la div contenant le texte. Cette alternance est gérée par le premier élement présent dans la div, soit la figure soit la div de texte :
+<div align="center"><p>Section de classe "presentation" avec la balise figure en premier</p></div>
 
-Voici les élements redondants sur le site ainsi qu'une description de quelques spécificités techniques qui leur sont propres :  
-- La navbar : alignée en haut de la page à droite, celle-ci utilise flexbox pour la mise en forme et les noms des pages auxquelles elle renvoie sont dans la police `Barlow`
-- Le footer : prenant toute la largeur de la page et étant situé tout en bas de celle-ci, le footer donne accès à une page de source (`infos.html`) et à des liens externes (GitHub, Gmail et Drive) dans une police identique à la barre de navigation
-- L'aspect responsive : toutes les pages admettent un aspect pouvant s'adapter aux tailles d'écrans plus petites, notamment celle des mobiles. Géré par le fichier `responsive.js` du dossier `js`, cet aspect se manifeste notamment par le changement de mise en place du texte et des images dans les sections, passant de cote à cote à à coté l'un de l'autre, mais aussi par la disparition de la barre de navigation au profit d'un menu sandwich pour les tailles d'écrans inférieures ou égales à `633px`.
-- L'utilisation de la bibliothèque [`MathJax`](https://www.mathjax.org/) permettant un rendu LaTex des expressions mathématiques dont les formules sont tapées entre `\(\)` ou `\[\]`. Au fur et à mesure de l'élaboration du site, notamment de la page `tentatives-resolutions.html`, le besoin d'expressions mathématiques propres, claires et agréables à lire s'est de plus en plus fait ressentir, d'où l'utilisation de cet outil. Seul point noir : la couleur des expressiosn était bien plus foncée que l'écriture du site, ce qui cassait l'identité visuelle d'une page. Pour y remédier, j'ai mis dans le fichier `general.css` un code permettant de rendre moins foncé le tout : `.MathJax.CtxtMenu_Attached_0 { color: rgb(85 85 85); }`
-- Les deux types de section : le site utilise deux types de sections distinctes : les sections de classe `presentation` et les sections de classe `carte`. Voici deux exemples pour voir la différence entre les deux :
+![image](https://github.com/enisbeziau/Syracuse-NSI/assets/126325785/6f978d89-9a45-4aa3-a124-1581e83000e7)
 
-<div align="center"><p>Section de classe "presentation"</p></div>
+<div align="center"><p>Section de classe "presentation" avec la balise div de classe "texte-presentation" en premier</p></div>
 
-![Capture d'écran des sections de classe présentation comportant une image et un texte cote à cote](https://github.com/enisbeziau/Syracuse-NSI/assets/126325785/28cdc2ad-180a-429a-b64d-c517a63ee738)  
+![image](https://github.com/enisbeziau/Syracuse-NSI/assets/126325785/286fee1a-8802-4700-8f3c-61cb0e8cb048)
 
-<div align="center"><p>Section de classe "carte"</p></div>
+- `section.carte.css` ; ce fichier contient le code relatif au style des sections ayant la classe `carte` comme `tentatives-resolutions.html` et `infos.html`. Celles-ci sont notamment utilisées dans la page `tentatives-resolutions.html` et servent plutot à laisser de l'espace au texte qui peut prendre toute la largeur de l'écran. Celles-ci s'avèrent très utiles lors de la démonstration de notions mathématiques comme l'unicité du cycle de longueur 3
+
+<div align="center"><p>Section de classe "carte" sans image</p></div>
 
 ![Capture d'écran des sections de classe carte comportant du texte](https://github.com/enisbeziau/Syracuse-NSI/assets/126325785/191d2380-81f6-41aa-b35c-1bb7399a4409)
 
-Les deux sont assez différentes dans leur style et seront utilisées dans des contextes différents : 
-- Les sections `presentation` sont les plus utilisées et servent à exposer un concept ou expliquer une notion nécessitant un exemple visuel comme un graphique
-- Les sections `carte` sont notamment utilisées dans la page `tentatives-resolutions.html` et servent plutot à laisser de l'espace au texte qui peut prendre toute la largeur de l'écran. Celles-ci s'avèrent très utiles lors de la démonstration de notions mathématiques comme l'unicité du cycle de longueur 3
+<div align="center"><p>Section de classe "carte" avec image illustrative</p></div>
+
+![image](https://github.com/enisbeziau/Syracuse-NSI/assets/126325785/28cdc2ad-180a-429a-b64d-c517a63ee738)  
 
 
 ## II. Page d'accueil `index.html`  
