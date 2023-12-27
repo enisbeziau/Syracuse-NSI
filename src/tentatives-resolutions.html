@@ -41,16 +41,16 @@
                 <div class="texte">
                     <p>
                         En se basant sur la définition explicite de la suite de Syracuse compressée, nous pouvons écrire
-                        une fonction python pour vérifier si tous les nombres entiers naturels vérifient la conjecture
-                        de
-                        Syracuse.
+                        une fonction python pour vérifier si tous les nombres entiers naturels vérifient la conjecture de Syracuse.
                         <br>
-                        Le programme se découpe en deux fonctions : <br>
+                        Le programme se découpe en deux fonctions : 
+                        <br>
                         - La fonction <code>suite_de_syracuse()</code> prenant en argument un nombre entier et
-                        retournant sa suite de Syracuse (compressée) sous la forme d'une liste d'entier <br>
+                        retournant sa suite de Syracuse (compressée) sous la forme d'une liste d'entiers 
+                        <br>
                         - La fonction <code>verifier_tous_les_nombres()</code> qui est celle qui devra être appelée pour
                         lancer le programme.
-                        Celle ci utilise une boucle infinie pour tester un à un tous les nombres entiers en utilisant la
+                        Celle-ci utilise une boucle infinie pour tester un à un tous les nombres entiers en utilisant la
                         première fonction. Dès qu'un nombre ne vérifie pas la conjecture, la boucle s'arrête grâce à
                         l'instruction <code>break</code>
                     </p>
@@ -64,14 +64,12 @@
                 </figure>
             </div>
 
-            <p>Notre algorithme précédant, bien que fonctionnel, est loin d'être le plus optimal. En effet, celui ci
-                teste tous les nombres entiers sctrictement supérieur à 2. Pour disqualifier
-                d'emblée certains
-                nombres, nous pouvons modifier l'énoncé de la conjecture de Syracuse en un nouvel énoncé
-                équivalent. Ainsi, nous pouvons affirmer que si tout entier a un temps de vol en altitude fini,
-                alors tout vol atterit. Cette nouvelle formulation est intéressante dans notre recherche de contre
-                exemple car elle nous amène à ne chercher que des nombres dont la suite de Syracuse ne passe pas en
-                dessous de \(u_0\) tels que : <br>
+            <p>Notre algorithme précédant, bien que fonctionnel, est loin d'être le plus optimal. En effet, celui-ci
+                teste tous les nombres entiers strictement supérieur à 2. Pour disqualifier d'emblée certains nombres, 
+                nous pouvons modifier l'énoncé de la conjecture de Syracuse en un nouvel énoncé équivalent. 
+                Ainsi, nous pouvons affirmer que si tout entier a un temps de vol en altitude fini, alors tout vol atterrit. 
+                Cette nouvelle formulation est intéressante dans notre recherche de contre exemple car elle nous amène à ne chercher 
+                que des nombres dont la suite de Syracuse ne passe pas en dessous de \(u_0\) tels que : 
             </p>
 
             <div class="contenu-carte">
@@ -98,18 +96,15 @@
                 </div>
 
                 <figure class="image">
-                    <a href="https://replit.com/@medouard770/suiteexclusion#main.py" target="_blank"
-                        rel="noopener noreferrer">
+                    <a href="https://replit.com/@medouard770/suiteexclusion#main.py" target="_blank" rel="noopener noreferrer">
                         <img src="../assets/tentatives_resolutions/code_opti.png" alt="Code Python" title="Testez-le">
                     </a>
                 </figure>
             </div>
             <p>
-                Par des calculs analogues, nous prouvons prouver que plus de 90% des nombres entiers
-                naturels
-                sont inutiles à tester car nous prouvons prouver que leur vol en altitude est fini.
-                Ainsi, seuls
-                les nombres impairs de la forme \(16k+7, 16k+11\) et \(16k+5\) peuvent être des prétendants à un
+                Par des calculs analogues, nous pouvons prouver que plus de 90% des nombres entiers
+                naturels sont inutiles à tester car nous pouvons prouver que leur vol en altitude est fini.
+                Ainsi, seuls les nombres impairs de la forme \(16k+7, 16k+11\) et \(16k+5\) peuvent être des prétendants à un
                 contre exemple. En effet, nous ne pouvons pas prouver avec exactitude que ces vols atterissent
                 car leur comportement varie en fonction des nombres.
             </p>

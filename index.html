@@ -76,17 +76,17 @@
             <div class="texte-presentation">
                 <h3>Application de Syracuse</h3>
                 <p>
-                    La conjecture de Syracuse repose sur une série d'opération appliquée à un nombre entier sctrictement
+                    La conjecture de Syracuse repose sur une série d'opérations appliquée à un nombre entier strictement
                     positif.
                     Cette opération, appelée <span class="gras">application de Syracuse</span>, est définie ainsi :
 
                     <br><br>
-                    - Prenez n'importe quel nombre entier sctrictement positif <br>
-                    - S'il est pair, divisez le par 2 <br>
-                    - S'il est impair, triplez le et ajoutez 1
+                    - Prenez n'importe quel nombre entier strictement positif <br>
+                    - S'il est pair, divisez-le par 2 <br>
+                    - S'il est impair, triplez-le et ajoutez 1
                     <br><br>
 
-                    Remarque : On note conventionnellement \(N\) le nombre de départ.
+                    Remarque : on note conventionnellement \(N\) le nombre de départ.
                 </p>
             </div>
 
@@ -109,9 +109,8 @@
             <div class="texte-presentation">
                 <h3>La suite de Syracuse</h3>
                 <p>
-                    En itérant sur l'application de Syracuse, nous pouvons obtenir une suite appelée <span
-                        class="gras">suite de Syracuse</span>.
-                    Cette suite se définie par récurrence
+                    En itérant sur l'application de Syracuse, nous pouvons obtenir une suite appelée <span class="gras">suite de Syracuse</span>.
+                    Cette suite se définit par récurrence
                     \[\forall n\in \mathbb N :\quad u_{n+1}=
                     \left \{
                     \begin{array}{c @{=} c}
@@ -121,7 +120,8 @@
                     \right.
                     \]
                     En prenant, par exemple, \(u_0=28\), la suite de Syracuse est la suivante
-                    14 ; 7 ; 22 ; 11 ; 34 ; 17 ; 52 ; 26 ; 13 ; 40 ; 20 ; 10 ; 5 ; 16 ; 8 ; 4 ; 2 ; 1. <br>
+                    14 ; 7 ; 22 ; 11 ; 34 ; 17 ; 52 ; 26 ; 13 ; 40 ; 20 ; 10 ; 5 ; 16 ; 8 ; 4 ; 2 ; 1. 
+                    <br>
                     1 étant impair, on le multiplie par 3 puis on ajoute 1 ce qui nous donne 4 qui est pair et que l'on
                     divise donc par 2 pour retomber sur 1...
                     Le cycle (4, 2, 1) se répète alors indéfiniment, on parle de cycle trivial.
@@ -136,8 +136,8 @@
                     En observant la formule de la suite de Syracuse, on remarque que si \(u_n\) est impair,
                     \(u_{n+1}\) est nécessairement pair et sera donc divisé par deux lors de la prochaine opération. 
                     Pour démontrer, posons \(n\in \mathbb N^*\) impair:
-                    \[3n+1=\underbrace{\underbrace{2n+1}_{\text{de la forme } 2k+1}+n}_{\text{de la forme }k+1 \text{ avec } k \text{ impair}}\]
 
+                    \[3n+1=\underbrace{\underbrace{2n+1}_{\text{de la forme } 2k+1}+n}_{\text{de la forme }k+1 \text{ avec } k \text{ impair}}\]
 
                     Ainsi, nous pouvons définir une variante de la suite de Syracuse appelée
                     <span class="gras">Suite compressée de Syracuse</span>.
@@ -154,8 +154,7 @@
 
             <figure>
                 <a href="assets/accueil/28compressee.png" target="_blank" rel="noopener noreferrer">
-                    <img src="assets/accueil/28compressee.png"
-                        alt="Représentation graphique de la suite compressée de Syracuse pour N = 28">
+                    <img src="assets/accueil/28compressee.png" alt="Représentation graphique de la suite compressée de Syracuse pour N = 28">
                 </a>
                 <figcaption>Représentation graphique de la suite compressée de Syracuse pour \(N=28\)</figcaption>
             </figure>
