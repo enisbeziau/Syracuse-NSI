@@ -34,6 +34,84 @@
     <h1 class="titre">Tentatives de résolution</h1>
 
     <main>
+
+        <section class="carte">
+            <h2>Approche inverse : arbre de Syracuse</h2>
+            <p>
+                Depuis le début, nos approches sont similaires. Nous partons d'une itération sur l'application de
+                Syracuse pour en observer ou démontrer des propriétés. Une autre approche possible est de changer de
+                point de vue et de prendre le problème à l'envers. C'est de cette idée qu'est née l'arbre de syracuse.
+            </p>
+
+            <div class="contenu-carte">
+
+                <div class="texte">
+                    <p>
+                        Partons de 8 Pour y arriver, nous venons soit de l'application de Syracuse \(3x+1\), soit de
+                        \(\displaystyle \frac x 2\).
+                        <br>
+                        On tente de résoudre l'équation d'inconnue \(n\in \mathbb N^*\) :
+                        \[3n+1=8\iff 3n=7\iff n=\frac{7}{3} \notin \mathbb N^*\]
+
+                        On en déduit donc que 8 ne vient pas de l'application de Syracuse sur les nombres impairs car
+                        \(\displaystyle \frac{7}{3}\) n'est pas un entier naturel. Ainsi, 8 vient forcément de l'application de
+                        Syracuse sur les nombres pairs et donc de 16.
+                        <br><br>
+                        Nous passons maintenant à 16. Par la même méthode que pour 8, on résoud les équations
+                        d'inconnues \(n\in \mathbb N^*\) :
+                        \[3n+1=16\iff n=5\in \mathbb N^*\, \, \, \text{ou}\, \frac{n}{2}=16\iff n=32\in \mathbb N^* \]
+                        Ces deux équations possèdent des solutions naturels, l'arbre de Syracuse possède donc 2 branches
+                        qui représente les 2 applications de Syracuse possibles. À partir de ces deux branches, d'autres
+                        seront à leur tour crées. Ainsi, il est dit que tous les nombres entiers naturels sctrictement
+                        positifs sont présents dans cet arbre. Nous n'avons cependant par encore réussi à le démontrer.
+                    </p>
+                </div>
+
+                <figure class="image">
+                    <a href="../assets/tentatives_resolutions/arbre.jpg" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/tentatives_resolutions/arbre.jpg" alt="Image de l'arbre de Syracuse">
+                    </a>
+                    <figcaption>Arbre de Syracuse</figcaption>
+                </figure>
+
+            </div>
+        </section>
+
+        <section class="carte">
+            <h2>Recherche de cycles non triviaux</h2>
+            <p>
+                Une autre approche pour vaincre la conjecture de Syracuse serait de prouver qu'il existe un cycle
+                différent du cycle trivial.
+                <br>
+                Pour ce faire, raisonnons par l'absurde et admettons qu'il existe un autre cycle de longueur 3 
+                <br>
+                Supposons \((A, B,C)\in \mathbb N^3\setminus\{0\}\) tel que \(A\lt B\lt C\) et
+
+                \[A \rightarrow B \rightarrow C \rightarrow A\]
+
+                Nous avons donc nécessairrement \(A\) impair car, le cas échéant, \(B\) serait divisé par 2 et \(B\lt
+                A\).
+                <br>
+                Ainsi \(B=3A+1\), qui est pair donc \(C=\displaystyle \frac{B}{2}=\frac{3A+1}{2}\). Puisque \(C \to A\) et \(C \gt
+                A\), \(C\) est pair et vaut
+                \(\displaystyle \frac{B}{2}=\frac{1}{2}\left(\frac{3A+1}{2}\right)=\frac{3A+1}{4}\)
+                <br>
+                Résolvons maintenant l'équation d'inconnue \(A\in \mathbb N^*\) afin de déduire les valeurs de \(A, B,
+                C\) telles que le cycle existe.
+                \[A=\frac{3A+1}{4}\iff 4A=3A+1\iff A=1\]
+
+                Ainsi \(B=3A+1=3\times 1+1=4\;\) et \(C=\displaystyle \frac{B}{2}=\frac{4}{2}=2\)
+                <br>
+                Nous concluons donc que le seul cycle de longueur 3 existant est le cycle trivial.
+                <br>
+                Par des méthodes de démonstration par l'absurde, il est possible de prouver
+                qu'il n'existe pas de cycle de longueur 2 ou 5.
+                <br>
+                En général, le théorème de Eliahou nous dit qu'il
+                n'existe aucun cycle de nombre positif inférieur à 180 000 000 000.
+            </p>
+        </section>
+
         <section class="carte">
             <h2>Approche algorithmique</h2>
             <div class="contenu-carte">
@@ -108,84 +186,6 @@
                 contre exemple. En effet, nous ne pouvons pas prouver avec exactitude que ces vols atterissent
                 car leur comportement varie en fonction des nombres.
             </p>
-        </section>
-
-        <section class="carte">
-            <h2>Recherche de cycles non triviaux</h2>
-            <p>
-                Une autre approche pour vaincre la conjecture de Syracuse serait de prouver qu'il existe un cycle
-                différent du cycle trivial.
-                <br>
-                Pour ce faire, raisonnons par l'absurde et admettons qu'il existe un autre cycle de longueur 3 
-                <br>
-                Supposons \((A, B,C)\in \mathbb N^3\setminus\{0\}\) tel que \(A\lt B\lt C\) et
-
-                \[A \rightarrow B \rightarrow C \rightarrow A\]
-
-                Nous avons donc nécessairrement \(A\) impair car, le cas échéant, \(B\) serait divisé par 2 et \(B\lt
-                A\).
-                <br>
-                Ainsi \(B=3A+1\), qui est pair donc \(C=\displaystyle \frac{B}{2}=\frac{3A+1}{2}\). Puisque \(C \to A\) et \(C \gt
-                A\), \(C\) est pair et vaut
-                \(\displaystyle \frac{B}{2}=\frac{1}{2}\left(\frac{3A+1}{2}\right)=\frac{3A+1}{4}\)
-                <br>
-                Résolvons maintenant l'équation d'inconnue \(A\in \mathbb N^*\) afin de déduire les valeurs de \(A, B,
-                C\) telles que le cycle existe.
-                \[A=\frac{3A+1}{4}\iff 4A=3A+1\iff A=1\]
-
-                Ainsi \(B=3A+1=3\times 1+1=4\;\) et \(C=\displaystyle \frac{B}{2}=\frac{4}{2}=2\)
-                <br>
-                Nous concluons donc que le seul cycle de longueur 3 existant est le cycle trivial.
-                <br>
-                Par des méthodes de démonstration par l'absurde, il est possible de prouver
-                qu'il n'existe pas de cycle de longueur 2 ou 5.
-                <br>
-                En général, le théorème de Eliahou nous dit qu'il
-                n'existe aucun cycle de nombre positif inférieur à 180 000 000 000.
-            </p>
-        </section>
-
-        <section class="carte">
-            <h2>Approche inverse : arbre de Syracuse</h2>
-            <p>
-                Depuis le début, nos approches sont similaires. Nous partons d'une itération sur l'application de
-                Syracuse pour en observer ou démontrer des propriétés. Une autre approche possible est de changer de
-                point de vue et de prendre le problème à l'envers. C'est de cette idée qu'est née l'arbre de syracuse.
-            </p>
-
-            <div class="contenu-carte">
-
-                <div class="texte">
-                    <p>
-                        Partons de 8 Pour y arriver, nous venons soit de l'application de Syracuse \(3x+1\), soit de
-                        \(\displaystyle \frac x 2\).
-                        <br>
-                        On tente de résoudre l'équation d'inconnue \(n\in \mathbb N^*\) :
-                        \[3n+1=8\iff 3n=7\iff n=\frac{7}{3} \notin \mathbb N^*\]
-
-                        On en déduit donc que 8 ne vient pas de l'application de Syracuse sur les nombres impairs car
-                        \(\displaystyle \frac{7}{3}\) n'est pas un entier naturel. Ainsi, 8 vient forcément de l'application de
-                        Syracuse sur les
-                        nombres pairs et donc de 16.
-                        <br><br>
-                        Nous passons maintenant à 16. Par la même méthode que pour 8, on résoud les équations
-                        d'inconnues \(n\in \mathbb N^*\) :
-                        \[3n+1=16\iff n=5\in \mathbb N^*\, \, \, \text{ou}\, \frac{n}{2}=16\iff n=32\in \mathbb N^* \]
-                        Ces deux équations possèdent des solutions naturels, l'arbre de Syracuse possède donc 2 branches
-                        qui représente les 2 applications de Syracuse possibles. À partir de ces deux branches, d'autres
-                        seront à leur tour crées. Ainsi, il est dit que tous les nombres entiers naturels sctrictement
-                        positifs sont présents dans cet arbre. Nous n'avons cependant par encore réussi à le démontrer.
-                    </p>
-                </div>
-
-                <figure class="image">
-                    <a href="../assets/tentatives_resolutions/arbre.jpg" target="_blank" rel="noopener noreferrer">
-                        <img src="../assets/tentatives_resolutions/arbre.jpg" alt="Image de l'arbre de Syracuse">
-                    </a>
-                    <figcaption>Arbre de Syracuse</figcaption>
-                </figure>
-
-            </div>
         </section>
 
         <section class="carte">
