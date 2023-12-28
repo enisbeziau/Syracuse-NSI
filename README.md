@@ -28,11 +28,11 @@ Tout d'abord, pour mieux appréhender les explications ci-dessous, voici l'archi
 │   ├── icones  
 │   │   ├── hamburger.png  
 │   │   ├── icon.png  
-|       ├── telecharger.png  
+|   |   ├── telecharger.png  
 ├── js  
 │   ├── simu  
-        ├── fonction.js  
-        ├── app.js  
+|   |   ├── fonction.js  
+|   |   ├── app.js  
 │   ├── responsive.js  
 │   ├── anim.js  
 ├── css  
