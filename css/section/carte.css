@@ -43,6 +43,10 @@ Cet aspect de carte est réutilisé dans toutes les pages sauf accueil.html
     width: 98%;
 }
 
+.image figcaption a {
+    color: black;
+}
+
 .carte p a {
     color: black;
 }
