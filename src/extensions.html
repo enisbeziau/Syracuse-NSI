@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extensions | Projet NSI</title>
+    <link rel="shortcut icon" href="../assets/icones/icon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Quicksand:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/section/carte.css">
+    <!-- Importation de la bibliothèque MathJax qui permet d'écrire des équations plus proprement grâce à LaTex -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="ensemble-lien">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="voca.html">Vocabulaire</a></li>
+                <li><a href="simulateur.html">Simulateur</a></li>
+                <li><a href="tentatives-resolutions.html">Tentatives résolution</a></li>
+            </ul>
+            <img src="../assets/icones/hamburger.png" alt="Menu Hamburger" class="hamburger">
+        </nav>
+        <script src="../js/responsive.js"></script>
+    </header>
+
+    <h1 class="titre">Extensions et variantes</h1>
+
+    <main>
+        <section class="carte">
+            <h2>Extension sur Z</h2>
+            <p>
+                Depuis le début, nous utilisons la suite de Syracuse \(\left(u_n\right)_{n\in \mathbb N}\).
+                <br>
+                Cependant, quand est-il si nous considérions une suite définie pour tout \(N\in \mathbb Z\) ?
+                <br>
+                Pour y répondre, définissons une suite \(v_n\) telle que
+                \[\forall n\in \mathbb N :\quad v_{n+1}=
+                \left \{
+                \begin{array}{c @{=} c}
+                \dfrac{v_n}{2} & \text{Si } v_n \equiv 0[2] \\
+                3v_n+1 & \text{Si } v_n \equiv 1[2]
+                \end{array}
+                \right.
+                \]
+                Avec \(N\in \mathbb Z^*\quad ;\quad u_0=N\)
+                <br>
+                Suite à cette extension, plusieurs cycles différents du cycle trivial peuvent être observés :
+            </p>
+
+            <ul class="liste">
+                <li>
+                    Avec \(v_0=-1, \quad u_1=3\times (-1)+1=-2 \quad ;\quad u_2=-\dfrac{2}{2}=-1=u_0\).
+                    <br>
+                    Nous tombons donc dans un cycle \((-1, -2)\) de longueur 2
+                </li>
+
+                <li>
+                    Avec \(u_0=-5, \quad u_1=-14\quad ; \quad u_2=-7\quad ; \quad u_3=-20
+                    \quad ; \quad u_4=-10\quad ; \quad u_5=u_0\)
+                    <br>
+                    Nous tombons dans un cycle \((-5, -14, -7, -20, -10)\) de longueur 5
+                </li>
+
+                <li>
+                    Avec \(u_0=-17, \quad u_1=-50\quad ;\quad u_2=-25\quad ;\quad u_3=-74\quad \cdots\)
+                    <br>
+                    Nous tombons dans un cycle de longueur 18
+                </li>
+            </ul>
+
+            <p>
+                Il semble que, peut importe l'entier relatif \(N\ne 0\) choisi, celui-ci tombera dans un de ces trois
+                cycles.
+                <br>
+                Cependant, rien n'a pour le moment encore été démontré.
+            </p>
+        </section>
+
+        <section class="carte">
+            <h2>Variante de la suite de Syracuse</h2>
+            <p>
+                Pour mieux appréhender le comportement de la suite de Syracuse, il peut être intéressant de s'intéresser à ses variantes.
+                <br>
+                Et si au lieu de multiplier par trois, nous multipliions par cinq
+                <br>
+                Définissons pour ceci une nouvelle suite \((u_n')_{n\in \mathbb N}\, \) et étudions la :
+                \[\forall n\in \mathbb N :\quad u'_{n+1}=
+                \left \{
+                \begin{array}{c @{=} c}
+                \dfrac{u'_n}{2} & \text{Si } u'_n \equiv 0[2] \\
+                5u'_n+1 & \text{Si } u'_n \equiv 1[2]
+                \end{array}
+                \right.
+                \]
+                Avec \(N'\in \mathbb N^*\quad ;\quad u'_0=N'\)
+                <br>
+                Comme lors de l'extension de \(u_n\) aux nombres relatifs, plusieurs cas peuvent être observés :
+            </p>
+
+            <ul class="liste">
+                <li>
+                    Avec \(u'_0=6, \quad u'_1=3\quad ;\quad u'_2=16\quad ;\quad u'_3=8\quad ;\quad u'_4=4\quad ;\quad 
+                    u'_5=2\quad ;\quad u'_5=1\quad ;\quad u'_6=6=u'_0\)
+                    <br>
+                    Nous tombons dans le cycle \((6, 3, 16, 8, 4, 2, 1)\) de longueur 7.
+                </li>
+
+                <li>
+                    Avec \(u'_0=5, \quad u'_1=26\quad ;\quad u'_2=13\quad ;\quad \cdots \quad ;\quad
+                    u'_{10}=52\quad ;\quad u'_{11}=26=u'_1\)
+                    <br>
+                    Nous tombons dans le cycle \((26, 13, 66, 33, 166, 83, 416, 208, 104, 52)\) de longueur 10, qui ne retombe jamais sur 1. 
+                </li>
+            </ul>
+            
+        </section>
+    </main>
+
+
+</body>
+
+</html>

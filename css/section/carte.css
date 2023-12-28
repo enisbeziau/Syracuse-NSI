@@ -55,6 +55,19 @@ Cet aspect de carte est réutilisé dans toutes les pages sauf accueil.html
     text-decoration: underline;
 }
 
+.liste {
+    padding-left: 40px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.liste li {
+    list-style-type: disc;
+    margin: 20px;
+}
+
+
+
 @media screen and (max-width: 950px) {
 
     .carte {
