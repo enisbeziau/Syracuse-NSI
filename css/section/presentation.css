@@ -37,6 +37,10 @@
     line-height: 1.5;
 }
 
+.texte-presentation p a {
+    color: whitesmoke;
+}
+
 .presentation figcaption {
     color: whitesmoke;
     text-align: center;
