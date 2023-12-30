@@ -25,7 +25,6 @@ html {
 
 
 body {
-    /* Police utilisée dans le footer et la navbar */
     font-family: 'Quicksand';
     background-color: rgb(38 74 87);
     min-height: 100vh;
@@ -35,6 +34,7 @@ body {
 /* Code de la barre de navigation */
 
 nav {
+    /* Barlow est la police utilisée pour les titres h1 des pages et la navbar */
     font-family: 'Barlow', 'sans-serif';
     padding: 20px;
 }
@@ -101,18 +101,10 @@ footer a {
 
 /* Éléments redondants dans l'ensemble des pages */
 
-h1.titre {
+.titre {
     text-align: center;
     color: whitesmoke;
     padding: 20px;
-}
-
-code {
-    color: black;
-    background-color: #eee;
-    border-radius: 3px;
-    font-family: courier, monospace;
-    padding: 0 3px;
 }
 
 
@@ -182,7 +174,7 @@ code {
 
 /* Code servant à la gestion de l'anim quand on scroll sur la page */
 
-.presentation.index{
+.presentation.index {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.5s ease, transform 0.5s ease;
