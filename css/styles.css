@@ -26,7 +26,7 @@ html {
 
 body {
     font-family: 'Quicksand';
-    background-color: rgb(38 74 87);
+    background-color: rgb(38, 74, 87);
     min-height: 100vh;
 }
 
@@ -66,7 +66,7 @@ nav {
 footer {
     font-weight: bold;
     border-top: 1px solid whitesmoke;
-    background-color: rgb(38 74 87);
+    background-color: rgb(38, 74, 87);
     color: whitesmoke;
     text-align: center;
     padding: 20px;
@@ -152,7 +152,7 @@ footer a {
 #decouvrir {
     display: inline-block;
     cursor: pointer;
-    background-color: rgb(52, 52, 52);
+    background-color: rgb(38, 74, 87);
     border-radius: 4px;
     width: 141px;
     height: 41px;
@@ -162,7 +162,7 @@ footer a {
 }
 
 #decouvrir:hover {
-    background-color: #7e7e7e;
+    background-color: rgba(56, 82, 92, 0.994);
 }
 
 #link {
@@ -187,7 +187,7 @@ footer a {
 
 /* Style des rendus visuels LaTex grâce à MathJax. La couleur sert à mieux intégrer l'expression mathématique avec la police Quicksand */
 .MathJax.CtxtMenu_Attached_0 {
-    color: rgb(85 85 85);
+    color: rgb(85, 85, 85);
 }
 
 
