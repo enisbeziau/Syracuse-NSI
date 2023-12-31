@@ -1,6 +1,6 @@
 Lien du site : https://enisbeziau.github.io/Syracuse-NSI  
 
-Lien du code : [https://github.com/enisbeziau/Syracuse-NSI/releases/tag/release](https://github.com/enisbeziau/Syracuse-NSI/releases/tag/Phase1)  
+Lien du code : [https://github.com/enisbeziau/Syracuse-NSI/releases/tag/release](https://github.com/enisbeziau/Syracuse-NSI/releases/tag/phaseFinale)  
 
 Document de rendu de projet phase n°1 : https://github.com/enisbeziau/Rendu-1/blob/main/README.md  
 
