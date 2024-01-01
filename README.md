@@ -6,7 +6,7 @@ Document de rendu de projet phase n°1 : https://github.com/enisbeziau/Rendu-1/b
 
 # Document de rendu de projet - Phase finale  
 
-Le site a été codé sur un écran `1410 x 940`.
+Le site a été codé sur un écran `1567 x 1044`.
 
 ## I. Généralités  
 Tout d'abord, pour mieux appréhender les explications ci-dessous, voici l'architecture du projet :  
