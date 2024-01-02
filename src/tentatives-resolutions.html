@@ -60,10 +60,10 @@
                         Nous passons maintenant à 16. Par la même méthode que pour 8, on résoud les équations
                         d'inconnues \(n\in \mathbb N^*\) :
                         \[3n+1=16\iff n=5\in \mathbb N^*\, \, \, \text{ou}\, \frac{n}{2}=16\iff n=32\in \mathbb N^* \]
-                        Ces deux équations possèdent des solutions naturels, l'arbre de Syracuse possède donc 2 branches
-                        qui représente les 2 applications de Syracuse possibles. À partir de ces deux branches, d'autres
-                        seront à leur tour crées. Ainsi, il est dit que tous les nombres entiers naturels sctrictement
-                        positifs sont présents dans cet arbre. Nous n'avons cependant par encore réussi à le démontrer.
+                        Ces deux équations possèdent des solutions naturelles, l'arbre de Syracuse possède donc 2 branches
+                        qui représentent les 2 applications de Syracuse possibles. À partir de ces deux branches, d'autres
+                        seront à leur tour crées. Ainsi, il est dit que tous les nombres entiers naturels strictement
+                        positifs sont présents dans cet arbre. Personne n'a cependant encore réussi à le démontrer.
                     </p>
                 </div>
 
@@ -87,13 +87,13 @@
                 Une autre approche pour vaincre la conjecture de Syracuse serait de prouver qu'il existe un cycle
                 différent du cycle trivial.
                 <br>
-                Pour ce faire, raisonnons par l'absurde et admettons qu'il existe un autre cycle de longueur 3 
+                Pour ce faire, raisonnons par l'absurde et admettons qu'il existe un cycle de longueur 3 différent du cycle \((4, 2, 1)\)
                 <br>
                 Supposons \(A, B,C\in \mathbb N^*\) tel que \(A\lt B\lt C\) et
 
                 \[A \rightarrow B \rightarrow C \rightarrow A\]
 
-                Nous avons donc nécessairrement \(A\) impair car, le cas échéant, \(A\) serait divisé par 2 et \(B\lt
+                Nous avons donc nécessairement \(A\) impair car, le cas échéant, \(A\) serait divisé par 2 et \(B\lt
                 A\).
                 <br>
                 Ainsi \(B=3A+1\), qui est pair donc \(C=\displaystyle \frac{B}{2}=\frac{3A+1}{2}\). Puisque \(C \to A\) et \(C \gt
@@ -108,8 +108,8 @@
                 <br>
                 Nous concluons donc que le seul cycle de longueur 3 existant est le cycle trivial.
                 <br><br>
-                Nous pourrions également nous demander s'il existe des cycles autre que le cycle trivial parmi ceux de longueur différente de 3.
-                Essayons par exemple de chercher s'il existe un cycle de longueur 5, toujours pas l'absurde
+                Nous pourrions également nous demander s'il existe des cycles autre que le cycle trivial parmi ceux de longueurs différentes de 3.
+                Essayons par exemple de chercher s'il existe un cycle de longueurs 5, toujours par l'absurde
                 <br>
                 Supposons \(A, B, C, D, E\in \mathbb N^*\) tel que \(A\lt B\lt C\lt D\lt E\) et 
                 \[A\to B\to C\to D\to E\to A\]
@@ -158,11 +158,11 @@
             </div>
 
             <p>Notre algorithme précédant, bien que fonctionnel, est loin d'être le plus optimal. En effet, celui-ci
-                teste tous les nombres entiers strictement supérieur à 2. Pour disqualifier d'emblée certains nombres, 
+                teste tous les nombres entiers strictement supérieurs à 2. Pour disqualifier d'emblée certains nombres, 
                 nous pouvons modifier l'énoncé de la conjecture de Syracuse en un nouvel énoncé équivalent. 
                 Ainsi, nous pouvons affirmer que si tout entier a un temps de vol en altitude fini, alors tout vol atterrit. 
                 Cette nouvelle formulation est intéressante dans notre recherche de contre exemple car elle nous amène à ne chercher 
-                que des nombres dont la suite de Syracuse ne passe pas en dessous de \(u_0\) tels que : 
+                que des nombres dont la suite de Syracuse ne passe pas en dessous de \(u_0\). Nous pouvons donc disqualifier :
             </p>
 
             <div class="contenu-carte">
@@ -171,7 +171,7 @@
                         - Les nombres de la forme \(2n\) et \(2^n\), pour tout \(n\in \mathbb N^*\),
                         car ceux ci sont directement divisés par 2 donc \(u_1 \lt N\)
                         <br><br>
-                        - Les nombres impairs de la forme \(4k+1\) car,
+                        - Les nombres de la forme \(4k+1\) car,
                         \[4k+1 \rightarrow 12k+4 \rightarrow 6k+2 \rightarrow 3k+1\]
                         et \(3k+1 \lt 4k+1 \iff u_3 \lt N\)
                         <br>
@@ -336,9 +336,8 @@
             <h2>Un énoncé indécidable ?</h2>
             <p>
                 Après toutes ces tentatives infructueuses ou n'apportant pas une réponse claire et définitive quant à la
-                validation ou à la réfutation de la conjecture, certains spécialités viennent à se demander si cette
-                question ne serait pas indescidable. Cependant, une méthode de résoudre cette conjecture serait de
-                trouver un contre exemple à celle ci. Pour le moment, tous les nombres de l'intervalle \([1\, ;\, 2^{68}]\)
+                validation ou à la réfutation de la conjecture, certains spécialistes viennent à se demander si cette
+                question ne serait pas indescidable. Pour le moment, tous les nombres de l'intervalle \([1\, ;\, 2^{68}]\)
                 vérifient la conjecture de Syracuse. Or, il est important de noter que, sur l'infinité des nombres
                 naturels, ce nombre est ridiculement petit. A titre d'exemple, 
                 <a href="https://fr.wikipedia.org/wiki/Conjecture_de_P%C3%B3lya" target="_blank" rel="noopener noreferrer">
