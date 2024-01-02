@@ -39,6 +39,8 @@ body {
 
 #graphique {
     margin-top: 25px;
+    min-height: 80vh;
+    min-width: 100%;
 }
 
 .zone-graphique {
