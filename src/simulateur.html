@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 
+<!-- Page permettant de générer un graphique montrant la suite de Syracuse d'un nbr entré -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,6 +39,7 @@
             </button>
         </section>
 
+        <!-- Boutons permettant, au clic, de changer le repère du graphique généré. Ne s'affiche que lorsque un nombre valide a été entré -->
         <div class="ensemble-btn" id="ensemble-btn">
             <button class="btn" id="btn-ortho" class="btn" title="Bouton pour changer le graphique en repère orthonormal">
                 Repère orthonormé
@@ -46,21 +49,23 @@
             </button>
         </div>
 
-
+        <!-- Zone accueillant le graphique lorsque le nombre a été validé -->
         <section class="zone-graphique" id="zone-graphique">
             <canvas id="graphique"></canvas>
         </section>
 
-
+        <!-- Zone comportant des informations sur la suite de Syracuse générée. Ne s'affiche que quand le nombre est valide -->
         <section id="informations">
             <p>Nombre d'itérations : <span id="nbr-iteration"></span></p>
             <p>Valeur maximale atteinte : <span id="altitude-max"></span></p>
             <p>Facteur d'expansion : <span id="facteur-expansion"></span></p>
+            <!-- Permet de télécharger un fichier csv comportant les étapes de la suite de Syracuse générée -->
             <button id="csv">
                 <img src="../assets/icones/telecharger.png" alt="btn de téléchargement tiré de google font">
             </button>
         </section>
     </main>
+    <!-- Importation du fichier js permettant la création du graphique ; le téléchargement du csv et de compléter les infos -->
     <script type="module" src="../js/simu/app.js"></script>
 
 </body>

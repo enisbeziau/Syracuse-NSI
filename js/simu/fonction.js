@@ -1,16 +1,20 @@
 /*
 Auteur : Enis Béziau [1H]
-Ce code sert à définir les fonctions utilisées dans le fichier app.js pour faire fonctionner la partie simulateur
-Le fait de scinder le code js en deux fichiers améliore la lisibilité de app.js et améliore la maintenabilité du code
+Ce fichier sert à définir toutes les fonctions utilisées dans la partie simulateur du site. 
+Ces fonctions seront ensuites importées dans 'app.js'. 
+Scinder en une partie fonction et une partie détection des évènements améliore la maintenabilité et la compréhension du code
 */
 
 
 function syracuseSuite(nombre) {
     /**
-     * Génère la suite de Syracuse pour un nombre donné
-     * @param {number} nombre - Le nombre de départ
-     * @returns {Object} - La suite de Syracuse sous forme de tableau, le nbr d'itérations et le max
-     */
+    * Génère la suite de Syracuse pour un nombre donné.
+    * @param {number} nombre - Le nombre de départ.
+    * @returns {Object} - Un objet contenant :
+    *   @property {number[]} sequence - La suite de Syracuse sous forme de tableau
+    *   @property {number} nbr_iterations - Le nombre d'itérations effectuées
+    *   @property {number} max - La valeur maximale atteinte par la suite
+    */
     let sequence = [nombre];
     let nbr_iterations = 0;
     while (nombre !== 1) {
@@ -24,6 +28,7 @@ function syracuseSuite(nombre) {
         max: Math.max(...sequence),
     };
 }
+
 
 function supprimerGraphiqueExistant(canvas) {
     /**
@@ -39,7 +44,7 @@ function supprimerGraphiqueExistant(canvas) {
 function creerGraphique(ctx, infos, repere) {
     /**
      * @param {CanvasRenderingContext2D} ctx - Le contexte 2D du canvas HTML, utilisé pour dessiner des éléments graphiques sur le canvas
-     * @param {entier[]} infos - La suite dont les éléments composeront les points du graphique qui seront reliés
+     * @param {int[]} infos - La suite dont les éléments composeront les points du graphique qui seront reliés
      * @param {"linear" | "logarithmic"} repere - Le type de repère dans lequel sera dessiné le graphique
      */
     // Constante contenant les str "orthonormé" ou "semi-logarithmique" en fonction de la valeur de l'argument repere.

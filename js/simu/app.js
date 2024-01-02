@@ -1,8 +1,9 @@
 /*
 Auteur : Enis Béziau [1H]
 Code gérant : 
-- L'affichage du graphique montrant la suite de Syracuse d'un nombre entré
-- L'affichage de la section d'informations lors du clic sur la flèche
+- L'affichage du graphique montrant la suite de Syracuse du nombre entré
+- Le changement de repère au clic sur le btn correspondant
+- Le téléchargement en format csv des informations au clic sur le btn correspondant 
 */
 
 
