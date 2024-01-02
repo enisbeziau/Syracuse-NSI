@@ -1,3 +1,9 @@
+/* 
+Auteur : Enis Béziau
+Cette page définit le style des sections de classe présentation utilisées dans les pages index.html et voca.html
+*/
+
+
 .presentation {
     font-family: 'Barlow', 'sans-serif';
     background-color: rgb(38 74 87);
@@ -33,7 +39,7 @@
 .texte-presentation p {
     color: whitesmoke;
     text-align: justify;
-    font-size: 18px;
+    font-size: 1.2em;
     line-height: 1.5;
 }
 
@@ -52,6 +58,7 @@ span.gras {
 
 }
 
+/* Changement de la couleur des équations générées par MathJax (par défaut noir) */
 .MathJax.CtxtMenu_Attached_0 {
     color: whitesmoke;
 }

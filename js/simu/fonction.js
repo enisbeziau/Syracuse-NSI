@@ -35,6 +35,7 @@ function supprimerGraphiqueExistant(canvas) {
      * @param {HTMLElement} canvas - Le canvas dans lequel on devra supprimer le graphique
      */
     const graphiqueExistant = Chart.getChart(canvas);
+    // Si un graphique est à l'emplacement prévu, on le supprime avant d'en recréer un nouveau
     if (graphiqueExistant) {
         graphiqueExistant.destroy();
     }
@@ -44,7 +45,7 @@ function supprimerGraphiqueExistant(canvas) {
 function creerGraphique(ctx, infos, repere) {
     /**
      * @param {CanvasRenderingContext2D} ctx - Le contexte 2D du canvas HTML, utilisé pour dessiner des éléments graphiques sur le canvas
-     * @param {int[]} infos - La suite dont les éléments composeront les points du graphique qui seront reliés
+     * @param {number[]} infos - La suite dont les éléments composeront les points du graphique qui seront reliés
      * @param {"linear" | "logarithmic"} repere - Le type de repère dans lequel sera dessiné le graphique
      */
     // Constante contenant les str "orthonormé" ou "semi-logarithmique" en fonction de la valeur de l'argument repere.
@@ -99,7 +100,7 @@ function creerGraphique(ctx, infos, repere) {
 function verifierEntree(input) {
     /**
      * Sert à vérifier la saisie de l'utilisateur pour éviter une erreur lors de la génération du graphique
-     * @param {any} input - La valeur qui est testé pour savoir si oui ou non c'est un entier
+     * @param {number} input - La valeur qui est testé pour savoir si oui ou non c'est un entier
      * @return {bool} - true si input est un nombre entier supérieur ou égal à 1, false sinon
      */
     return Number.isInteger(input) && input >= 1;

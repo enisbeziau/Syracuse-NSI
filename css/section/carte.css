@@ -74,6 +74,11 @@ code {
     padding: 0 3px;
 }
 
+/* Style des rendus visuels LaTex grâce à MathJax. La couleur sert à mieux intégrer l'expression mathématique avec la police Quicksand */
+.MathJax.CtxtMenu_Attached_0 {
+    color: rgb(85, 85, 85);
+}
+
 @media screen and (max-width: 950px) {
 
     .carte {

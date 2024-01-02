@@ -1,11 +1,11 @@
 /* 
 Auteur : Enis Béziau 1H
-Ce fichier vise à réunir tous les élements de style communs aux pages du site pour éviter les répétitions
+Ce fichier contient le code stylisant les parties redondantes (navbar ; footer) et la page index.html
 */
 
 
 /* ==============================
-   Coode des élements redondants sur l'ensemble des pages (navbar, footer, reset)
+   Code des élements redondants sur l'ensemble des pages (navbar, footer, reset)
    ============================== */
 
 * {
@@ -100,8 +100,6 @@ footer a {
 }
 
 
-/* Éléments redondants dans l'ensemble des pages */
-
 .titre {
     text-align: center;
     color: whitesmoke;
@@ -184,11 +182,6 @@ footer a {
 .presentation.index.visible {
     opacity: 1;
     transform: translateY(0);
-}
-
-/* Style des rendus visuels LaTex grâce à MathJax. La couleur sert à mieux intégrer l'expression mathématique avec la police Quicksand */
-.MathJax.CtxtMenu_Attached_0 {
-    color: rgb(85, 85, 85);
 }
 
 

@@ -16,6 +16,7 @@ import {
     exporterCSV
 } from './fonction.js';
 
+
 // Déclaration de la variable infos en dehors de toute fonction pour qu'elle soit globale
 let infos;
 
@@ -61,6 +62,7 @@ boutons.forEach(bouton => {
 
 
 btn_input.addEventListener('click', () => {
+    // On peut parseInt directement vu que l'input est défini comme ne prenant que des nombres dans le HTML
     const entree_utilisateur = parseInt(entree.value);
 
     if (verifierEntree(entree_utilisateur)) {
@@ -69,11 +71,11 @@ btn_input.addEventListener('click', () => {
         infos = syracuseSuite(entree_utilisateur);
 
 
-        // Supprimer le graphique existant s'il y en a un
+        // Supprime le graphique existant s'il y en a un
         supprimerGraphiqueExistant(canvas);
 
 
-        // Créer un nouveau graphique
+        // Crée un nouveau graphique
         creerGraphique(ctx, infos, "linear");
 
 
@@ -105,7 +107,7 @@ btn_input.addEventListener('click', () => {
         // Remplissage des informations de la section informations en fonction de l'entrée de l'utilisateur
         iterations.innerHTML = infos.nbr_iterations;
         altitudeMax.innerHTML = infos.max;
-        facteurExpansion.innerHTML =  Math.round((infos.max / entree_utilisateur));
+        facteurExpansion.innerHTML = Math.round((infos.max / entree_utilisateur));
 
     }
     // Si l'entrée est invalide
@@ -115,6 +117,7 @@ btn_input.addEventListener('click', () => {
 
 // Lorsque l'on clique sur le bouton pour générer le fichier csv, on vérifie que la variable infos contient quelque chose puis on exporte
 btnCsv.addEventListener('click', () => {
+    // Si la variable globale n'est pas vide
     if (infos) {
         exporterCSV(infos)
     }
