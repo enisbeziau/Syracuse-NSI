@@ -82,7 +82,7 @@ code {
 @media screen and (max-width: 950px) {
 
     .carte {
-        margin: 0px;
+        margin: 20px 0 0 0;
     }
 
     .image {

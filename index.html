@@ -143,12 +143,15 @@
                 <p>
                     En observant la formule de la suite de Syracuse, on remarque que si \(u_n\) est impair,
                     \(u_{n+1}\) est nécessairement pair et sera donc divisé par deux lors de la prochaine opération. 
-                    Pour démontrer, posons \(n\in \mathbb N^*\) impair:
+                    Pour démontrer, considérons \(u_n\) impair :
 
-                    \[3n+1=\underbrace{\underbrace{2n+1}_{\text{de la forme } 2k+1}+n}_{\text{de la forme }k+1 \text{ avec } k \text{ impair}}\]
+                    \[u_n=2k+1\]
 
-                    Ainsi, nous pouvons définir une variante de la suite de Syracuse appelée
-                    <span class="gras">Suite compressée de Syracuse</span>.
+                    Avec \(k\) entier. Ainsi, par l'application de Syracuse
+                    
+                    \[u_{n+1}=3u_n+1=3(2k+1)+1=6k+4=\underbrace{2(3k+2)}_{\text{de la forme } 2k', \; k' \in\, \mathbb Z}\]
+
+                    Nous pouvons donc définir une variante de la suite de Syracuse appelée <span class="gras">Suite compressée de Syracuse</span>.
                     \[\forall n\in \mathbb N :\quad u_{n+1}=
                     \left \{
                     \begin{array}{c @{=} c}
