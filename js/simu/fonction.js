@@ -53,7 +53,7 @@ function creerGraphique(ctx, infos, repere) {
     new Chart(ctx, {
         type: 'line',
         data: {
-            labels: Array.from({ length: infos.sequence.length }, (_, index) => index + 1),
+            labels: Array.from({ length: infos.sequence.length }, (_, index) => index),
             datasets: [{
                 label: 'Repère ' + repereLabel,
                 data: infos.sequence,
