@@ -9,56 +9,56 @@ Document de rendu de projet phase n°1 : https://github.com/enisbeziau/Rendu-1/b
 Le site a été codé sur un écran `1567 x 1044`.
 
 ## I. Généralités  
-Tout d'abord, pour mieux appréhender les explications ci-dessous, voici l'architecture du projet :  
+Tout d'abord, pour mieux appréhender les explications ci-dessous, voici l'architecture du projet (les dossiers sont en __gras__):  
 ├── index.html  
-├── assets  
-│   ├── accueil  
+├── __assets__  
+│   ├── __accueil__  
 │   │   ├── 28.png  
 │   │   ├── 28compressee.png  
 │   │   ├── accueil.png  
 │   │   ├── collatz.jpeg  
 │   │   ├── valeurs.png    
-│   ├── tentatives_resolutions  
+│   ├── __tentatives_resolutions__  
 │   │   ├── arbre.jpg  
 │   │   ├── code.png  
 │   │   ├── code_opti.png  
-│   ├── voca  
+│   ├── __voca__  
 │   │   ├── 12.png  
 │   │   ├── 20.png  
 │   │   ├── 27.png  
 │   │   ├── 30.png  
-│   ├── icones  
+│   ├── __icones__  
 │   │   ├── hamburger.png  
 │   │   ├── icon.png  
 |   |   ├── telecharger.png  
-├── js  
-│   ├── simu  
+├── __js__  
+│   ├── __simu__  
 |   |   ├── fonction.js  
 |   |   ├── app.js  
 │   ├── responsive.js  
 │   ├── anim.js  
-├── css  
+├── __css__  
 │   ├── general.css  
 │   ├── simulateur.css  
-│   ├── section  
+│   ├── __section__  
 │   │   ├── presentation.css  
 │   │   ├── carte.css  
-├── src  
+├── __src__  
 │   ├── infos.html  
 │   ├── simulateur.html  
 │   ├── tentatives-resolutions.html  
 │   ├── voca.html 
 
 Voici les éléments redondants sur le site ainsi qu'une description de quelques spécificités techniques qui leur sont propres :  
-- La navbar : alignée en haut de la page à droite, celle-ci utilise flexbox pour la mise en forme et les noms des pages auxquelles elle renvoie sont dans la police `Barlow`
+- La navbar : alignée en haut de la page à droite, celle-ci utilise les flexbox pour la mise en forme et les noms des pages auxquelles elle renvoie sont dans la police `Barlow`
 - Le footer : prenant toute la largeur de la page et étant situé tout en bas de celle-ci, le footer donne accès à une page de source (`infos.html`) et à des liens externes (GitHub, Gmail et Drive) dans une police identique à la barre de navigation
-- L'aspect responsive : toutes les pages admettent un aspect pouvant s'adapter aux tailles d'écrans plus petites, notamment celle des mobiles. Géré par le fichier `responsive.js` du dossier `js`, cet aspect se manifeste notamment par le changement de mise en place du texte et des images dans les sections, passant de cote à côte à côte à l'un de l'autre, mais aussi par la disparition de la barre de navigation au profit d'un menu sandwich pour les tailles d'écrans inférieures ou égales à `633px`.
+- L'aspect responsive : toutes les pages ont un aspect pouvant s'adapter aux tailles d'écrans plus petites, notamment celle des mobiles. Géré par le fichier `responsive.js` du dossier `js`, cet aspect se manifeste notamment par le changement de mise en place du texte et des images dans les sections, passant de cote à côte à côte à l'un de l'autre, mais aussi par la disparition de la barre de navigation au profit d'un menu sandwich pour les tailles d'écrans inférieures ou égales à `633px` à l'aide de media queries. 
 - L'utilisation de la bibliothèque [`MathJax`](https://www.mathjax.org/) permettant un rendu LaTex des expressions mathématiques dont les formules sont tapées entre `\(\)` ou `\[\]`. Au fur et à mesure de l'élaboration du site, notamment de la page `tentatives-resolutions.html`, le besoin d'expressions mathématiques propres, claires et agréables à lire s'est de plus en plus fait ressentir, d'où l'utilisation de cet outil. Seul point noir : la couleur des expressions était bien plus foncée que l'écriture du site, ce qui cassait l'identité visuelle d'une page. Pour y remédier, j'ai mis dans le fichier `general.css` un code permettant de rendre moins foncé le tout : `.MathJax.CtxtMenu_Attached_0 { color: rgb(85 85 85); }`.
 
-Concernant le choix du découpage du code stylisant la page en 5 fichiers distincts, ce choix est notamment justifié par 
+Concernant le choix du découpage du css de la page en 5 fichiers distincts, ce choix est notamment justifié par 
 - une meilleure maintenabilité du code (il est plus simple de chercher dans un fichier de ~100 lignes que dans un fichier de plus de 600 lignes)
 - de meilleures performances : on importe dans la page uniquement ce dont elle a besoin : il est inutile de charger le style d'une section qui n'y est jamais utilisée
-- une plus grande simplicité dans la gestion des polices et écriture. En effet, par exemple, la couleur utilisée pour ajuster la lisibilité des expressions LaTex générées par [`MathJax`](https://www.mathjax.org/) change en fonction de la page et du type de section utilisé. Si le fond est bleu comme dans les pages `index.html` et `voca.html`, il est plus judicieux que la couleur soit blanche. À contrario, lorsque le fond est blanc, une couleur plutôt grise vers noire sera bien meilleure. Pour gérer ce détail, grâce au découpage des fichiers gérant le style des sections, on importe le code de style d'une seule section dans lequel la couleur est gérée. (si nous importions un seul fichier contenant tout le style relatif aux sections, et bien que cela soit gérable, nous aurions pu avoir des soucis de priorité rendant tantôt le texte blanc tantôt le texte noir vu qu'il est difficile de manipuler la couleur du texte d'une extension qui n'est pas la notre).
+- une plus grande simplicité dans la gestion des polices et écriture. Par exemple, la couleur utilisée pour ajuster la lisibilité des expressions LaTex générées par [`MathJax`](https://www.mathjax.org/) change en fonction de la page et du type de section utilisé. Si le fond est bleu comme dans les pages `index.html` et `voca.html`, il est plus judicieux que la couleur soit blanche. À contrario, lorsque le fond est blanc, une couleur plutôt grise vers noire sera bien meilleure. Pour gérer ce détail, grâce au découpage des fichiers gérant le style des sections, on importe le code de style d'une seule section dans lequel la couleur est gérée. (si nous importions un seul fichier contenant tout le style relatif aux sections, et bien que cela soit gérable, nous aurions pu avoir des soucis de priorité rendant tantôt le texte blanc tantôt le texte noir vu qu'il est difficile de manipuler la couleur du texte d'une extension qui n'est pas la notre).
 - `general.css` contient le code relatif aux éléments redondants cités plus haut (navbar, footer). Il est importé sur toutes les pages du site et contient également le code de style de la page d'accueil car celui-ci est assez court.
 - `simulateur.css` qui possède une page à part en raison de la quantité de code importante (~140 lignes). Le détail du fonctionnement du code est donné plus bas.
 - `section/presentation.css` : ce fichier contient le code relatif au style des sections ayant la classe `presentation` comme `index.html` et `voca.html`. Celles-ci sont les plus utilisées et servent à exposer un concept ou à expliquer une notion nécessitant un exemple visuel comme un graphique. Le style alterne entre image à gauche et texte à droite et texte à gauche image à droite grâce à la propriété `flex: 1` appliqué à la div contenant le texte. Cette alternance est gérée par le premier élement présent dans la div, soit la figure soit la div de texte :
@@ -91,7 +91,7 @@ Dans celle-ci sont expliquées ou introduites les notions les plus fondamentales
 - La définition rigoureuse de Syracuse par récurrence
 - La définition de la suite de Syracuse compressée, très utilisée notamment dans la page `tentatives-resolutions.html`  
 
-*Remarque* : Tous les points sont illustrés par des graphiques que j'ai créé à l'aide du simulateur de la page `simulateur.html`
+*Remarque* : Tous les points ci-dessus sont illustrés par des graphiques que j'ai créé à l'aide du simulateur de la page `simulateur.html`
 
 ### 2) Style  
 Cette page utilise des sections de classe `presentation`.   
@@ -108,8 +108,7 @@ Cette page sert à définir les notions plus complexes relatives à la conjectur
 - Le temps de vol d'une suite de Syracuse
 - L'altitude maximale d'une suite de Syracuse
 - Le temps de vol en altitude d'une suite de Syracuse
-
-### 2) Style  
+ 
 Cette page utilise des sections de classe `presentation` et présente un style plutôt similaire à `index.html`  
 
 
@@ -159,7 +158,6 @@ Cette page sert à regrouper et à expliquer différentes tentatives pour vaincr
 - Une extension sur Z de la suite de Syracuse qui nous permet de constater que la conjecture de Syracuse ne tient pas à l'extension aux nombres relatifs
 - La présentation d'une variante de la suite de Syracuse
 
-### 2) Style  
 Cette page utilise des sections de classe `carte` permettant de laisser plus de place au texte explicatif tout en permettant d'intégrer une image illustrative si besoin
 
 ## VI. Remarque sur le contenu du site  
