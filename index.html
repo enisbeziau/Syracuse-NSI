@@ -16,6 +16,7 @@
     <!-- Importation de la bibliothèque MathJax qui permet d'obtenir un rendu LaTex dans le navigateur -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- \(\) est équivalent à $$ en LaTex et \[\] à $$$$ -->
 </head>
 
 <body>
@@ -50,11 +51,11 @@
         <h2 id="link">Énoncé et histoire du problème</h1>
 
         <!-- Les sections de cette page possèdent deux classes pour les différencier des sections présentations de la page voca.html -->
-        <!-- On veut que seules les sections de cette page soient affectées par l'opacity (nécessaire à l'animation) définie dans general.css -->
+        <!-- On veut que seules les sections de cette page soient affectées par l'opacity (nécessaire à l'animation) définie dans styles.css -->
         <section class="presentation index">
             <figure>
                 <a href="assets/accueil/collatz.jpeg" target="_blank" rel="noopener noreferrer">
-                    <img src="assets/accueil/collatz.jpeg" alt="Lothar Collatz">
+                    <img src="assets/accueil/collatz.jpeg" alt="Photo de Lothar Collatz, mai 1990">
                 </a>
                 <figcaption>Lothar Collatz, mai 1990</figcaption>
             </figure>
@@ -132,7 +133,7 @@
                     <br>
                     1 étant impair, on le multiplie par 3 puis on ajoute 1 ce qui nous donne 4 qui est pair et que l'on
                     divise donc par 2 pour retomber sur 1...
-                    Le cycle (4, 2, 1) se répète alors indéfiniment, on parle de cycle trivial.
+                    Le cycle (4, 2, 1) se répète alors indéfiniment, on parle de <span class="gras">cycle trivial</span>.
                 </p>
             </div>
         </section>
