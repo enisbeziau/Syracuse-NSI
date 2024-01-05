@@ -26,7 +26,7 @@ html {
 
 body {
     font-family: 'Quicksand';
-    background-color: rgb(38, 74, 87);
+    background-color: rgb(38 82 99);
     min-height: 100vh;
 }
 
@@ -67,7 +67,7 @@ nav {
 footer {
     font-weight: bold;
     border-top: 1px solid whitesmoke;
-    background-color: rgb(38, 74, 87);
+    background-color: rgb(38 82 99);
     color: whitesmoke;
     text-align: center;
     padding: 20px;

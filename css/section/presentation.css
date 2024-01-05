@@ -6,7 +6,7 @@ Cette page définit le style des sections de classe présentation utilisées dan
 
 .presentation {
     font-family: 'Barlow', 'sans-serif';
-    background-color: rgb(38 74 87);
+    background-color: rgb(38 82 99);
     display: flex;
     justify-content: space-between;
     align-items: center;
