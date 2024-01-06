@@ -1,12 +1,12 @@
 Lien du site : https://enisbeziau.github.io/Syracuse-NSI  
 
-Lien du code : [https://github.com/enisbeziau/Syracuse-NSI/releases/tag/release](https://github.com/enisbeziau/Syracuse-NSI/releases/tag/phaseFinale)  
+Lien du code : https://github.com/enisbeziau/Syracuse-NSI/releases/tag/renduFinal
 
 Document de rendu de projet phase n°1 : https://github.com/enisbeziau/Rendu-1/blob/main/README.md  
 
 # Document de rendu de projet - Phase finale  
 
-Le site a été codé sur un écran `1567 x 1044`.
+Le site a été codé sur un écran `1567 x 1044` px.
 
 ## I. Généralités  
 Tout d'abord, pour mieux appréhender les explications ci-dessous, voici l'architecture du projet (les dossiers sont en __gras__):  
